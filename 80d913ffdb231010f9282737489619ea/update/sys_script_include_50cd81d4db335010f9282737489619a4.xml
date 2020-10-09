@@ -1,0 +1,291 @@
+<?xml version="1.0" encoding="UTF-8"?><record_update table="sys_script_include">
+    <sys_script_include action="INSERT_OR_UPDATE">
+        <access>package_private</access>
+        <active>true</active>
+        <api_name>x_8302_insubnet.inSubnetFunctions</api_name>
+        <caller_access/>
+        <client_callable>false</client_callable>
+        <description/>
+        <name>inSubnetFunctions</name>
+        <script><![CDATA[var inSubnetFunctions = Class.create();
+inSubnetFunctions.prototype = {
+	initialize: function() {
+	},
+
+	insertNetwork: function(name,address,netmask,sub_supernet,id){
+		var mainNetwork = this.calculateNetwork(address,netmask).toString();
+		var objMain = JSON.parse(mainNetwork);
+		var mainInsert = new GlideRecord('x_8302_insubnet_network');
+		mainInsert.initialize(); 
+		mainInsert.parent = id;
+		mainInsert.name = name+'_'+objMain.networkIP; 
+		mainInsert.address = objMain.networkIP;
+		mainInsert.hosts = objMain.hostCount;
+		mainInsert.range = objMain.startingIP+'-'+objMain.endingIP;
+		mainInsert.insert();
+
+		if(sub_supernet){
+			var rangesNetwork = this.calculateNetwork(address,netmask,sub_supernet).toString();
+			var objRanges = JSON.parse(rangesNetwork);
+			gs.info(objRanges.length);
+			for(i=0;i<objRanges.length;i++){
+				this._insertRanges(id,name,objRanges[i].newNetwork,objRanges[i].maskCount,objRanges[i].newStartIP,objRanges[i].newEndingIP);
+			}
+		}
+	},
+
+	calculateNetwork: function(ip,mask,subnet){
+		var binIP = this._convertToBinary(ip);
+		var getMask = new GlideRecord('x_8302_insubnet_subnet');
+		getMask.get('mask_bit',mask);
+		getMask.query();
+		while(getMask.next()){
+			var subMask = getMask.netmask;
+			var hostCount = getMask.count;
+			var binMask = this._convertToBinary(getMask.netmask);
+		}
+
+		var networkBinary = this._compareMaskToIP(binMask,binIP);
+		var networkIP = this._convertToAddress(networkBinary);
+		var wildcardBinary = this._getWildcardBinary(binMask);
+		var wildcardIP = this._convertToAddress(wildcardBinary);
+		var startingIP = this._getStartingIP(networkIP);
+		var broadcastIP = this._getBroadcast(networkIP,wildcardIP);
+		var endingIP = this._getEndingIP(broadcastIP);
+
+		if(subnet){
+			var getCount = new GlideRecord('x_8302_insubnet_subnet');
+			getCount.get('mask_bit',subnet);
+			getCount.query();
+			while(getCount.next()){
+				var maskCount = getCount.count;
+				var binSubnet = this._convertToBinary(getCount.netmask);
+			}
+			var incHosts = parseInt(maskCount)+2;
+			var broadcastDecimal = this._octetToDecimal(broadcastIP);
+			var networkDecimal = this._octetToDecimal(networkIP);
+			var increaseCount = ((parseInt(broadcastDecimal)-parseInt(networkDecimal))+1)/(parseInt(maskCount)+2);
+
+			var subnetData = [];
+
+			for(i=0;i<parseInt(increaseCount);i++){
+				var newNetwork = this._decimalToOctet(networkDecimal);
+				var newStartIP = this._getStartingIP(newNetwork);
+				var newWildcardBinary = this._getWildcardBinary(binSubnet);
+				var newWildcardIP = this._convertToAddress(newWildcardBinary);
+				var newBroadcastIP = this._getBroadcast(newNetwork,newWildcardIP);
+				var newEndingIP = this._getEndingIP(newBroadcastIP);
+
+				subnetData.push({
+					'newNetwork':newNetwork+"/"+subnet,
+					'maskCount':maskCount.toString(),
+					'newStartIP':newStartIP,
+					'newEndingIP':newEndingIP
+				});
+				networkDecimal = parseInt(networkDecimal) + parseInt(incHosts);
+			}
+			subnetData = new global.JSON().encode(subnetData);
+			return subnetData;
+		}else{
+			return this._buildNetworkResult(networkIP,mask,subMask,wildcardIP,hostCount,startingIP,broadcastIP,endingIP);
+		}
+
+	},
+
+	deleteNetworks: function(id,opt){
+		var dMulti = new GlideRecord('x_8302_insubnet_network');
+		dMulti.addEncodedQuery('parent='+id);
+		dMulti.query();
+		dMulti.deleteMultiple();
+
+		if(!opt){
+			var dParent = new GlideRecord('x_8302_insubnet_calculator');
+			dParent.get(id);
+			dParent.query();
+			if(dParent.next()){
+				dParent.deleteRecord();
+			}
+		}
+	},
+
+	updateNetworks: function(name,address,netmask,sub_supernet,id){
+		this.deleteNetworks(id,"netonly");
+		this.insertNetwork(name,address,netmask,sub_supernet,id);
+	},
+	
+	getIPsFromRange: function(range){
+		var ipArr = [];
+		var splitRange = range.split("-");
+		var startingDec = this._octetToDecimal(splitRange[0]);
+		var endingDec = this._octetToDecimal(splitRange[1]);
+		var difference = parseInt(endingDec) - parseInt(startingDec);
+		for(i=0;i<parseInt(difference);i++){
+			var newIP = this._decimalToOctet(startingDec);
+			ipArr.push(newIP);
+			startingDec = parseInt(startingDec)+1;
+		}
+		return ipArr.toString();
+	},
+	
+	sameAsParent: function(id){
+		var getParMask = new GlideRecord('x_8302_insubnet_calculator');
+		getParMask.get(id);
+		getParMask.query();
+		while(getParMask.next()){
+			var getMaskCount = new GlideRecord('x_8302_insubnet_subnet');
+			getMaskCount.addEncodedQuery('mask_bit='+getParMask.netmask);
+			getMaskCount.query();
+			while(getMaskCount.next()){
+				var hostCount = getMaskCount.count;
+			}
+		}
+		return hostCount;
+	},
+
+	_buildNetworkResult: function(networkIP,mask,subMask,wildcardIP,hostCount,startingIP,broadcastIP,endingIP){
+		var data = {};
+		var object = {
+			'networkIP':networkIP+"/"+mask,
+			'subnetMask':subMask.toString(),
+			'wildcardIP':wildcardIP,
+			'hostCount':hostCount.toString(),
+			'startingIP':startingIP,
+			'broadcastIP':broadcastIP,
+			'endingIP':endingIP
+		};
+		data = new global.JSON().encode(object);
+		return data;
+	},
+
+	_insertRanges: function(parent,name,network,count,startIP,endIP){
+		var rangesInsert = new GlideRecord('x_8302_insubnet_network');
+		rangesInsert.initialize(); 
+		rangesInsert.parent = parent;
+		rangesInsert.name = name+'_'+network; 
+		rangesInsert.address = network;
+		rangesInsert.hosts = count;
+		rangesInsert.range = startIP+'-'+endIP;
+		rangesInsert.insert();
+	},
+
+	_convertToAddress: function(binary){
+		var splitBinary = binary.split(".");
+		var octA = parseInt(splitBinary[0], 2);
+		var octB = parseInt(splitBinary[1], 2);
+		var octC = parseInt(splitBinary[2], 2);
+		var octD = parseInt(splitBinary[3], 2);
+		return octA+"."+octB+"."+octC+"."+octD;
+	},
+
+	_convertToBinary: function(ip){
+		var splitIP = ip.split(".");
+		var octA = this._padBinaryNum(splitIP[0],8);
+		var octB = this._padBinaryNum(splitIP[1],8);
+		var octC = this._padBinaryNum(splitIP[2],8);
+		var octD = this._padBinaryNum(splitIP[3],8);
+		return octA+"."+octB+"."+octC+"."+octD;
+	},
+
+	_padBinaryNum: function(num,size){
+		var binaryNum = parseInt(num).toString(2);
+		var s = "00000000" + binaryNum;
+		return s.substr(s.length-size);
+	},
+
+	_compareMaskToIP: function(mask,address){
+		var maskSplit = mask.split(".");
+		var addressSplit = address.split(".");
+		var octA = this._compareOctets(maskSplit[0],addressSplit[0]);
+		var octB = this._compareOctets(maskSplit[1],addressSplit[1]);
+		var octC = this._compareOctets(maskSplit[2],addressSplit[2]);
+		var octD = this._compareOctets(maskSplit[3],addressSplit[3]);
+		return octA+"."+octB+"."+octC+"."+octD;
+	},
+
+	_compareOctets: function(mask,address){
+		var same = "";
+		mask.split('').forEach(function(val, i){
+			if (val == address.charAt(i)){
+				same += val; }else{ same += "0";}});
+		return same;
+	},
+
+	_flipOctet: function(octet){
+		var flip = "";
+		octet.split('').forEach(function(val){
+			if (val == "1"){
+				flip += "0"; }else{ flip += "1";}});
+		return flip;
+	},
+
+	_getWildcardBinary: function(mask){
+		var maskSplit = mask.split(".");
+		var octA = this._flipOctet(maskSplit[0]);
+		var octB = this._flipOctet(maskSplit[1]);
+		var octC = this._flipOctet(maskSplit[2]);
+		var octD = this._flipOctet(maskSplit[3]);
+		return octA+"."+octB+"."+octC+"."+octD;
+	},
+
+	_getStartingIP: function(network){
+		var d = this._octetToDecimal(network);
+		d = parseInt(d)+1;
+		return this._decimalToOctet(d);
+	},
+
+	_getEndingIP: function(broadcast){
+		var d = this._octetToDecimal(broadcast);
+		d = parseInt(d)-1;
+		return this._decimalToOctet(d);
+	},
+
+	_getBroadcast: function(network,wildcard){
+		var a = new Array(0,0,0,0);
+		var b = network.split(".");
+		var c = wildcard.split(".");
+		for(var i=0;i<4;i++){
+			a[i] = b[i] | c[i];
+		}
+		return a[0]+"."+a[1]+"."+a[2]+"."+a[3];
+	},
+
+	_octetToDecimal: function(network){
+		var a = network.split(".");
+		var d = 0;
+		d = d + parseInt(a[0])*16777216;
+		d = d + parseInt(a[1])*65536;
+		d = d + parseInt(a[2])*256;
+		d = d + parseInt(a[3]);
+		return d;
+	},
+
+	_decimalToOctet: function(total){
+		var zeros = "00000000000000000000000000000000";
+		var b = parseInt(total).toString(2);
+		b = zeros.substring(0,32-b.length) + b;
+		var a = new Array(
+			parseInt(b.substring(0,8),2)
+			, (total & 16711680)/65536
+			, (total & 65280)/256
+			, (total & 255)
+		);
+		o = a[0]+"."+a[1]+"."+a[2]+"."+a[3];
+		return o;
+	},
+
+	type: 'inSubnetFunctions'
+};]]></script>
+        <sys_class_name>sys_script_include</sys_class_name>
+        <sys_created_by>admin</sys_created_by>
+        <sys_created_on>2020-10-07 17:28:05</sys_created_on>
+        <sys_id>50cd81d4db335010f9282737489619a4</sys_id>
+        <sys_mod_count>105</sys_mod_count>
+        <sys_name>inSubnetFunctions</sys_name>
+        <sys_package display_value="inSubnet" source="x_8302_insubnet">80d913ffdb231010f9282737489619ea</sys_package>
+        <sys_policy>read</sys_policy>
+        <sys_scope display_value="inSubnet">80d913ffdb231010f9282737489619ea</sys_scope>
+        <sys_update_name>sys_script_include_50cd81d4db335010f9282737489619a4</sys_update_name>
+        <sys_updated_by>admin</sys_updated_by>
+        <sys_updated_on>2020-10-09 16:43:44</sys_updated_on>
+    </sys_script_include>
+</record_update>

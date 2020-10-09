@@ -1,0 +1,7 @@
+<?xml version="1.0" encoding="UTF-8"?><database>
+    <element label="Subnet" max_length="40" name="x_8302_insubnet_subnet" sizeclass="32" type="collection">
+        <element label="Count" max_length="40" name="count" read_only="true" type="integer"/>
+        <element label="Mask Bit" max_length="40" name="mask_bit" read_only="true" type="integer"/>
+        <element display="true" label="Netmask" max_length="40" name="netmask" read_only="true" type="ip_addr"/>
+    </element>
+</database>

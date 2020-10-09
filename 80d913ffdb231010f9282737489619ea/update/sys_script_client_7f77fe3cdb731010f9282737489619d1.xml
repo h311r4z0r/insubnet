@@ -1,0 +1,53 @@
+<?xml version="1.0" encoding="UTF-8"?><record_update sys_domain="global" table="sys_script_client">
+    <sys_script_client action="INSERT_OR_UPDATE">
+        <active>true</active>
+        <applies_extended>false</applies_extended>
+        <condition/>
+        <description/>
+        <field>address</field>
+        <global>true</global>
+        <isolate_script>true</isolate_script>
+        <messages/>
+        <name>onLoad Calculator</name>
+        <order/>
+        <script><![CDATA[function onLoad() {
+	
+	g_form.addInfoMessage("Large network and subnet creation may take longer to submit/update than smaller ones.<br>When clicking into a network there is a relationship to all possible CIs with the ranged ip addresses, because of this loading the page may take longer with larger host counts.");
+	
+	var breakdown = g_form.getValue('sub_supernet');
+	if(breakdown == '' || breakdown === "0"){
+		var getNetwork = new GlideAjax('inSubnetFunctionsAjax');
+		getNetwork.addParam('sysparm_name', 'getNetwork');
+		getNetwork.addParam('sysparm_ip', ip);
+		getNetwork.addParam('sysparm_mask', netmask);
+		getNetwork.getXML(loadNetworkResults);
+	}
+}
+
+function loadNetworkResults(response) {
+	g_form.clearValue('results');
+	var answer = response.responseXML.documentElement.getAttribute("answer");
+	var obj = JSON.parse(answer);
+	g_form.setValue('results','Network: '+obj.networkIP+'\nSubnet Mask: '+obj.subnetMask+'\nWildcard Mask: '+obj.wildcardIP+'\nBroadcast: '+obj.broadcastIP+'\nHosts: '+obj.hostCount+'\nRange: '+obj.startingIP+'-'+obj.endingIP);
+}]]></script>
+        <sys_class_name>sys_script_client</sys_class_name>
+        <sys_created_by>admin</sys_created_by>
+        <sys_created_on>2020-10-09 14:27:05</sys_created_on>
+        <sys_domain>global</sys_domain>
+        <sys_domain_path>/</sys_domain_path>
+        <sys_id>7f77fe3cdb731010f9282737489619d1</sys_id>
+        <sys_mod_count>3</sys_mod_count>
+        <sys_name>onLoad Calculator</sys_name>
+        <sys_overrides/>
+        <sys_package display_value="inSubnet" source="x_8302_insubnet">80d913ffdb231010f9282737489619ea</sys_package>
+        <sys_policy/>
+        <sys_scope display_value="inSubnet">80d913ffdb231010f9282737489619ea</sys_scope>
+        <sys_update_name>sys_script_client_7f77fe3cdb731010f9282737489619d1</sys_update_name>
+        <sys_updated_by>admin</sys_updated_by>
+        <sys_updated_on>2020-10-09 15:50:32</sys_updated_on>
+        <table>x_8302_insubnet_calculator</table>
+        <type>onLoad</type>
+        <ui_type>10</ui_type>
+        <view/>
+    </sys_script_client>
+</record_update>

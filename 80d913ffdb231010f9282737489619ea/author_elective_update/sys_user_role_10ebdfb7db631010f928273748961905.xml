@@ -1,0 +1,71 @@
+<?xml version="1.0" encoding="UTF-8"?><record_update table="sys_user_role">
+    <sys_user_role action="DELETE">
+        <assignable_by/>
+        <can_delegate>true</can_delegate>
+        <description/>
+        <elevated_privilege>false</elevated_privilege>
+        <grantable>true</grantable>
+        <includes_roles/>
+        <name>x_8302_insubnet.parent_segments_user</name>
+        <requires_subscription>-1</requires_subscription>
+        <scoped_admin>false</scoped_admin>
+        <suffix>parent_segments_user</suffix>
+        <sys_class_name>sys_user_role</sys_class_name>
+        <sys_created_by>admin</sys_created_by>
+        <sys_created_on>2020-10-06 14:27:15</sys_created_on>
+        <sys_id>10ebdfb7db631010f928273748961905</sys_id>
+        <sys_mod_count>0</sys_mod_count>
+        <sys_name>x_8302_insubnet.parent_segments_user</sys_name>
+        <sys_package display_value="inSubnet" source="x_8302_insubnet">80d913ffdb231010f9282737489619ea</sys_package>
+        <sys_policy/>
+        <sys_scope display_value="inSubnet">80d913ffdb231010f9282737489619ea</sys_scope>
+        <sys_update_name>sys_user_role_10ebdfb7db631010f928273748961905</sys_update_name>
+        <sys_updated_by>admin</sys_updated_by>
+        <sys_updated_on>2020-10-06 14:27:15</sys_updated_on>
+    </sys_user_role>
+    <sys_update_version action="INSERT_OR_UPDATE">
+        <action>DELETE</action>
+        <application display_value="inSubnet">80d913ffdb231010f9282737489619ea</application>
+        <file_path/>
+        <instance_id>1b3b271adb097f04b847ac44d4961904</instance_id>
+        <instance_name>dev84107</instance_name>
+        <name>sys_user_role_10ebdfb7db631010f928273748961905</name>
+        <payload><![CDATA[<?xml version="1.0" encoding="UTF-8"?><record_update table="sys_user_role"><sys_user_role action="INSERT_OR_UPDATE"><assignable_by/><can_delegate>true</can_delegate><description/><elevated_privilege>false</elevated_privilege><grantable>true</grantable><includes_roles/><name>x_8302_insubnet.parent_segments_user</name><requires_subscription>-1</requires_subscription><scoped_admin>false</scoped_admin><suffix>parent_segments_user</suffix><sys_class_name>sys_user_role</sys_class_name><sys_created_by>admin</sys_created_by><sys_created_on>2020-10-06 14:27:15</sys_created_on><sys_id>10ebdfb7db631010f928273748961905</sys_id><sys_mod_count>0</sys_mod_count><sys_name>x_8302_insubnet.parent_segments_user</sys_name><sys_package display_value="inSubnet" source="x_8302_insubnet">80d913ffdb231010f9282737489619ea</sys_package><sys_policy/><sys_scope display_value="inSubnet">80d913ffdb231010f9282737489619ea</sys_scope><sys_update_name>sys_user_role_10ebdfb7db631010f928273748961905</sys_update_name><sys_updated_by>admin</sys_updated_by><sys_updated_on>2020-10-06 14:27:15</sys_updated_on></sys_user_role></record_update>]]></payload>
+        <payload_hash>821544925</payload_hash>
+        <record_name>x_8302_insubnet.parent_segments_user</record_name>
+        <reverted_from/>
+        <source>14d913ffdb231010f9282737489619ec</source>
+        <source_table>sys_update_set</source_table>
+        <state>previous</state>
+        <sys_created_by>admin</sys_created_by>
+        <sys_created_on>2020-10-06 14:27:15</sys_created_on>
+        <sys_id>90ebdfb7db631010f92827374896190a</sys_id>
+        <sys_mod_count>0</sys_mod_count>
+        <sys_recorded_at>174fe4f2d730000001</sys_recorded_at>
+        <sys_updated_by>admin</sys_updated_by>
+        <sys_updated_on>2020-10-06 14:27:15</sys_updated_on>
+        <type>Role</type>
+        <update_guid>d8ebdfb78f631010cf3f94b8879e6609</update_guid>
+        <update_guid_history>d8ebdfb78f631010cf3f94b8879e6609:821544925</update_guid_history>
+    </sys_update_version>
+    <sys_metadata_delete action="INSERT_OR_UPDATE">
+        <sys_audit_delete display_value="x_8302_insubnet.parent_segments_user">68202bbbdb631010f9282737489619d1</sys_audit_delete>
+        <sys_class_name>sys_metadata_delete</sys_class_name>
+        <sys_created_by>admin</sys_created_by>
+        <sys_created_on>2020-10-06 14:45:51</sys_created_on>
+        <sys_db_object display_value="" name="sys_user_role">sys_user_role</sys_db_object>
+        <sys_id>128f23ff6af942af81ddf5d8af078079</sys_id>
+        <sys_metadata>10ebdfb7db631010f928273748961905</sys_metadata>
+        <sys_mod_count>0</sys_mod_count>
+        <sys_name>x_8302_insubnet.parent_segments_user</sys_name>
+        <sys_package display_value="inSubnet" source="x_8302_insubnet">80d913ffdb231010f9282737489619ea</sys_package>
+        <sys_parent/>
+        <sys_policy/>
+        <sys_scope display_value="inSubnet">80d913ffdb231010f9282737489619ea</sys_scope>
+        <sys_scope_delete display_value="">02cdb062db124b0f8471b9b5066e6be1</sys_scope_delete>
+        <sys_update_name>sys_user_role_10ebdfb7db631010f928273748961905</sys_update_name>
+        <sys_update_version display_value="sys_user_role_10ebdfb7db631010f928273748961905">90ebdfb7db631010f92827374896190a</sys_update_version>
+        <sys_updated_by>admin</sys_updated_by>
+        <sys_updated_on>2020-10-06 14:45:51</sys_updated_on>
+    </sys_metadata_delete>
+</record_update>
