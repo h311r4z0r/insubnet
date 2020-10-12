@@ -118,7 +118,6 @@ inSubnetFunctions.prototype = {
 	},
 
 	getIPsFromRange: function(range,id){
-		//var ipArr = [];
 		var splitRange = range.split("-");
 		var startingDec = this._octetToDecimal(splitRange[0]);
 		var endingDec = this._octetToDecimal(splitRange[1]);
@@ -126,10 +125,8 @@ inSubnetFunctions.prototype = {
 		for(i=0;i<parseInt(difference);i++){
 			var newIP = this._decimalToOctet(startingDec);
 			this._createM2MrangeToCI(newIP,id);
-			//ipArr.push(newIP);
 			startingDec = parseInt(startingDec)+1;
 		}
-		return ipArr.toString();
 	},
 
 	sameAsParent: function(id){
@@ -199,11 +196,17 @@ inSubnetFunctions.prototype = {
 	},
 
 	_insertRangeToCI: function(ipID,rangeID){
+		var lookupRec = new GlideRecord('x_8302_insubnet_m2m_range_to_ci');
+		lookupRec.addEncodedQuery('range='+rangeID+'^hardware='+ipID);
+		lookupRec.query();
+		
+		if(!lookupRec.next()){		
 		var insertRtoCI = new GlideRecord('x_8302_insubnet_m2m_range_to_ci');
 		insertRtoCI.initialize(); 
 		insertRtoCI.hardware = ipID;
 		insertRtoCI.range = rangeID; 
 		insertRtoCI.insert();
+		}
 	},
 
 	_buildNetworkResult: function(networkIP,mask,subMask,wildcardIP,hostCount,startingIP,broadcastIP,endingIP){
@@ -343,13 +346,13 @@ inSubnetFunctions.prototype = {
         <sys_created_by>admin</sys_created_by>
         <sys_created_on>2020-10-07 17:28:05</sys_created_on>
         <sys_id>50cd81d4db335010f9282737489619a4</sys_id>
-        <sys_mod_count>109</sys_mod_count>
+        <sys_mod_count>112</sys_mod_count>
         <sys_name>inSubnetFunctions</sys_name>
         <sys_package display_value="inSubnet" source="x_8302_insubnet">80d913ffdb231010f9282737489619ea</sys_package>
         <sys_policy>read</sys_policy>
         <sys_scope display_value="inSubnet">80d913ffdb231010f9282737489619ea</sys_scope>
         <sys_update_name>sys_script_include_50cd81d4db335010f9282737489619a4</sys_update_name>
         <sys_updated_by>admin</sys_updated_by>
-        <sys_updated_on>2020-10-12 19:17:36</sys_updated_on>
+        <sys_updated_on>2020-10-12 21:00:30</sys_updated_on>
     </sys_script_include>
 </record_update>
