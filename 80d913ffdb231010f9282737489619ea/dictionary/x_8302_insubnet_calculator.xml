@@ -1,5 +1,5 @@
 <?xml version="1.0" encoding="UTF-8"?><database>
-    <element label="Calculator" max_length="40" name="x_8302_insubnet_calculator" sizeclass="0" type="collection">
+    <element label="Calculator" max_length="40" name="x_8302_insubnet_calculator" sizeclass="3" type="collection">
         <element label="Address (Host or Network)" max_length="40" name="address" type="ip_addr"/>
         <element label="Description" max_length="1000" name="description" type="string"/>
         <element label="Name" max_length="40" name="name" type="string"/>

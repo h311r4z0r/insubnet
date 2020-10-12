@@ -27,7 +27,6 @@ inSubnetFunctions.prototype = {
 		if(sub_supernet){
 			var rangesNetwork = this.calculateNetwork(address,netmask,sub_supernet).toString();
 			var objRanges = JSON.parse(rangesNetwork);
-			gs.info(objRanges.length);
 			for(i=0;i<objRanges.length;i++){
 				this._insertRanges(id,name,objRanges[i].newNetwork,objRanges[i].maskCount,objRanges[i].newStartIP,objRanges[i].newEndingIP);
 			}
@@ -93,6 +92,11 @@ inSubnetFunctions.prototype = {
 	},
 
 	deleteNetworks: function(id,opt){
+		var dRelated = new GlideRecord('x_8302_insubnet_m2m_range_to_ci');
+		dRelated.addEncodedQuery('range.parent='+id);
+		dRelated.query();
+		dRelated.deleteMultiple();
+		
 		var dMulti = new GlideRecord('x_8302_insubnet_network');
 		dMulti.addEncodedQuery('parent='+id);
 		dMulti.query();
@@ -112,21 +116,22 @@ inSubnetFunctions.prototype = {
 		this.deleteNetworks(id,"netonly");
 		this.insertNetwork(name,address,netmask,sub_supernet,id);
 	},
-	
-	getIPsFromRange: function(range){
-		var ipArr = [];
+
+	getIPsFromRange: function(range,id){
+		//var ipArr = [];
 		var splitRange = range.split("-");
 		var startingDec = this._octetToDecimal(splitRange[0]);
 		var endingDec = this._octetToDecimal(splitRange[1]);
 		var difference = parseInt(endingDec) - parseInt(startingDec);
 		for(i=0;i<parseInt(difference);i++){
 			var newIP = this._decimalToOctet(startingDec);
-			ipArr.push(newIP);
+			this._createM2MrangeToCI(newIP,id);
+			//ipArr.push(newIP);
 			startingDec = parseInt(startingDec)+1;
 		}
 		return ipArr.toString();
 	},
-	
+
 	sameAsParent: function(id){
 		var getParMask = new GlideRecord('x_8302_insubnet_calculator');
 		getParMask.get(id);
@@ -140,6 +145,65 @@ inSubnetFunctions.prototype = {
 			}
 		}
 		return hostCount;
+	},
+
+	validateNetwork: function(ip,mask){
+		var binIP = this._convertToBinary(ip);
+		var getMask = new GlideRecord('x_8302_insubnet_subnet');
+		getMask.get('mask_bit',mask);
+		getMask.query();
+		while(getMask.next()){
+			var subMask = getMask.netmask;
+			var binMask = this._convertToBinary(getMask.netmask);
+		}
+
+		var networkBinary = this._compareMaskToIP(binMask,binIP);
+		var networkIP = this._convertToAddress(networkBinary);
+		var wildcardBinary = this._getWildcardBinary(binMask);
+		var wildcardIP = this._convertToAddress(wildcardBinary);
+		var startingIP = this._getStartingIP(networkIP);
+		var startingDec = this._octetToDecimal(startingIP);
+		var broadcastIP = this._getBroadcast(networkIP,wildcardIP);
+		var endingIP = this._getEndingIP(broadcastIP);
+		var endingDec = this._octetToDecimal(endingIP);
+
+		var validData = [];
+
+		var getNetworks = new GlideRecord('x_8302_insubnet_network');
+		getNetworks.query();
+		while(getNetworks.next()){
+			var range = getNetworks.range;
+			var splitRange = range.split("-");
+			var startingNetDec = this._octetToDecimal(splitRange[0]);
+			var endingNetDec = this._octetToDecimal(splitRange[1]);
+
+			if((startingNetDec >= startingDec && startingNetDec <= endingDec) || (endingNetDec >= startingDec && endingNetDec <= endingDec)){
+				validData.push({
+					'network':getNetworks.name.toString(),
+				});
+			}
+		}
+
+		validData = new global.JSON().encode(validData);
+		return validData;
+
+	},
+
+	_createM2MrangeToCI:function(ip,id){
+		var getIP = new GlideRecord('cmdb_ci_hardware');
+		getIP.addEncodedQuery('ip_address='+ip+'^install_status=1');
+		getIP.query();
+		while(getIP.next()){
+			this._insertRangeToCI(getIP.sys_id.toString(),id);
+		}
+	},
+
+	_insertRangeToCI: function(ipID,rangeID){
+		var insertRtoCI = new GlideRecord('x_8302_insubnet_m2m_range_to_ci');
+		insertRtoCI.initialize(); 
+		insertRtoCI.hardware = ipID;
+		insertRtoCI.range = rangeID; 
+		insertRtoCI.insert();
 	},
 
 	_buildNetworkResult: function(networkIP,mask,subMask,wildcardIP,hostCount,startingIP,broadcastIP,endingIP){
@@ -279,13 +343,13 @@ inSubnetFunctions.prototype = {
         <sys_created_by>admin</sys_created_by>
         <sys_created_on>2020-10-07 17:28:05</sys_created_on>
         <sys_id>50cd81d4db335010f9282737489619a4</sys_id>
-        <sys_mod_count>105</sys_mod_count>
+        <sys_mod_count>109</sys_mod_count>
         <sys_name>inSubnetFunctions</sys_name>
         <sys_package display_value="inSubnet" source="x_8302_insubnet">80d913ffdb231010f9282737489619ea</sys_package>
         <sys_policy>read</sys_policy>
         <sys_scope display_value="inSubnet">80d913ffdb231010f9282737489619ea</sys_scope>
         <sys_update_name>sys_script_include_50cd81d4db335010f9282737489619a4</sys_update_name>
         <sys_updated_by>admin</sys_updated_by>
-        <sys_updated_on>2020-10-09 16:43:44</sys_updated_on>
+        <sys_updated_on>2020-10-12 19:17:36</sys_updated_on>
     </sys_script_include>
 </record_update>

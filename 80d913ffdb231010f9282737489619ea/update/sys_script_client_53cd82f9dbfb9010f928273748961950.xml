@@ -4,37 +4,56 @@
         <applies_extended>false</applies_extended>
         <condition/>
         <description/>
-        <field>address</field>
+        <field>netmask</field>
         <global>true</global>
         <isolate_script>true</isolate_script>
         <messages/>
-        <name>Clear Netmask and Breakdown</name>
-        <order>300</order>
+        <name>Network Validation</name>
+        <order>100</order>
         <script><![CDATA[function onChange(control, oldValue, newValue, isLoading, isTemplate) {
 	if (isLoading || newValue === '') {
 		return;
 	}
 
-	g_form.clearValue('netmask');
-	g_form.clearValue('sub_supernet');
-	g_form.clearValue('results');
+	var ip = g_form.getValue('address');
 
+	var valNetwork = new GlideAjax('inSubnetFunctionsAjax');
+	valNetwork.addParam('sysparm_name', 'validateNetwork');
+	valNetwork.addParam('sysparm_ip', ip);
+	valNetwork.addParam('sysparm_mask', newValue);
+	valNetwork.getXML(validateNetwork);
+}
+
+function validateNetwork(response) {
+	var answer = response.responseXML.documentElement.getAttribute("answer");
+	var obj = JSON.parse(answer);
+	if(obj.length > 0){
+		g_form.clearValue('address');
+		g_form.clearValue('netmask');
+		var message = "The network already exists in "+obj.length+" record(s):\n ";
+		var records = [];
+
+		for(i=0;i<obj.length;i++){
+			records.push(obj[i].network);
+		}
+		g_form.addErrorMessage(message+records.toString());
+	}
 }]]></script>
         <sys_class_name>sys_script_client</sys_class_name>
         <sys_created_by>admin</sys_created_by>
-        <sys_created_on>2020-10-08 21:24:54</sys_created_on>
+        <sys_created_on>2020-10-12 13:53:58</sys_created_on>
         <sys_domain>global</sys_domain>
         <sys_domain_path>/</sys_domain_path>
-        <sys_id>d33e0fecdbff5010f9282737489619fb</sys_id>
-        <sys_mod_count>1</sys_mod_count>
-        <sys_name>Clear Netmask and Breakdown</sys_name>
+        <sys_id>53cd82f9dbfb9010f928273748961950</sys_id>
+        <sys_mod_count>45</sys_mod_count>
+        <sys_name>Network Validation</sys_name>
         <sys_overrides/>
         <sys_package display_value="inSubnet" source="x_8302_insubnet">80d913ffdb231010f9282737489619ea</sys_package>
         <sys_policy/>
         <sys_scope display_value="inSubnet">80d913ffdb231010f9282737489619ea</sys_scope>
-        <sys_update_name>sys_script_client_d33e0fecdbff5010f9282737489619fb</sys_update_name>
+        <sys_update_name>sys_script_client_53cd82f9dbfb9010f928273748961950</sys_update_name>
         <sys_updated_by>admin</sys_updated_by>
-        <sys_updated_on>2020-10-12 16:59:07</sys_updated_on>
+        <sys_updated_on>2020-10-12 18:14:34</sys_updated_on>
         <table>x_8302_insubnet_calculator</table>
         <type>onChange</type>
         <ui_type>10</ui_type>

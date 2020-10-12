@@ -9,7 +9,7 @@
         <isolate_script>true</isolate_script>
         <messages/>
         <name>onLoad Calculator</name>
-        <order/>
+        <order>100</order>
         <script><![CDATA[function onLoad() {
 	
 	g_form.addInfoMessage("Large network and subnet creation may take longer to submit/update than smaller ones.<br>When clicking into a network there is a relationship to all possible CIs with the ranged ip addresses, because of this loading the page may take longer with larger host counts.");
@@ -36,7 +36,7 @@ function loadNetworkResults(response) {
         <sys_domain>global</sys_domain>
         <sys_domain_path>/</sys_domain_path>
         <sys_id>7f77fe3cdb731010f9282737489619d1</sys_id>
-        <sys_mod_count>3</sys_mod_count>
+        <sys_mod_count>4</sys_mod_count>
         <sys_name>onLoad Calculator</sys_name>
         <sys_overrides/>
         <sys_package display_value="inSubnet" source="x_8302_insubnet">80d913ffdb231010f9282737489619ea</sys_package>
@@ -44,7 +44,7 @@ function loadNetworkResults(response) {
         <sys_scope display_value="inSubnet">80d913ffdb231010f9282737489619ea</sys_scope>
         <sys_update_name>sys_script_client_7f77fe3cdb731010f9282737489619d1</sys_update_name>
         <sys_updated_by>admin</sys_updated_by>
-        <sys_updated_on>2020-10-09 15:50:32</sys_updated_on>
+        <sys_updated_on>2020-10-12 16:58:53</sys_updated_on>
         <table>x_8302_insubnet_calculator</table>
         <type>onLoad</type>
         <ui_type>10</ui_type>
