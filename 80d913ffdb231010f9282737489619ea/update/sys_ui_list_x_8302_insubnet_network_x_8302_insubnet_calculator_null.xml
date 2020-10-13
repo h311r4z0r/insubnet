@@ -3,77 +3,107 @@
         <sys_ui_list_element action="INSERT_OR_UPDATE">
             <average_value>false</average_value>
             <element>name</element>
-            <list_id display_value="x_8302_insubnet_network" element="NULL" name="x_8302_insubnet_network" parent="x_8302_insubnet_calculator" relationship="NULL" sys_domain="global" view="Default view">4368daf4db331010f928273748961985</list_id>
+            <list_id display_value="x_8302_insubnet_network" element="NULL" name="x_8302_insubnet_network" parent="x_8302_insubnet_calculator" relationship="NULL" sys_domain="global" view="Default view">c908ef0edb3fd010f92827374896192f</list_id>
             <max_value>false</max_value>
             <min_value>false</min_value>
             <position>0</position>
             <sum>false</sum>
             <sys_created_by>admin</sys_created_by>
-            <sys_created_on>2020-10-09 12:06:27</sys_created_on>
-            <sys_id>4f68daf4db331010f928273748961985</sys_id>
+            <sys_created_on>2020-10-13 15:06:37</sys_created_on>
+            <sys_id>c108ef0edb3fd010f928273748961931</sys_id>
             <sys_mod_count>0</sys_mod_count>
             <sys_updated_by>admin</sys_updated_by>
-            <sys_updated_on>2020-10-09 12:06:27</sys_updated_on>
+            <sys_updated_on>2020-10-13 15:06:37</sys_updated_on>
         </sys_ui_list_element>
         <sys_ui_list_element action="INSERT_OR_UPDATE">
             <average_value>false</average_value>
-            <element>address</element>
-            <list_id display_value="x_8302_insubnet_network" element="NULL" name="x_8302_insubnet_network" parent="x_8302_insubnet_calculator" relationship="NULL" sys_domain="global" view="Default view">4368daf4db331010f928273748961985</list_id>
+            <element>type</element>
+            <list_id display_value="x_8302_insubnet_network" element="NULL" name="x_8302_insubnet_network" parent="x_8302_insubnet_calculator" relationship="NULL" sys_domain="global" view="Default view">c908ef0edb3fd010f92827374896192f</list_id>
             <max_value>false</max_value>
             <min_value>false</min_value>
             <position>1</position>
             <sum>false</sum>
             <sys_created_by>admin</sys_created_by>
-            <sys_created_on>2020-10-09 12:06:27</sys_created_on>
-            <sys_id>cf68daf4db331010f928273748961985</sys_id>
+            <sys_created_on>2020-10-13 15:06:37</sys_created_on>
+            <sys_id>5908ef0edb3fd010f928273748961931</sys_id>
             <sys_mod_count>0</sys_mod_count>
             <sys_updated_by>admin</sys_updated_by>
-            <sys_updated_on>2020-10-09 12:06:27</sys_updated_on>
+            <sys_updated_on>2020-10-13 15:06:37</sys_updated_on>
         </sys_ui_list_element>
         <sys_ui_list_element action="INSERT_OR_UPDATE">
             <average_value>false</average_value>
-            <element>parent</element>
-            <list_id display_value="x_8302_insubnet_network" element="NULL" name="x_8302_insubnet_network" parent="x_8302_insubnet_calculator" relationship="NULL" sys_domain="global" view="Default view">4368daf4db331010f928273748961985</list_id>
+            <element>address</element>
+            <list_id display_value="x_8302_insubnet_network" element="NULL" name="x_8302_insubnet_network" parent="x_8302_insubnet_calculator" relationship="NULL" sys_domain="global" view="Default view">c908ef0edb3fd010f92827374896192f</list_id>
             <max_value>false</max_value>
             <min_value>false</min_value>
             <position>2</position>
             <sum>false</sum>
             <sys_created_by>admin</sys_created_by>
-            <sys_created_on>2020-10-09 12:06:27</sys_created_on>
-            <sys_id>4368daf4db331010f928273748961986</sys_id>
+            <sys_created_on>2020-10-13 15:06:37</sys_created_on>
+            <sys_id>d908ef0edb3fd010f928273748961931</sys_id>
             <sys_mod_count>0</sys_mod_count>
             <sys_updated_by>admin</sys_updated_by>
-            <sys_updated_on>2020-10-09 12:06:27</sys_updated_on>
+            <sys_updated_on>2020-10-13 15:06:37</sys_updated_on>
         </sys_ui_list_element>
         <sys_ui_list_element action="INSERT_OR_UPDATE">
             <average_value>false</average_value>
             <element>range</element>
-            <list_id display_value="x_8302_insubnet_network" element="NULL" name="x_8302_insubnet_network" parent="x_8302_insubnet_calculator" relationship="NULL" sys_domain="global" view="Default view">4368daf4db331010f928273748961985</list_id>
+            <list_id display_value="x_8302_insubnet_network" element="NULL" name="x_8302_insubnet_network" parent="x_8302_insubnet_calculator" relationship="NULL" sys_domain="global" view="Default view">c908ef0edb3fd010f92827374896192f</list_id>
             <max_value>false</max_value>
             <min_value>false</min_value>
             <position>3</position>
             <sum>false</sum>
             <sys_created_by>admin</sys_created_by>
-            <sys_created_on>2020-10-09 12:06:27</sys_created_on>
-            <sys_id>c368daf4db331010f928273748961986</sys_id>
+            <sys_created_on>2020-10-13 15:06:37</sys_created_on>
+            <sys_id>5d08ef0edb3fd010f928273748961931</sys_id>
             <sys_mod_count>0</sys_mod_count>
             <sys_updated_by>admin</sys_updated_by>
-            <sys_updated_on>2020-10-09 12:06:27</sys_updated_on>
+            <sys_updated_on>2020-10-13 15:06:37</sys_updated_on>
         </sys_ui_list_element>
         <sys_ui_list_element action="INSERT_OR_UPDATE">
             <average_value>false</average_value>
             <element>hosts</element>
-            <list_id display_value="x_8302_insubnet_network" element="NULL" name="x_8302_insubnet_network" parent="x_8302_insubnet_calculator" relationship="NULL" sys_domain="global" view="Default view">4368daf4db331010f928273748961985</list_id>
+            <list_id display_value="x_8302_insubnet_network" element="NULL" name="x_8302_insubnet_network" parent="x_8302_insubnet_calculator" relationship="NULL" sys_domain="global" view="Default view">c908ef0edb3fd010f92827374896192f</list_id>
             <max_value>false</max_value>
             <min_value>false</min_value>
             <position>4</position>
             <sum>false</sum>
             <sys_created_by>admin</sys_created_by>
-            <sys_created_on>2020-10-09 12:06:27</sys_created_on>
-            <sys_id>4768daf4db331010f928273748961986</sys_id>
+            <sys_created_on>2020-10-13 15:06:37</sys_created_on>
+            <sys_id>dd08ef0edb3fd010f928273748961931</sys_id>
             <sys_mod_count>0</sys_mod_count>
             <sys_updated_by>admin</sys_updated_by>
-            <sys_updated_on>2020-10-09 12:06:27</sys_updated_on>
+            <sys_updated_on>2020-10-13 15:06:37</sys_updated_on>
+        </sys_ui_list_element>
+        <sys_ui_list_element action="INSERT_OR_UPDATE">
+            <average_value>false</average_value>
+            <element>ci_count</element>
+            <list_id display_value="x_8302_insubnet_network" element="NULL" name="x_8302_insubnet_network" parent="x_8302_insubnet_calculator" relationship="NULL" sys_domain="global" view="Default view">c908ef0edb3fd010f92827374896192f</list_id>
+            <max_value>false</max_value>
+            <min_value>false</min_value>
+            <position>5</position>
+            <sum>false</sum>
+            <sys_created_by>admin</sys_created_by>
+            <sys_created_on>2020-10-13 15:06:37</sys_created_on>
+            <sys_id>5108ef0edb3fd010f928273748961932</sys_id>
+            <sys_mod_count>0</sys_mod_count>
+            <sys_updated_by>admin</sys_updated_by>
+            <sys_updated_on>2020-10-13 15:06:37</sys_updated_on>
+        </sys_ui_list_element>
+        <sys_ui_list_element action="INSERT_OR_UPDATE">
+            <average_value>false</average_value>
+            <element>parent</element>
+            <list_id display_value="x_8302_insubnet_network" element="NULL" name="x_8302_insubnet_network" parent="x_8302_insubnet_calculator" relationship="NULL" sys_domain="global" view="Default view">c908ef0edb3fd010f92827374896192f</list_id>
+            <max_value>false</max_value>
+            <min_value>false</min_value>
+            <position>6</position>
+            <sum>false</sum>
+            <sys_created_by>admin</sys_created_by>
+            <sys_created_on>2020-10-13 15:06:37</sys_created_on>
+            <sys_id>d108ef0edb3fd010f928273748961932</sys_id>
+            <sys_mod_count>0</sys_mod_count>
+            <sys_updated_by>admin</sys_updated_by>
+            <sys_updated_on>2020-10-13 15:06:37</sys_updated_on>
         </sys_ui_list_element>
         <sys_ui_list action="INSERT_OR_UPDATE">
             <average_value>false</average_value>
@@ -87,10 +117,10 @@
             <sum>false</sum>
             <sys_class_name>sys_ui_list</sys_class_name>
             <sys_created_by>admin</sys_created_by>
-            <sys_created_on>2020-10-09 12:06:27</sys_created_on>
+            <sys_created_on>2020-10-13 15:06:37</sys_created_on>
             <sys_domain>global</sys_domain>
             <sys_domain_path>/</sys_domain_path>
-            <sys_id>4368daf4db331010f928273748961985</sys_id>
+            <sys_id>c908ef0edb3fd010f92827374896192f</sys_id>
             <sys_mod_count>0</sys_mod_count>
             <sys_name>x_8302_insubnet_network</sys_name>
             <sys_package display_value="inSubnet" source="x_8302_insubnet">80d913ffdb231010f9282737489619ea</sys_package>
@@ -98,7 +128,7 @@
             <sys_scope display_value="inSubnet">80d913ffdb231010f9282737489619ea</sys_scope>
             <sys_update_name>sys_ui_list_x_8302_insubnet_network_x_8302_insubnet_calculator_null</sys_update_name>
             <sys_updated_by>admin</sys_updated_by>
-            <sys_updated_on>2020-10-09 12:06:27</sys_updated_on>
+            <sys_updated_on>2020-10-13 15:06:37</sys_updated_on>
             <sys_user/>
             <view display_value="Default view" name="NULL">Default view</view>
             <view_name/>

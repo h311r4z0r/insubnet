@@ -8,7 +8,7 @@
         <configuration_access>false</configuration_access>
         <create_access>true</create_access>
         <create_access_controls>true</create_access_controls>
-        <delete_access>false</delete_access>
+        <delete_access>true</delete_access>
         <extension_model/>
         <is_extendable>false</is_extendable>
         <label>Calculator</label>
@@ -25,14 +25,14 @@
         <sys_created_by>admin</sys_created_by>
         <sys_created_on>2020-10-06 14:47:07</sys_created_on>
         <sys_id>1d40277bdb631010f9282737489619c3</sys_id>
-        <sys_mod_count>0</sys_mod_count>
+        <sys_mod_count>1</sys_mod_count>
         <sys_name>Calculator</sys_name>
         <sys_package display_value="inSubnet" source="x_8302_insubnet">80d913ffdb231010f9282737489619ea</sys_package>
         <sys_policy/>
         <sys_scope display_value="inSubnet">80d913ffdb231010f9282737489619ea</sys_scope>
         <sys_update_name>sys_db_object_1d40277bdb631010f9282737489619c3</sys_update_name>
         <sys_updated_by>admin</sys_updated_by>
-        <sys_updated_on>2020-10-06 14:47:07</sys_updated_on>
+        <sys_updated_on>2020-10-13 21:36:51</sys_updated_on>
         <update_access>true</update_access>
         <user_role display_value="x_8302_insubnet.calculator_user" name="x_8302_insubnet.calculator_user">9760637bdb631010f928273748961948</user_role>
         <ws_access>true</ws_access>

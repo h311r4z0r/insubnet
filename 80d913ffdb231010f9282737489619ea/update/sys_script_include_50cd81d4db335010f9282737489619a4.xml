@@ -1,6 +1,6 @@
 <?xml version="1.0" encoding="UTF-8"?><record_update table="sys_script_include">
     <sys_script_include action="INSERT_OR_UPDATE">
-        <access>package_private</access>
+        <access>public</access>
         <active>true</active>
         <api_name>x_8302_insubnet.inSubnetFunctions</api_name>
         <caller_access/>
@@ -96,7 +96,7 @@ inSubnetFunctions.prototype = {
 		dRelated.addEncodedQuery('range.parent='+id);
 		dRelated.query();
 		dRelated.deleteMultiple();
-		
+
 		var dMulti = new GlideRecord('x_8302_insubnet_network');
 		dMulti.addEncodedQuery('parent='+id);
 		dMulti.query();
@@ -118,6 +118,11 @@ inSubnetFunctions.prototype = {
 	},
 
 	getIPsFromRange: function(range,id){
+		var clearCurrent = new GlideRecord('x_8302_insubnet_m2m_range_to_ci');
+		clearCurrent.addEncodedQuery('range='+id);
+		clearCurrent.query();
+		clearCurrent.deleteMultiple();
+
 		var splitRange = range.split("-");
 		var startingDec = this._octetToDecimal(splitRange[0]);
 		var endingDec = this._octetToDecimal(splitRange[1]);
@@ -126,6 +131,20 @@ inSubnetFunctions.prototype = {
 			var newIP = this._decimalToOctet(startingDec);
 			this._createM2MrangeToCI(newIP,id);
 			startingDec = parseInt(startingDec)+1;
+		}
+
+		var getCount = new GlideAggregate('x_8302_insubnet_m2m_range_to_ci');
+		getCount.addEncodedQuery('range='+id);
+		getCount.addAggregate('COUNT');
+		getCount.query();
+		if (getCount.next()) {
+			var updateCount = new GlideRecord('x_8302_insubnet_network');
+			updateCount.get(id);
+			updateCount.query();
+			while(updateCount.next()){
+				updateCount.ci_count = getCount.getAggregate('COUNT');
+				updateCount.update();
+			}	
 		}
 	},
 
@@ -186,6 +205,32 @@ inSubnetFunctions.prototype = {
 
 	},
 
+	discoveryRanges: function(ranges,discovery){
+		var stringRanges = ranges.toString();
+		var splitRanges = stringRanges.split(",");
+		for(i=0;i<splitRanges.length;i++){
+			var getRanges = new GlideRecord('x_8302_insubnet_network');
+			getRanges.get(splitRanges[i].toString());
+			getRanges.query();
+			while(getRanges.next()){
+				var address = getRanges.address;
+				this._insertDiscoveryRange(address,discovery.toString());
+			}
+		}
+	},
+	
+	_insertDiscoveryRange: function(address,discovery){
+		var splitAdd = address.split("/");
+		var insertDR = new GlideRecord('discovery_range_item');
+		insertDR.initialize();
+		insertDR.name = address;
+		insertDR.network_ip = splitAdd[0];
+		insertDR.netmask = splitAdd[1];
+		insertDR.schedule = discovery;
+		insertDR.type = "IP Address List";
+		insertDR.insert();
+	},
+
 	_createM2MrangeToCI:function(ip,id){
 		var getIP = new GlideRecord('cmdb_ci_hardware');
 		getIP.addEncodedQuery('ip_address='+ip+'^install_status=1');
@@ -199,13 +244,13 @@ inSubnetFunctions.prototype = {
 		var lookupRec = new GlideRecord('x_8302_insubnet_m2m_range_to_ci');
 		lookupRec.addEncodedQuery('range='+rangeID+'^hardware='+ipID);
 		lookupRec.query();
-		
+
 		if(!lookupRec.next()){		
-		var insertRtoCI = new GlideRecord('x_8302_insubnet_m2m_range_to_ci');
-		insertRtoCI.initialize(); 
-		insertRtoCI.hardware = ipID;
-		insertRtoCI.range = rangeID; 
-		insertRtoCI.insert();
+			var insertRtoCI = new GlideRecord('x_8302_insubnet_m2m_range_to_ci');
+			insertRtoCI.initialize(); 
+			insertRtoCI.hardware = ipID;
+			insertRtoCI.range = rangeID; 
+			insertRtoCI.insert();
 		}
 	},
 
@@ -346,13 +391,13 @@ inSubnetFunctions.prototype = {
         <sys_created_by>admin</sys_created_by>
         <sys_created_on>2020-10-07 17:28:05</sys_created_on>
         <sys_id>50cd81d4db335010f9282737489619a4</sys_id>
-        <sys_mod_count>112</sys_mod_count>
+        <sys_mod_count>127</sys_mod_count>
         <sys_name>inSubnetFunctions</sys_name>
         <sys_package display_value="inSubnet" source="x_8302_insubnet">80d913ffdb231010f9282737489619ea</sys_package>
         <sys_policy>read</sys_policy>
         <sys_scope display_value="inSubnet">80d913ffdb231010f9282737489619ea</sys_scope>
         <sys_update_name>sys_script_include_50cd81d4db335010f9282737489619a4</sys_update_name>
         <sys_updated_by>admin</sys_updated_by>
-        <sys_updated_on>2020-10-12 21:00:30</sys_updated_on>
+        <sys_updated_on>2020-10-13 21:47:48</sys_updated_on>
     </sys_script_include>
 </record_update>
