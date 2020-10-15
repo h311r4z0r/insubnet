@@ -1,25 +1,25 @@
 <?xml version="1.0" encoding="UTF-8"?><record_update>
-    <sys_documentation element="" label="Discovery" language="en" table="x_8302_insubnet_m2m_range_to_discovery">
+    <sys_documentation element="" label="Schedule" language="en" table="x_8302_insubnet_m2m_range_to_discovery">
         <sys_documentation action="INSERT_OR_UPDATE">
             <element/>
             <help/>
             <hint/>
-            <label>Discovery</label>
+            <label>Schedule</label>
             <language>en</language>
             <name>x_8302_insubnet_m2m_range_to_discovery</name>
-            <plural>Discoveries</plural>
+            <plural>Schedules</plural>
             <sys_class_name>sys_documentation</sys_class_name>
             <sys_created_by>admin</sys_created_by>
             <sys_created_on>2020-10-13 17:34:03</sys_created_on>
-            <sys_id>fcc9cc96dbbfd010f9282737489619e6</sys_id>
-            <sys_mod_count>0</sys_mod_count>
-            <sys_name>Discovery</sys_name>
+            <sys_id>c0fbb9ee2f331010ff58c886f699b6d9</sys_id>
+            <sys_mod_count>1</sys_mod_count>
+            <sys_name>Schedule</sys_name>
             <sys_package display_value="inSubnet" source="x_8302_insubnet">80d913ffdb231010f9282737489619ea</sys_package>
             <sys_policy/>
             <sys_scope display_value="inSubnet">80d913ffdb231010f9282737489619ea</sys_scope>
             <sys_update_name>sys_documentation_x_8302_insubnet_m2m_range_to_discovery__en</sys_update_name>
             <sys_updated_by>admin</sys_updated_by>
-            <sys_updated_on>2020-10-13 17:34:03</sys_updated_on>
+            <sys_updated_on>2020-10-15 15:16:53</sys_updated_on>
             <url/>
             <url_target/>
         </sys_documentation>

@@ -65,7 +65,7 @@
         <update_guid_history>61afeb37e4a31010e9906e7254e260ea:-1773547159</update_guid_history>
     </sys_update_version>
     <sys_metadata_delete action="INSERT_OR_UPDATE">
-        <sys_audit_delete display_value="Masks">e66ad094dbbf1010f928273748961967</sys_audit_delete>
+        <sys_audit_delete display_value="">e66ad094dbbf1010f928273748961967</sys_audit_delete>
         <sys_class_name>sys_metadata_delete</sys_class_name>
         <sys_created_by>admin</sys_created_by>
         <sys_created_on>2020-10-07 13:38:58</sys_created_on>

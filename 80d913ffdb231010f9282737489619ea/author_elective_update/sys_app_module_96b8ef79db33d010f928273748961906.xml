@@ -73,7 +73,7 @@ new inSubnetFunctions().getIPsFromRange(getRanges.range,getRanges.sys_id);&#13;
         <update_guid_history>eb4b6bf97533d0101d5d7b15014c30dc:151050582,ff0be7f92a33d0100dcf3e1aac4fa954:316763396</update_guid_history>
     </sys_update_version>
     <sys_metadata_delete action="INSERT_OR_UPDATE">
-        <sys_audit_delete display_value="Update Relationship to CI">7e1c2ff9db33d010f9282737489619ef</sys_audit_delete>
+        <sys_audit_delete display_value="">7e1c2ff9db33d010f9282737489619ef</sys_audit_delete>
         <sys_class_name>sys_metadata_delete</sys_class_name>
         <sys_created_by>admin</sys_created_by>
         <sys_created_on>2020-10-12 20:45:59</sys_created_on>

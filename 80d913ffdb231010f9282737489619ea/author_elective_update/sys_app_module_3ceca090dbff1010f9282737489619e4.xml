@@ -65,7 +65,7 @@
         <update_guid_history>f4eca0908bff1010f6042a7825ee05e7:-630171462</update_guid_history>
     </sys_update_version>
     <sys_metadata_delete action="INSERT_OR_UPDATE">
-        <sys_audit_delete display_value="Subnets">2cfbc73cdbb31010f928273748961912</sys_audit_delete>
+        <sys_audit_delete display_value="">2cfbc73cdbb31010f928273748961912</sys_audit_delete>
         <sys_class_name>sys_metadata_delete</sys_class_name>
         <sys_created_by>admin</sys_created_by>
         <sys_created_on>2020-10-09 15:51:33</sys_created_on>

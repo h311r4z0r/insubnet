@@ -42,7 +42,7 @@
         <update_guid_history>796eeff3a2a31010b01e3df84b315abb:-689886736</update_guid_history>
     </sys_update_version>
     <sys_metadata_delete action="INSERT_OR_UPDATE">
-        <sys_audit_delete display_value="x_8302_insubnet_subnet_masks.x_8302_insubnet.subnet_masks_user">666ad094dbbf1010f92827374896195c</sys_audit_delete>
+        <sys_audit_delete display_value="">666ad094dbbf1010f92827374896195c</sys_audit_delete>
         <sys_class_name>sys_metadata_delete</sys_class_name>
         <sys_created_by>admin</sys_created_by>
         <sys_created_on>2020-10-07 13:38:57</sys_created_on>

@@ -49,7 +49,7 @@
         <update_guid_history>d8ebdfb78f631010cf3f94b8879e6609:821544925</update_guid_history>
     </sys_update_version>
     <sys_metadata_delete action="INSERT_OR_UPDATE">
-        <sys_audit_delete display_value="x_8302_insubnet.parent_segments_user">68202bbbdb631010f9282737489619d1</sys_audit_delete>
+        <sys_audit_delete display_value="">68202bbbdb631010f9282737489619d1</sys_audit_delete>
         <sys_class_name>sys_metadata_delete</sys_class_name>
         <sys_created_by>admin</sys_created_by>
         <sys_created_on>2020-10-06 14:45:51</sys_created_on>
