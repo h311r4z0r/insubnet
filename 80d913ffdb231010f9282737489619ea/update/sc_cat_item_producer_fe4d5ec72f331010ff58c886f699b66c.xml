@@ -55,7 +55,19 @@
         <sc_catalogs/>
         <sc_ic_item_staging/>
         <sc_ic_version/>
-        <script><![CDATA[new inSubnetFunctions().updateDiscoveryRanges(producer.networks,producer.name);]]></script>
+        <script><![CDATA[var record = producer.name;
+var checkCMDBRec = new GlideRecord('x_8302_insubnet_discovery_schedule');
+checkCMDBRec.get(record);
+checkCMDBRec.query();
+while(checkCMDBRec.next()){
+	var oobSchedule = checkCMDBRec.getValue('insubnet_schedule');
+}
+
+if (oobSchedule) {
+	new inSubnetFunctions().updateDiscoveryRanges(producer.networks,record,oobSchedule);
+}
+
+producer.redirect="/discovery_schedule.do?sys_id="+oobSchedule.toString();]]></script>
         <short_description>Add network(s) to a discovery schedule.</short_description>
         <show_variable_help_on_load>false</show_variable_help_on_load>
         <start_closed>false</start_closed>
@@ -63,14 +75,14 @@
         <sys_created_by>admin</sys_created_by>
         <sys_created_on>2020-10-16 12:14:04</sys_created_on>
         <sys_id>fe4d5ec72f331010ff58c886f699b66c</sys_id>
-        <sys_mod_count>2</sys_mod_count>
+        <sys_mod_count>7</sys_mod_count>
         <sys_name>Add-to Schedule</sys_name>
         <sys_package display_value="inSubnet" source="x_8302_insubnet">80d913ffdb231010f9282737489619ea</sys_package>
         <sys_policy/>
         <sys_scope display_value="inSubnet">80d913ffdb231010f9282737489619ea</sys_scope>
         <sys_update_name>sc_cat_item_producer_fe4d5ec72f331010ff58c886f699b66c</sys_update_name>
         <sys_updated_by>admin</sys_updated_by>
-        <sys_updated_on>2020-10-16 12:47:35</sys_updated_on>
+        <sys_updated_on>2020-10-16 16:03:45</sys_updated_on>
         <table_name>discovery_schedule</table_name>
         <template/>
         <type>item</type>
