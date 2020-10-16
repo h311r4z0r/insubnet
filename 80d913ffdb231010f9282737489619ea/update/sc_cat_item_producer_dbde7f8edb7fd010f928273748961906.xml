@@ -28,7 +28,7 @@
         <mobile_picture/>
         <mobile_picture_type>use_desktop_picture</mobile_picture_type>
         <model/>
-        <name>Network Discovery</name>
+        <name>Create Schedule</name>
         <no_attachment_v2>false</no_attachment_v2>
         <no_cart>false</no_cart>
         <no_cart_v2>false</no_cart_v2>
@@ -56,7 +56,7 @@
         <sc_ic_item_staging/>
         <sc_ic_version/>
         <script><![CDATA[current.mid_select_method = "auto_select";
-new inSubnetFunctions().discoveryRanges(producer.networks,current.sys_id);]]></script>
+new inSubnetFunctions().discoveryRanges(producer.networks,current.sys_id,producer.name);]]></script>
         <short_description>Add network(s) to a discovery schedule.</short_description>
         <show_variable_help_on_load>false</show_variable_help_on_load>
         <start_closed>false</start_closed>
@@ -64,14 +64,14 @@ new inSubnetFunctions().discoveryRanges(producer.networks,current.sys_id);]]></s
         <sys_created_by>admin</sys_created_by>
         <sys_created_on>2020-10-13 16:48:14</sys_created_on>
         <sys_id>dbde7f8edb7fd010f928273748961906</sys_id>
-        <sys_mod_count>8</sys_mod_count>
-        <sys_name>Network Discovery</sys_name>
+        <sys_mod_count>10</sys_mod_count>
+        <sys_name>Create Schedule</sys_name>
         <sys_package display_value="inSubnet" source="x_8302_insubnet">80d913ffdb231010f9282737489619ea</sys_package>
         <sys_policy/>
         <sys_scope display_value="inSubnet">80d913ffdb231010f9282737489619ea</sys_scope>
         <sys_update_name>sc_cat_item_producer_dbde7f8edb7fd010f928273748961906</sys_update_name>
         <sys_updated_by>admin</sys_updated_by>
-        <sys_updated_on>2020-10-13 21:16:00</sys_updated_on>
+        <sys_updated_on>2020-10-16 12:13:21</sys_updated_on>
         <table_name>discovery_schedule</table_name>
         <template/>
         <type>item</type>
