@@ -1,0 +1,111 @@
+<?xml version="1.0" encoding="UTF-8"?><record_update table="sys_script_include">
+    <sys_script_include action="INSERT_OR_UPDATE">
+        <access>public</access>
+        <active>true</active>
+        <api_name>x_8302_insubnet.inSubnetExtraFunctions</api_name>
+        <caller_access/>
+        <client_callable>false</client_callable>
+        <description/>
+        <name>inSubnetExtraFunctions</name>
+        <script><![CDATA[ var inSubnetExtraFunctions = Class.create();
+inSubnetExtraFunctions.prototype = {
+	initialize: function() {
+	},
+
+	getCurrentDiscoverySchedules: function(){
+		var getSchedulesArr = [];
+		var getSchedules = new GlideRecord('discovery_schedule');
+		getSchedules.addEncodedQuery('active=true');
+		getSchedules.query();
+		while(getSchedules.next()){
+			var schedule = getSchedules.getValue('sys_id').toString();
+			getSchedulesArr.push(schedule);
+		}
+		
+		for(i=0; i<getSchedulesArr.length; i++){
+			var parentID = this._createCalulatorRecord(getSchedulesArr[i]);
+			var getRangeItemArr = [];
+			var getRangeItem = new GlideRecord('discovery_range_item');
+			getRangeItem.addEncodedQuery('schedule='+getSchedulesArr[i]);
+			getRangeItem.query();
+			while(getRangeItem.next()){
+				var rangeItemID = getRangeItem.getValue('sys_id').toString();
+				var range = getRangeItem.name;
+				range = range.split("/");
+				this._processRangeType(rangeItemID,schedule,parentID);
+			}
+		}
+	},
+
+	_processRangeType: function(id,schedule,parentID){
+		var getRangeInfo = new GlideRecord('discovery_range_item');
+		getRangeInfo.get(id);
+		getRangeInfo.query();
+		while(getRangeInfo.next()){
+			var type = getRangeInfo.type;
+		}
+
+		if(type == "IP Network"){
+			this._processIPnetwork(id,schedule,parentID);
+		}
+	},
+
+	_processIPnetwork: function(id,schedule,parentID){
+		var getScheduleData = new GlideRecord('discovery_schedule');
+		getScheduleData.get(schedule);
+		getScheduleData.query();
+		while(getScheduleData.next()){
+			var schdname = getScheduleData.name; 
+		}
+
+		var getRangeData = new GlideRecord('discovery_range_item');
+		getRangeData.get(id);
+		getRangeData.query();
+		while(getRangeData.next()){
+			var range = getRangeData.network_ip+"/"+getRangeData.netmask;
+			var address = getRangeData.network_ip;
+			var netmask = getRangeData.netmask;
+		}
+		
+		var insertName = "LDS "+schdname;
+		
+		var networkID = new inSubnetFunctions().insertNetwork(insertName,address,netmask,'',parentID);
+		new inSubnetFunctions().discoveryRangesNoInsert(networkID,schedule,schdname);
+	},
+	
+	_createCalulatorRecord: function(schedule,address,netmask){
+		var getScheduleName = new GlideRecord('discovery_schedule');
+		getScheduleName.get(schedule);
+		getScheduleName.query();
+		while(getScheduleName.next()){
+			schdname = getScheduleName.name;
+		}		
+		
+		var insertName = "LDS "+schdname;
+		
+		var insertCalculator = new GlideRecord('x_8302_insubnet_calculator');
+		insertCalculator.initialize();
+		insertCalculator.name = insertName;
+		insertCalculator.description = "Inserted from legacy Discovery Schedule";
+		insertCalculator.disable_mandatory = "true";
+		var parentID = insertCalculator.insert();
+	
+		return parentID;
+	},
+
+	type: 'inSubnetExtraFunctions'
+};]]></script>
+        <sys_class_name>sys_script_include</sys_class_name>
+        <sys_created_by>admin</sys_created_by>
+        <sys_created_on>2020-10-20 14:29:35</sys_created_on>
+        <sys_id>da82ef942f402010ff58c886f699b6d6</sys_id>
+        <sys_mod_count>22</sys_mod_count>
+        <sys_name>inSubnetExtraFunctions</sys_name>
+        <sys_package display_value="inSubnet" source="x_8302_insubnet">80d913ffdb231010f9282737489619ea</sys_package>
+        <sys_policy>read</sys_policy>
+        <sys_scope display_value="inSubnet">80d913ffdb231010f9282737489619ea</sys_scope>
+        <sys_update_name>sys_script_include_da82ef942f402010ff58c886f699b6d6</sys_update_name>
+        <sys_updated_by>admin</sys_updated_by>
+        <sys_updated_on>2020-10-20 21:06:13</sys_updated_on>
+    </sys_script_include>
+</record_update>

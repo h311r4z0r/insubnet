@@ -2,6 +2,7 @@
     <element label="Calculator" max_length="40" name="x_8302_insubnet_calculator" sizeclass="0" type="collection">
         <element label="Address (Host or Network)" max_length="40" name="address" type="ip_addr"/>
         <element label="Description" max_length="1000" name="description" type="string"/>
+        <element label="Disable mandatory" max_length="40" name="disable_mandatory" type="boolean"/>
         <element label="Name" max_length="40" name="name" type="string"/>
         <element label="Netmask (i.e. 16)" max_length="40" name="netmask" type="integer"/>
         <element attributes="edge_encryption_enabled=true" label="Results" max_length="10000" name="results" read_only="true" type="string"/>
