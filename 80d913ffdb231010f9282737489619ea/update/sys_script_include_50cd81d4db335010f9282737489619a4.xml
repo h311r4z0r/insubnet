@@ -163,6 +163,14 @@ inSubnetFunctions.prototype = {
 		clearCurrent.addEncodedQuery('range='+id);
 		clearCurrent.query();
 		clearCurrent.deleteMultiple();
+		
+		var clearRangeCalc = new GlideRecord('x_8302_insubnet_network');
+		clearRangeCalc.addEncodedQuery('sys_id='+id);
+		clearRangeCalc.query();
+		while(clearRangeCalc.next()){
+			clearRangeCalc.ci_count = 0;
+			clearRangeCalc.update;
+		}
 
 		var property = gs.getProperty('x_8302_insubnet.cmdb.integration');
 		if(property == "true"){
@@ -693,13 +701,13 @@ inSubnetFunctions.prototype = {
         <sys_created_by>admin</sys_created_by>
         <sys_created_on>2020-10-07 17:28:05</sys_created_on>
         <sys_id>50cd81d4db335010f9282737489619a4</sys_id>
-        <sys_mod_count>190</sys_mod_count>
+        <sys_mod_count>191</sys_mod_count>
         <sys_name>inSubnetFunctions</sys_name>
         <sys_package display_value="inSubnet" source="x_8302_insubnet">80d913ffdb231010f9282737489619ea</sys_package>
         <sys_policy>read</sys_policy>
         <sys_scope display_value="inSubnet">80d913ffdb231010f9282737489619ea</sys_scope>
         <sys_update_name>sys_script_include_50cd81d4db335010f9282737489619a4</sys_update_name>
         <sys_updated_by>admin</sys_updated_by>
-        <sys_updated_on>2020-10-20 19:19:55</sys_updated_on>
+        <sys_updated_on>2020-10-21 15:28:10</sys_updated_on>
     </sys_script_include>
 </record_update>

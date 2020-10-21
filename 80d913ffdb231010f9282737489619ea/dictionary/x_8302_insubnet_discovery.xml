@@ -1,3 +1,3 @@
 <?xml version="1.0" encoding="UTF-8"?><database>
-    <element extends="cmdb_ci" label="Discovery" max_length="40" name="x_8302_insubnet_discovery" sizeclass="0" type="collection"/>
+    <element extends="cmdb_ci" label="Discovery" max_length="40" name="x_8302_insubnet_discovery" sizeclass="3" type="collection"/>
 </database>

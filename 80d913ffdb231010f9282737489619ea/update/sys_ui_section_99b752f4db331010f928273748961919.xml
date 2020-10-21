@@ -4,13 +4,13 @@
             <element>name</element>
             <position>0</position>
             <sys_created_by>admin</sys_created_by>
-            <sys_created_on>2020-10-13 15:19:06</sys_created_on>
-            <sys_id>00ea63cedb3fd010f9282737489619d7</sys_id>
+            <sys_created_on>2020-10-21 17:09:00</sys_created_on>
+            <sys_id>fbb015fc2fc02010ff58c886f699b6b4</sys_id>
             <sys_mod_count>0</sys_mod_count>
             <sys_ui_formatter/>
             <sys_ui_section caption="NULL" display_value="" name="x_8302_insubnet_network" sys_domain="global" view="Default view">99b752f4db331010f928273748961919</sys_ui_section>
             <sys_updated_by>admin</sys_updated_by>
-            <sys_updated_on>2020-10-13 15:19:06</sys_updated_on>
+            <sys_updated_on>2020-10-21 17:09:00</sys_updated_on>
             <sys_user/>
             <type/>
         </sys_ui_element>
@@ -18,27 +18,27 @@
             <element>address</element>
             <position>1</position>
             <sys_created_by>admin</sys_created_by>
-            <sys_created_on>2020-10-13 15:19:06</sys_created_on>
-            <sys_id>80ea63cedb3fd010f9282737489619d7</sys_id>
+            <sys_created_on>2020-10-21 17:09:00</sys_created_on>
+            <sys_id>7fb015fc2fc02010ff58c886f699b6b4</sys_id>
             <sys_mod_count>0</sys_mod_count>
             <sys_ui_formatter/>
             <sys_ui_section caption="NULL" display_value="" name="x_8302_insubnet_network" sys_domain="global" view="Default view">99b752f4db331010f928273748961919</sys_ui_section>
             <sys_updated_by>admin</sys_updated_by>
-            <sys_updated_on>2020-10-13 15:19:06</sys_updated_on>
+            <sys_updated_on>2020-10-21 17:09:00</sys_updated_on>
             <sys_user/>
             <type/>
         </sys_ui_element>
         <sys_ui_element action="INSERT_OR_UPDATE">
-            <element>ci_count</element>
+            <element>range</element>
             <position>2</position>
             <sys_created_by>admin</sys_created_by>
-            <sys_created_on>2020-10-13 15:19:06</sys_created_on>
-            <sys_id>04ea63cedb3fd010f9282737489619d7</sys_id>
+            <sys_created_on>2020-10-21 17:09:00</sys_created_on>
+            <sys_id>ffb015fc2fc02010ff58c886f699b6b4</sys_id>
             <sys_mod_count>0</sys_mod_count>
             <sys_ui_formatter/>
             <sys_ui_section caption="NULL" display_value="" name="x_8302_insubnet_network" sys_domain="global" view="Default view">99b752f4db331010f928273748961919</sys_ui_section>
             <sys_updated_by>admin</sys_updated_by>
-            <sys_updated_on>2020-10-13 15:19:06</sys_updated_on>
+            <sys_updated_on>2020-10-21 17:09:00</sys_updated_on>
             <sys_user/>
             <type/>
         </sys_ui_element>
@@ -46,13 +46,13 @@
             <element>.split</element>
             <position>3</position>
             <sys_created_by>admin</sys_created_by>
-            <sys_created_on>2020-10-13 15:19:06</sys_created_on>
-            <sys_id>84ea63cedb3fd010f9282737489619d7</sys_id>
+            <sys_created_on>2020-10-21 17:09:00</sys_created_on>
+            <sys_id>73b015fc2fc02010ff58c886f699b6b5</sys_id>
             <sys_mod_count>0</sys_mod_count>
             <sys_ui_formatter/>
             <sys_ui_section caption="NULL" display_value="" name="x_8302_insubnet_network" sys_domain="global" view="Default view">99b752f4db331010f928273748961919</sys_ui_section>
             <sys_updated_by>admin</sys_updated_by>
-            <sys_updated_on>2020-10-13 15:19:06</sys_updated_on>
+            <sys_updated_on>2020-10-21 17:09:00</sys_updated_on>
             <sys_user/>
             <type>.split</type>
         </sys_ui_element>
@@ -60,41 +60,55 @@
             <element>type</element>
             <position>4</position>
             <sys_created_by>admin</sys_created_by>
-            <sys_created_on>2020-10-13 15:19:06</sys_created_on>
-            <sys_id>08ea63cedb3fd010f9282737489619d7</sys_id>
+            <sys_created_on>2020-10-21 17:09:00</sys_created_on>
+            <sys_id>f3b015fc2fc02010ff58c886f699b6b5</sys_id>
             <sys_mod_count>0</sys_mod_count>
             <sys_ui_formatter/>
             <sys_ui_section caption="NULL" display_value="" name="x_8302_insubnet_network" sys_domain="global" view="Default view">99b752f4db331010f928273748961919</sys_ui_section>
             <sys_updated_by>admin</sys_updated_by>
-            <sys_updated_on>2020-10-13 15:19:06</sys_updated_on>
-            <sys_user/>
-            <type/>
-        </sys_ui_element>
-        <sys_ui_element action="INSERT_OR_UPDATE">
-            <element>range</element>
-            <position>5</position>
-            <sys_created_by>admin</sys_created_by>
-            <sys_created_on>2020-10-13 15:19:06</sys_created_on>
-            <sys_id>88ea63cedb3fd010f9282737489619d7</sys_id>
-            <sys_mod_count>0</sys_mod_count>
-            <sys_ui_formatter/>
-            <sys_ui_section caption="NULL" display_value="" name="x_8302_insubnet_network" sys_domain="global" view="Default view">99b752f4db331010f928273748961919</sys_ui_section>
-            <sys_updated_by>admin</sys_updated_by>
-            <sys_updated_on>2020-10-13 15:19:06</sys_updated_on>
+            <sys_updated_on>2020-10-21 17:09:00</sys_updated_on>
             <sys_user/>
             <type/>
         </sys_ui_element>
         <sys_ui_element action="INSERT_OR_UPDATE">
             <element>hosts</element>
-            <position>6</position>
+            <position>5</position>
             <sys_created_by>admin</sys_created_by>
-            <sys_created_on>2020-10-13 15:19:06</sys_created_on>
-            <sys_id>0cea63cedb3fd010f9282737489619d7</sys_id>
+            <sys_created_on>2020-10-21 17:09:00</sys_created_on>
+            <sys_id>77b015fc2fc02010ff58c886f699b6b5</sys_id>
             <sys_mod_count>0</sys_mod_count>
             <sys_ui_formatter/>
             <sys_ui_section caption="NULL" display_value="" name="x_8302_insubnet_network" sys_domain="global" view="Default view">99b752f4db331010f928273748961919</sys_ui_section>
             <sys_updated_by>admin</sys_updated_by>
-            <sys_updated_on>2020-10-13 15:19:06</sys_updated_on>
+            <sys_updated_on>2020-10-21 17:09:00</sys_updated_on>
+            <sys_user/>
+            <type/>
+        </sys_ui_element>
+        <sys_ui_element action="INSERT_OR_UPDATE">
+            <element>ci_count</element>
+            <position>6</position>
+            <sys_created_by>admin</sys_created_by>
+            <sys_created_on>2020-10-21 17:09:00</sys_created_on>
+            <sys_id>f7b015fc2fc02010ff58c886f699b6b5</sys_id>
+            <sys_mod_count>0</sys_mod_count>
+            <sys_ui_formatter/>
+            <sys_ui_section caption="NULL" display_value="" name="x_8302_insubnet_network" sys_domain="global" view="Default view">99b752f4db331010f928273748961919</sys_ui_section>
+            <sys_updated_by>admin</sys_updated_by>
+            <sys_updated_on>2020-10-21 17:09:00</sys_updated_on>
+            <sys_user/>
+            <type/>
+        </sys_ui_element>
+        <sys_ui_element action="INSERT_OR_UPDATE">
+            <element>available_ips</element>
+            <position>7</position>
+            <sys_created_by>admin</sys_created_by>
+            <sys_created_on>2020-10-21 17:09:00</sys_created_on>
+            <sys_id>7bb015fc2fc02010ff58c886f699b6b5</sys_id>
+            <sys_mod_count>0</sys_mod_count>
+            <sys_ui_formatter/>
+            <sys_ui_section caption="NULL" display_value="" name="x_8302_insubnet_network" sys_domain="global" view="Default view">99b752f4db331010f928273748961919</sys_ui_section>
+            <sys_updated_by>admin</sys_updated_by>
+            <sys_updated_on>2020-10-21 17:09:00</sys_updated_on>
             <sys_user/>
             <type/>
         </sys_ui_element>
