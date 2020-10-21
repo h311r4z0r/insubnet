@@ -8,33 +8,33 @@
         <hint/>
         <homepage/>
         <image/>
-        <link_type>LIST</link_type>
+        <link_type>SEPARATOR</link_type>
         <map_page/>
-        <mobile_title>Network Types</mobile_title>
+        <mobile_title>Administration</mobile_title>
         <mobile_view_name>Mobile</mobile_view_name>
-        <name>x_8302_insubnet_network_type</name>
-        <order>3010</order>
+        <name/>
+        <order>2000</order>
         <override_menu_roles>false</override_menu_roles>
         <query/>
         <report/>
-        <roles>x_8302_insubnet.network_type_user</roles>
+        <roles/>
         <sys_class_name>sys_app_module</sys_class_name>
         <sys_created_by>admin</sys_created_by>
-        <sys_created_on>2020-10-13 13:40:17</sys_created_on>
+        <sys_created_on>2020-10-21 20:27:55</sys_created_on>
         <sys_domain>global</sys_domain>
         <sys_domain_path>/</sys_domain_path>
-        <sys_id>68445bcedbfbd010f9282737489619fd</sys_id>
-        <sys_mod_count>4</sys_mod_count>
-        <sys_name>Network Types</sys_name>
+        <sys_id>794ebd782f842010ff58c886f699b6bb</sys_id>
+        <sys_mod_count>0</sys_mod_count>
+        <sys_name>Schedules</sys_name>
         <sys_overrides/>
         <sys_package display_value="inSubnet" source="x_8302_insubnet">80d913ffdb231010f9282737489619ea</sys_package>
         <sys_policy/>
         <sys_scope display_value="inSubnet">80d913ffdb231010f9282737489619ea</sys_scope>
-        <sys_update_name>sys_app_module_68445bcedbfbd010f9282737489619fd</sys_update_name>
+        <sys_update_name>sys_app_module_794ebd782f842010ff58c886f699b6bb</sys_update_name>
         <sys_updated_by>admin</sys_updated_by>
-        <sys_updated_on>2020-10-21 20:26:57</sys_updated_on>
+        <sys_updated_on>2020-10-21 20:27:55</sys_updated_on>
         <timeline_page/>
-        <title>Network Types</title>
+        <title>Schedules</title>
         <uncancelable>false</uncancelable>
         <view_name/>
         <window_name/>

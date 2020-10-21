@@ -163,7 +163,7 @@ inSubnetFunctions.prototype = {
 		clearCurrent.addEncodedQuery('range='+id);
 		clearCurrent.query();
 		clearCurrent.deleteMultiple();
-		
+
 		var clearRangeCalc = new GlideRecord('x_8302_insubnet_network');
 		clearRangeCalc.addEncodedQuery('sys_id='+id);
 		clearRangeCalc.query();
@@ -385,6 +385,39 @@ inSubnetFunctions.prototype = {
 		return qResult;
 	},
 
+	getCurrentRanges: function(name){
+		if(!name){
+			qResult = 'sys_idIN';
+		}else{
+			var getSchedule = new GlideRecord('x_8302_insubnet_discovery_schedule');
+			getSchedule.get(name);
+			getSchedule.query();
+			while(getSchedule.next()){
+				var oobDiscoveryScheduleID = getSchedule.insubnet_schedule.toString();
+			}
+
+			var rangeScheduleArr = [];
+			var getRangesfromSchedule = new GlideRecord('discovery_range_item');
+			getRangesfromSchedule.addEncodedQuery('schedule='+oobDiscoveryScheduleID);
+			getRangesfromSchedule.query();
+			while(getRangesfromSchedule.next()){
+				var rangeSchedule = getRangesfromSchedule.getValue('name');
+				rangeScheduleArr.push(rangeSchedule);
+			}
+
+			var finalRangeArray = [];
+			var getFinalRangesfromNetwork = new GlideRecord('x_8302_insubnet_network');
+			getFinalRangesfromNetwork.addEncodedQuery('addressIN'+rangeScheduleArr.toString()+'^nameNOT LIKELDS');
+			getFinalRangesfromNetwork.query();
+			while(getFinalRangesfromNetwork.next()){
+				var finalArray = getFinalRangesfromNetwork.getValue('sys_id').toString();
+				finalRangeArray.push(finalArray);
+			}
+			qResult = 'sys_idIN'+finalRangeArray.toString();
+		}
+		return qResult;
+	},
+
 	updateDiscoveryRanges: function(ranges,record,oobSchedule){
 		var property = gs.getProperty('x_8302_insubnet.cmdb.integration');
 		var stringRanges = ranges.toString();
@@ -404,6 +437,26 @@ inSubnetFunctions.prototype = {
 			}
 		}
 
+	},
+
+	removeDiscoveryRanges: function(ranges,record,oobSchedule){
+		var property = gs.getProperty('x_8302_insubnet.cmdb.integration');
+		var stringRanges = ranges.toString();
+		var splitRanges = stringRanges.split(",");
+
+		for(i=0;i<splitRanges.length;i++){
+			var getRanges = new GlideRecord('x_8302_insubnet_network');
+			getRanges.get(splitRanges[i].toString());
+			getRanges.query();
+			while(getRanges.next()){
+				var address = getRanges.address;
+				//var rangeItemID = this._updateDiscoveryRange(address,oobSchedule.toString());
+				//this._createM2MrangetoDiscovery(oobSchedule.toString(),splitRanges[i].toString());
+				if(property == "true"){
+					//this._insertCMDBscheduleRel(record.toString(),splitRanges[i].toString());
+				}
+			}
+		}
 	},
 
 	_getArrayDifference: function(arr1,arr2){
@@ -701,13 +754,13 @@ inSubnetFunctions.prototype = {
         <sys_created_by>admin</sys_created_by>
         <sys_created_on>2020-10-07 17:28:05</sys_created_on>
         <sys_id>50cd81d4db335010f9282737489619a4</sys_id>
-        <sys_mod_count>191</sys_mod_count>
+        <sys_mod_count>193</sys_mod_count>
         <sys_name>inSubnetFunctions</sys_name>
         <sys_package display_value="inSubnet" source="x_8302_insubnet">80d913ffdb231010f9282737489619ea</sys_package>
         <sys_policy>read</sys_policy>
         <sys_scope display_value="inSubnet">80d913ffdb231010f9282737489619ea</sys_scope>
         <sys_update_name>sys_script_include_50cd81d4db335010f9282737489619a4</sys_update_name>
         <sys_updated_by>admin</sys_updated_by>
-        <sys_updated_on>2020-10-21 15:28:10</sys_updated_on>
+        <sys_updated_on>2020-10-21 20:25:39</sys_updated_on>
     </sys_script_include>
 </record_update>

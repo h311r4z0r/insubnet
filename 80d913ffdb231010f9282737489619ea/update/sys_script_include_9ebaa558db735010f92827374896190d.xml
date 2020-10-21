@@ -9,26 +9,26 @@
         <name>inSubnetFunctionsAjax</name>
         <script><![CDATA[var inSubnetFunctionsAjax = Class.create();
 inSubnetFunctionsAjax.prototype = Object.extendsObject(global.AbstractAjaxProcessor, {
-	
+
 	getNetwork: function(){
 		var ip = this.getParameter('sysparm_ip');
 		var mask = this.getParameter('sysparm_mask');
 		return new inSubnetFunctions().calculateNetwork(ip,mask).toString();		
 	},
-	
+
 	getRanges: function(){
 		var ip = this.getParameter('sysparm_ip');
 		var mask = this.getParameter('sysparm_mask');
 		var subnet = this.getParameter('sysparm_subnet');
 		return new inSubnetFunctions().calculateNetwork(ip,mask,subnet).toString();		
 	},
-	
+
 	validateNetwork: function(){
 		var ip = this.getParameter('sysparm_ip');
 		var mask = this.getParameter('sysparm_mask');
 		return new inSubnetFunctions().validateNetwork(ip,mask).toString();		
 	},
-	
+
 	checkDiscoveryName: function(){
 		var name = this.getParameter('sysparm_schedule');
 		return new inSubnetFunctions().validateSchedule(name);
@@ -40,13 +40,13 @@ inSubnetFunctionsAjax.prototype = Object.extendsObject(global.AbstractAjaxProces
         <sys_created_by>admin</sys_created_by>
         <sys_created_on>2020-10-07 19:43:10</sys_created_on>
         <sys_id>9ebaa558db735010f92827374896190d</sys_id>
-        <sys_mod_count>35</sys_mod_count>
+        <sys_mod_count>37</sys_mod_count>
         <sys_name>inSubnetFunctionsAjax</sys_name>
         <sys_package display_value="inSubnet" source="x_8302_insubnet">80d913ffdb231010f9282737489619ea</sys_package>
         <sys_policy>read</sys_policy>
         <sys_scope display_value="inSubnet">80d913ffdb231010f9282737489619ea</sys_scope>
         <sys_update_name>sys_script_include_9ebaa558db735010f92827374896190d</sys_update_name>
         <sys_updated_by>admin</sys_updated_by>
-        <sys_updated_on>2020-10-15 17:59:56</sys_updated_on>
+        <sys_updated_on>2020-10-21 20:16:42</sys_updated_on>
     </sys_script_include>
 </record_update>
