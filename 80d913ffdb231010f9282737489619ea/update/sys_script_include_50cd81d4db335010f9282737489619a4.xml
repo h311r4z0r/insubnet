@@ -103,6 +103,15 @@ inSubnetFunctions.prototype = {
 	},
 
 	deleteNetworks: function(id,opt){
+		var getRangetoDiscovery = new GlideRecord('x_8302_insubnet_m2m_range_to_discovery');
+		getRangetoDiscovery.getEncodedQuery('range.parent='+id);
+		getRangetoDiscovery.query();
+		while(getRangetoDiscovery.next()){
+			if(getRangetoDiscovery.schedule){
+				this._deleteSchedule(getRangetoDiscovery.schedule.toString());
+			}
+		}
+		
 		var property = gs.getProperty('x_8302_insubnet.cmdb.integration');
 		if(property == "true"){
 			var dCMDBDiscoRanges = new GlideRecord('x_8302_insubnet_discovery_range');
@@ -116,15 +125,6 @@ inSubnetFunctions.prototype = {
 				if(getCMDBtoDiscovery.schedule){
 					this._deleteCMDBSchedule(getCMDBtoDiscovery.schedule.toString());
 				}
-			}
-		}
-
-		var getRangetoDiscovery = new GlideRecord('x_8302_insubnet_m2m_range_to_discovery');
-		getRangetoDiscovery.getEncodedQuery('range.parent='+id);
-		getRangetoDiscovery.query();
-		while(getRangetoDiscovery.next()){
-			if(getRangetoDiscovery.schedule){
-				this._deleteSchedule(getRangetoDiscovery.schedule.toString());
 			}
 		}
 
@@ -450,10 +450,10 @@ inSubnetFunctions.prototype = {
 			getRanges.query();
 			while(getRanges.next()){
 				var address = getRanges.address;
-				//var rangeItemID = this._updateDiscoveryRange(address,oobSchedule.toString());
-				//this._createM2MrangetoDiscovery(oobSchedule.toString(),splitRanges[i].toString());
+				var rangeItemID = this._deleteDiscoveryRange(address,oobSchedule.toString());
+					this._deleteM2MrangetoDiscovery(oobSchedule.toString(),splitRanges[i].toString());
 				if(property == "true"){
-					//this._insertCMDBscheduleRel(record.toString(),splitRanges[i].toString());
+					this._deleteCMDBscheduleRel(record.toString(),splitRanges[i].toString());
 				}
 			}
 		}
@@ -494,6 +494,15 @@ inSubnetFunctions.prototype = {
 			delSchedule.deleteRecord();
 		}
 	},
+	
+	_deleteM2MrangetoDiscovery: function(schedule,range){
+		var lookupRec = new GlideRecord('x_8302_insubnet_m2m_range_to_discovery');
+		lookupRec.addEncodedQuery('schedule='+schedule+'^range='+range);
+		lookupRec.query();
+		while(lookupRec.next()){		
+			lookupRec.deleteRecord();
+		} 
+	},
 
 	_createM2MrangetoDiscovery: function(schedule,range){
 		var lookupRec = new GlideRecord('x_8302_insubnet_m2m_range_to_discovery');
@@ -518,6 +527,16 @@ inSubnetFunctions.prototype = {
 		return recordID;
 	},
 
+	_deleteDiscoveryRange: function(address,schedule){
+		var splitAdd = address.split("/");
+		var lookupRangeItem = new GlideRecord('discovery_range_item');
+		lookupRangeItem.addEncodedQuery('name='+address+'^schedule='+schedule+'^network_ip='+splitAdd[0]+'^netmask='+splitAdd[1]);
+		lookupRangeItem.query();
+		while(lookupRangeItem.next()){
+			lookupRangeItem.deleteRecord();
+		}
+	},
+	
 	_updateDiscoveryRange: function(address,schedule){
 		var splitAdd = address.split("/");
 		var recordID = new global.QuickRanges().createItem('discovery_schedule',schedule.toString(),'IP Network'); 
@@ -534,6 +553,29 @@ inSubnetFunctions.prototype = {
 		while(getIP.next()){
 			this._insertRangeToCI(getIP.sys_id.toString(),id);
 		}
+	},
+	
+	_deleteCMDBscheduleRel: function(schedule,range){
+		var getCMDBrange = new GlideRecord('x_8302_insubnet_discovery_range');
+		getCMDBrange.addEncodedQuery('insubnet_range='+range);
+		getCMDBrange.query();
+		while(getCMDBrange.next()){
+			var CMDBrangeID = getCMDBrange.sys_id.toString();
+		}
+
+		var getRelType = new GlideRecord('cmdb_rel_type');
+		getRelType.addEncodedQuery('name=Managed by::Manages');
+		getRelType.query();
+		while(getRelType.next()){
+			var relTypeID = getRelType.sys_id.toString();
+		}
+
+		var lookupCMDBRel = new GlideRecord('cmdb_rel_ci');
+		lookupCMDBRel.addEncodedQuery('parent='+schedule+'^child='+CMDBrangeID+'^type='+relTypeID);
+		lookupCMDBRel.query();
+		while(lookupCMDBRel.next()){
+			lookupCMDBRel.deleteRecord();
+		}	
 	},
 
 	_insertCMDBscheduleRel: function(schedule,range){
@@ -754,13 +796,13 @@ inSubnetFunctions.prototype = {
         <sys_created_by>admin</sys_created_by>
         <sys_created_on>2020-10-07 17:28:05</sys_created_on>
         <sys_id>50cd81d4db335010f9282737489619a4</sys_id>
-        <sys_mod_count>193</sys_mod_count>
+        <sys_mod_count>197</sys_mod_count>
         <sys_name>inSubnetFunctions</sys_name>
         <sys_package display_value="inSubnet" source="x_8302_insubnet">80d913ffdb231010f9282737489619ea</sys_package>
         <sys_policy>read</sys_policy>
         <sys_scope display_value="inSubnet">80d913ffdb231010f9282737489619ea</sys_scope>
         <sys_update_name>sys_script_include_50cd81d4db335010f9282737489619a4</sys_update_name>
         <sys_updated_by>admin</sys_updated_by>
-        <sys_updated_on>2020-10-21 20:25:39</sys_updated_on>
+        <sys_updated_on>2020-10-22 13:05:44</sys_updated_on>
     </sys_script_include>
 </record_update>
