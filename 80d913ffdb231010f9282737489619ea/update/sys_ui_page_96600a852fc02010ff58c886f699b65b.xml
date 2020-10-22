@@ -1,0 +1,36 @@
+<?xml version="1.0" encoding="UTF-8"?><record_update table="sys_ui_page">
+    <sys_ui_page action="INSERT_OR_UPDATE">
+        <category>general</category>
+        <client_script><![CDATA[function onLoadFunction(){
+	var bringSchedules = new GlideAjax('inSubnetFunctionsAjax');
+	bringSchedules.addParam('sysparm_name', 'bringSchedulesOver');
+	bringSchedules.getXML();
+}]]></client_script>
+        <description/>
+        <direct>false</direct>
+        <endpoint>x_8302_insubnet_Add Legacy Schedules.do</endpoint>
+        <html><![CDATA[<?xml version="1.0" encoding="utf-8" ?>
+<j:jelly trim="false" xmlns:j="jelly:core" xmlns:g="glide" xmlns:j2="null" xmlns:g2="null">
+	<script>
+		addLoadEvent( function() {
+		onLoadFunction();
+		});
+	</script>
+	This is option is adding legacy schedules to the inSubnet application.<br />The page will only execute one time based on a system property.<br />If you need to rerun this option for any reason, be sure to set the property x_8302_insubnet.processed.legacy.schedules to false and rerun this option.
+</j:jelly>]]></html>
+        <name>Add Legacy Schedules</name>
+        <processing_script/>
+        <sys_class_name>sys_ui_page</sys_class_name>
+        <sys_created_by>admin</sys_created_by>
+        <sys_created_on>2020-10-22 15:17:27</sys_created_on>
+        <sys_id>96600a852fc02010ff58c886f699b65b</sys_id>
+        <sys_mod_count>7</sys_mod_count>
+        <sys_name>Add Legacy Schedules</sys_name>
+        <sys_package display_value="inSubnet" source="x_8302_insubnet">80d913ffdb231010f9282737489619ea</sys_package>
+        <sys_policy/>
+        <sys_scope display_value="inSubnet">80d913ffdb231010f9282737489619ea</sys_scope>
+        <sys_update_name>sys_ui_page_96600a852fc02010ff58c886f699b65b</sys_update_name>
+        <sys_updated_by>admin</sys_updated_by>
+        <sys_updated_on>2020-10-22 16:30:19</sys_updated_on>
+    </sys_ui_page>
+</record_update>
