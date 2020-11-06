@@ -26,17 +26,15 @@ inSubnetExtraFunctions.prototype = {
 
 			for(i=0; i<getSchedulesArr.length; i++){
 				var parentID = this._createCalulatorRecord(getSchedulesArr[i]);
-				var getRangeItemArr = [];
 				var getRangeItem = new GlideRecord('discovery_range_item');
 				getRangeItem.addEncodedQuery('schedule='+getSchedulesArr[i]);
 				getRangeItem.query();
 				while(getRangeItem.next()){
 					var rangeItemID = getRangeItem.getValue('sys_id').toString();
-					var range = getRangeItem.name;
-					range = range.split("/");
-					this._processRangeType(rangeItemID,schedule,parentID);
+					this._processRangeType(rangeItemID,getSchedulesArr[i],parentID);
 				}
 			}
+			
 			var sysproprec = new GlideRecord('sys_properties');
 			sysproprec.addQuery('name', 'x_8302_insubnet.processed.legacy.schedules');
 			sysproprec.query();
@@ -80,8 +78,8 @@ inSubnetExtraFunctions.prototype = {
 		var insertName = "LDS "+schdname;
 
 		var networkID = new inSubnetFunctions().insertNetwork(insertName,address,netmask,'',parentID);
-		new inSubnetFunctions().discoveryRangesNoInsert(networkID,schedule,schdname);
-	},
+		var newRel = new inSubnetFunctions().discoveryRangesNoInsert(networkID,schedule,schdname);
+		},
 
 	_createCalulatorRecord: function(schedule,address,netmask){
 		var getScheduleName = new GlideRecord('discovery_schedule');
@@ -109,13 +107,13 @@ inSubnetExtraFunctions.prototype = {
         <sys_created_by>admin</sys_created_by>
         <sys_created_on>2020-10-20 14:29:35</sys_created_on>
         <sys_id>da82ef942f402010ff58c886f699b6d6</sys_id>
-        <sys_mod_count>32</sys_mod_count>
+        <sys_mod_count>46</sys_mod_count>
         <sys_name>inSubnetExtraFunctions</sys_name>
         <sys_package display_value="inSubnet" source="x_8302_insubnet">80d913ffdb231010f9282737489619ea</sys_package>
         <sys_policy>read</sys_policy>
         <sys_scope display_value="inSubnet">80d913ffdb231010f9282737489619ea</sys_scope>
         <sys_update_name>sys_script_include_da82ef942f402010ff58c886f699b6d6</sys_update_name>
         <sys_updated_by>admin</sys_updated_by>
-        <sys_updated_on>2020-10-22 16:34:31</sys_updated_on>
+        <sys_updated_on>2020-11-06 15:18:09</sys_updated_on>
     </sys_script_include>
 </record_update>
