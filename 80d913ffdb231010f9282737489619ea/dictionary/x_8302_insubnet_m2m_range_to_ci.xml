@@ -1,5 +1,5 @@
 <?xml version="1.0" encoding="UTF-8"?><database>
-    <element label="Device" max_length="40" name="x_8302_insubnet_m2m_range_to_ci" sizeclass="0" type="collection">
+    <element label="Device" max_length="40" name="x_8302_insubnet_m2m_range_to_ci" sizeclass="24" type="collection">
         <element label="Device" max_length="32" name="hardware" reference="cmdb_ci_hardware" type="reference"/>
         <element label="Range" max_length="32" name="range" reference="x_8302_insubnet_network" type="reference"/>
         <index name="index">
