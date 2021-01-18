@@ -1,0 +1,75 @@
+<?xml version="1.0" encoding="UTF-8"?><record_update sys_domain="global" table="sys_aw_list">
+    <sys_aw_list action="DELETE">
+        <active>true</active>
+        <category display_value="Discovery Schedules">bc6fa1332f502010ff58c886f699b661</category>
+        <columns>asset,asset_tag,assigned,assigned_to,assignment_group,attestation_score,attested,attested_by,attested_date,attributes,can_print,category,change_control,checked_in,checked_out,comments,company,correlation_id,cost,cost_cc,cost_center,delivery_date,department,discovery_source,dns_domain,due,due_in,duplicate_of,environment,fault_count,first_discovered,fqdn,gl_account,install_date,install_status,insubnet_schedule,invoice_number,ip_address,justification,last_discovered,lease_id,life_cycle_stage,life_cycle_stage_status,location,mac_address,maintenance_schedule,managed_by,managed_by_group,manufacturer,model_id,model_number,monitor,name,operational_status,order_date,owned_by,po_number,purchase_date,schedule,serial_number,short_description,skip_sync,start_date,subcategory,support_group,supported_by,sys_class_name,sys_class_path,sys_created_by,sys_created_on,sys_domain,sys_domain_path,sys_id,sys_mod_count,sys_tags,sys_updated_by,sys_updated_on,unverified,vendor,warranty_expiration</columns>
+        <condition/>
+        <groups/>
+        <list_attributes/>
+        <order>100</order>
+        <roles/>
+        <sys_class_name>sys_aw_list</sys_class_name>
+        <sys_created_by>admin</sys_created_by>
+        <sys_created_on>2020-11-12 13:20:20</sys_created_on>
+        <sys_domain>global</sys_domain>
+        <sys_domain_path>/</sys_domain_path>
+        <sys_id>f46fa1332f502010ff58c886f699b663</sys_id>
+        <sys_mod_count>1</sys_mod_count>
+        <sys_name>CMDB Discovery Schedule</sys_name>
+        <sys_overrides/>
+        <sys_package display_value="inSubnet" source="x_8302_insubnet">80d913ffdb231010f9282737489619ea</sys_package>
+        <sys_policy/>
+        <sys_scope display_value="inSubnet">80d913ffdb231010f9282737489619ea</sys_scope>
+        <sys_update_name>sys_aw_list_f46fa1332f502010ff58c886f699b663</sys_update_name>
+        <sys_updated_by>admin</sys_updated_by>
+        <sys_updated_on>2020-11-12 13:40:33</sys_updated_on>
+        <table>x_8302_insubnet_discovery_schedule</table>
+        <title>CMDB Discovery Schedule</title>
+        <workspace display_value="inSubnet">a86fa5bf2f102010ff58c886f699b603</workspace>
+    </sys_aw_list>
+    <sys_update_version action="INSERT_OR_UPDATE">
+        <action>DELETE</action>
+        <application display_value="inSubnet">80d913ffdb231010f9282737489619ea</application>
+        <file_path/>
+        <instance_id>e7486de4dbb4dcd89a4dcac505961986</instance_id>
+        <instance_name>dev103201</instance_name>
+        <name>sys_aw_list_f46fa1332f502010ff58c886f699b663</name>
+        <payload><![CDATA[<?xml version="1.0" encoding="UTF-8"?><record_update sys_domain="global" table="sys_aw_list"><sys_aw_list action="INSERT_OR_UPDATE"><active>true</active><category display_value="Discovery Schedules">bc6fa1332f502010ff58c886f699b661</category><columns>asset,asset_tag,assigned,assigned_to,assignment_group,attestation_score,attested,attested_by,attested_date,attributes,can_print,category,change_control,checked_in,checked_out,comments,company,correlation_id,cost,cost_cc,cost_center,delivery_date,department,discovery_source,dns_domain,due,due_in,duplicate_of,environment,fault_count,first_discovered,fqdn,gl_account,install_date,install_status,insubnet_schedule,invoice_number,ip_address,justification,last_discovered,lease_id,life_cycle_stage,life_cycle_stage_status,location,mac_address,maintenance_schedule,managed_by,managed_by_group,manufacturer,model_id,model_number,monitor,name,operational_status,order_date,owned_by,po_number,purchase_date,schedule,serial_number,short_description,skip_sync,start_date,subcategory,support_group,supported_by,sys_class_name,sys_class_path,sys_created_by,sys_created_on,sys_domain,sys_domain_path,sys_id,sys_mod_count,sys_tags,sys_updated_by,sys_updated_on,unverified,vendor,warranty_expiration</columns><condition/><groups/><list_attributes/><order>100</order><roles/><sys_class_name>sys_aw_list</sys_class_name><sys_created_by>admin</sys_created_by><sys_created_on>2020-11-12 13:20:20</sys_created_on><sys_domain>global</sys_domain><sys_domain_path>/</sys_domain_path><sys_id>f46fa1332f502010ff58c886f699b663</sys_id><sys_mod_count>1</sys_mod_count><sys_name>CMDB Discovery Schedule</sys_name><sys_overrides/><sys_package display_value="inSubnet" source="x_8302_insubnet">80d913ffdb231010f9282737489619ea</sys_package><sys_policy/><sys_scope display_value="inSubnet">80d913ffdb231010f9282737489619ea</sys_scope><sys_update_name>sys_aw_list_f46fa1332f502010ff58c886f699b663</sys_update_name><sys_updated_by>admin</sys_updated_by><sys_updated_on>2020-11-12 13:40:33</sys_updated_on><table>x_8302_insubnet_discovery_schedule</table><title>CMDB Discovery Schedule</title><workspace display_value="inSubnet">a86fa5bf2f102010ff58c886f699b603</workspace></sys_aw_list></record_update>]]></payload>
+        <payload_hash>-1102617502</payload_hash>
+        <record_name>CMDB Discovery Schedule</record_name>
+        <reverted_from/>
+        <source>4d672e1f2fcc2010ff58c886f699b616</source>
+        <source_table>sys_update_set</source_table>
+        <state>previous</state>
+        <sys_created_by>admin</sys_created_by>
+        <sys_created_on>2020-11-12 13:40:33</sys_created_on>
+        <sys_id>c50479772f502010ff58c886f699b67b</sys_id>
+        <sys_mod_count>0</sys_mod_count>
+        <sys_recorded_at>175bcafb6860000001</sys_recorded_at>
+        <sys_updated_by>admin</sys_updated_by>
+        <sys_updated_on>2020-11-12 13:40:33</sys_updated_on>
+        <type>Workspace List</type>
+        <update_guid>4504f937a55020109f70bb6519ec63a2</update_guid>
+        <update_guid_history>4504f937a55020109f70bb6519ec63a2:-1102617502,b46fa133275020106339f75a464c8064:1162922530</update_guid_history>
+    </sys_update_version>
+    <sys_metadata_delete action="INSERT_OR_UPDATE">
+        <sys_audit_delete/>
+        <sys_class_name>sys_metadata_delete</sys_class_name>
+        <sys_created_by>admin</sys_created_by>
+        <sys_created_on>2020-11-12 13:53:52</sys_created_on>
+        <sys_db_object display_value="" name="sys_aw_list">sys_aw_list</sys_db_object>
+        <sys_id>a8862ae0a548436898f24b397bc4d724</sys_id>
+        <sys_metadata>f46fa1332f502010ff58c886f699b663</sys_metadata>
+        <sys_mod_count>0</sys_mod_count>
+        <sys_name>CMDB Discovery Schedule</sys_name>
+        <sys_package display_value="inSubnet" source="x_8302_insubnet">80d913ffdb231010f9282737489619ea</sys_package>
+        <sys_parent/>
+        <sys_policy/>
+        <sys_scope display_value="inSubnet">80d913ffdb231010f9282737489619ea</sys_scope>
+        <sys_scope_delete display_value="">02cdb062db124b0f8471b9b5066e6be1</sys_scope_delete>
+        <sys_update_name>sys_aw_list_f46fa1332f502010ff58c886f699b663</sys_update_name>
+        <sys_update_version display_value="sys_aw_list_f46fa1332f502010ff58c886f699b663">c50479772f502010ff58c886f699b67b</sys_update_version>
+        <sys_updated_by>admin</sys_updated_by>
+        <sys_updated_on>2020-11-12 13:53:52</sys_updated_on>
+    </sys_metadata_delete>
+</record_update>

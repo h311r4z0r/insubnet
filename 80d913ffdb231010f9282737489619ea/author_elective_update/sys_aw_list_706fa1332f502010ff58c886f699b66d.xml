@@ -1,0 +1,75 @@
+<?xml version="1.0" encoding="UTF-8"?><record_update sys_domain="global" table="sys_aw_list">
+    <sys_aw_list action="DELETE">
+        <active>true</active>
+        <category display_value="Networks">386fa1332f502010ff58c886f699b66b</category>
+        <columns>address,available_ips,ci_count,hosts,name,parent,range,supernet,sys_created_by,sys_created_on,sys_id,sys_mod_count,sys_tags,sys_updated_by,sys_updated_on,type</columns>
+        <condition/>
+        <groups/>
+        <list_attributes/>
+        <order>100</order>
+        <roles/>
+        <sys_class_name>sys_aw_list</sys_class_name>
+        <sys_created_by>admin</sys_created_by>
+        <sys_created_on>2020-11-12 13:20:20</sys_created_on>
+        <sys_domain>global</sys_domain>
+        <sys_domain_path>/</sys_domain_path>
+        <sys_id>706fa1332f502010ff58c886f699b66d</sys_id>
+        <sys_mod_count>1</sys_mod_count>
+        <sys_name>inSubnet Network</sys_name>
+        <sys_overrides/>
+        <sys_package display_value="inSubnet" source="x_8302_insubnet">80d913ffdb231010f9282737489619ea</sys_package>
+        <sys_policy/>
+        <sys_scope display_value="inSubnet">80d913ffdb231010f9282737489619ea</sys_scope>
+        <sys_update_name>sys_aw_list_706fa1332f502010ff58c886f699b66d</sys_update_name>
+        <sys_updated_by>admin</sys_updated_by>
+        <sys_updated_on>2020-11-12 13:40:20</sys_updated_on>
+        <table>x_8302_insubnet_network</table>
+        <title>inSubnet Network</title>
+        <workspace display_value="inSubnet">a86fa5bf2f102010ff58c886f699b603</workspace>
+    </sys_aw_list>
+    <sys_update_version action="INSERT_OR_UPDATE">
+        <action>DELETE</action>
+        <application display_value="inSubnet">80d913ffdb231010f9282737489619ea</application>
+        <file_path/>
+        <instance_id>e7486de4dbb4dcd89a4dcac505961986</instance_id>
+        <instance_name>dev103201</instance_name>
+        <name>sys_aw_list_706fa1332f502010ff58c886f699b66d</name>
+        <payload><![CDATA[<?xml version="1.0" encoding="UTF-8"?><record_update sys_domain="global" table="sys_aw_list"><sys_aw_list action="INSERT_OR_UPDATE"><active>true</active><category display_value="Networks">386fa1332f502010ff58c886f699b66b</category><columns>address,available_ips,ci_count,hosts,name,parent,range,supernet,sys_created_by,sys_created_on,sys_id,sys_mod_count,sys_tags,sys_updated_by,sys_updated_on,type</columns><condition/><groups/><list_attributes/><order>100</order><roles/><sys_class_name>sys_aw_list</sys_class_name><sys_created_by>admin</sys_created_by><sys_created_on>2020-11-12 13:20:20</sys_created_on><sys_domain>global</sys_domain><sys_domain_path>/</sys_domain_path><sys_id>706fa1332f502010ff58c886f699b66d</sys_id><sys_mod_count>1</sys_mod_count><sys_name>inSubnet Network</sys_name><sys_overrides/><sys_package display_value="inSubnet" source="x_8302_insubnet">80d913ffdb231010f9282737489619ea</sys_package><sys_policy/><sys_scope display_value="inSubnet">80d913ffdb231010f9282737489619ea</sys_scope><sys_update_name>sys_aw_list_706fa1332f502010ff58c886f699b66d</sys_update_name><sys_updated_by>admin</sys_updated_by><sys_updated_on>2020-11-12 13:40:20</sys_updated_on><table>x_8302_insubnet_network</table><title>inSubnet Network</title><workspace display_value="inSubnet">a86fa5bf2f102010ff58c886f699b603</workspace></sys_aw_list></record_update>]]></payload>
+        <payload_hash>-1514814217</payload_hash>
+        <record_name>inSubnet Network</record_name>
+        <reverted_from/>
+        <source>4d672e1f2fcc2010ff58c886f699b616</source>
+        <source_table>sys_update_set</source_table>
+        <state>previous</state>
+        <sys_created_by>admin</sys_created_by>
+        <sys_created_on>2020-11-12 13:40:20</sys_created_on>
+        <sys_id>cef335772f502010ff58c886f699b666</sys_id>
+        <sys_mod_count>0</sys_mod_count>
+        <sys_recorded_at>175bcaf850b0000001</sys_recorded_at>
+        <sys_updated_by>admin</sys_updated_by>
+        <sys_updated_on>2020-11-12 13:40:20</sys_updated_on>
+        <type>Workspace List</type>
+        <update_guid>0af33577fa502010f2a3e8944f318966</update_guid>
+        <update_guid_history>0af33577fa502010f2a3e8944f318966:-1514814217,306fa133595020104c548fc7bdd1606e:-2016719861</update_guid_history>
+    </sys_update_version>
+    <sys_metadata_delete action="INSERT_OR_UPDATE">
+        <sys_audit_delete/>
+        <sys_class_name>sys_metadata_delete</sys_class_name>
+        <sys_created_by>admin</sys_created_by>
+        <sys_created_on>2020-11-12 13:53:52</sys_created_on>
+        <sys_db_object display_value="" name="sys_aw_list">sys_aw_list</sys_db_object>
+        <sys_id>73eb4fa6369542889bf13a77fcbc1711</sys_id>
+        <sys_metadata>706fa1332f502010ff58c886f699b66d</sys_metadata>
+        <sys_mod_count>0</sys_mod_count>
+        <sys_name>inSubnet Network</sys_name>
+        <sys_package display_value="inSubnet" source="x_8302_insubnet">80d913ffdb231010f9282737489619ea</sys_package>
+        <sys_parent/>
+        <sys_policy/>
+        <sys_scope display_value="inSubnet">80d913ffdb231010f9282737489619ea</sys_scope>
+        <sys_scope_delete display_value="">02cdb062db124b0f8471b9b5066e6be1</sys_scope_delete>
+        <sys_update_name>sys_aw_list_706fa1332f502010ff58c886f699b66d</sys_update_name>
+        <sys_update_version display_value="sys_aw_list_706fa1332f502010ff58c886f699b66d">cef335772f502010ff58c886f699b666</sys_update_version>
+        <sys_updated_by>admin</sys_updated_by>
+        <sys_updated_on>2020-11-12 13:53:52</sys_updated_on>
+    </sys_metadata_delete>
+</record_update>

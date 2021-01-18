@@ -1,0 +1,71 @@
+<?xml version="1.0" encoding="UTF-8"?><record_update table="sys_aw_renderer">
+    <sys_aw_renderer action="DELETE">
+        <active>true</active>
+        <custom_renderer display_value="sn-knowledge-discussion-wrapper">72799ecde4d1ac5180318bc017e3d71f</custom_renderer>
+        <custom_renderer_tag>sn-knowledge-discussion-wrapper</custom_renderer_tag>
+        <macroponent/>
+        <module_flag>false</module_flag>
+        <renderer_type/>
+        <sys_class_name>sys_aw_renderer</sys_class_name>
+        <sys_created_by>admin</sys_created_by>
+        <sys_created_on>2020-11-12 13:07:58</sys_created_on>
+        <sys_id>3b8c613f2f102010ff58c886f699b61c</sys_id>
+        <sys_mod_count>0</sys_mod_count>
+        <sys_name/>
+        <sys_package display_value="inSubnet" source="x_8302_insubnet">80d913ffdb231010f9282737489619ea</sys_package>
+        <sys_policy/>
+        <sys_scope display_value="inSubnet">80d913ffdb231010f9282737489619ea</sys_scope>
+        <sys_update_name>sys_aw_renderer_3b8c613f2f102010ff58c886f699b61c</sys_update_name>
+        <sys_updated_by>admin</sys_updated_by>
+        <sys_updated_on>2020-11-12 13:07:58</sys_updated_on>
+        <table>kb_knowledge</table>
+        <type_ext display_value="record">56a1aaa10f513300bb57f4a1ff767ede</type_ext>
+        <workspace_config display_value="inSubnet">cb8c6dfb2f102010ff58c886f699b6b9</workspace_config>
+        <workspace_module/>
+    </sys_aw_renderer>
+    <sys_update_version action="INSERT_OR_UPDATE">
+        <action>DELETE</action>
+        <application display_value="inSubnet">80d913ffdb231010f9282737489619ea</application>
+        <file_path/>
+        <instance_id>e7486de4dbb4dcd89a4dcac505961986</instance_id>
+        <instance_name>dev103201</instance_name>
+        <name>sys_aw_renderer_3b8c613f2f102010ff58c886f699b61c</name>
+        <payload><![CDATA[<?xml version="1.0" encoding="UTF-8"?><record_update table="sys_aw_renderer"><sys_aw_renderer action="INSERT_OR_UPDATE"><active>true</active><custom_renderer display_value="sn-knowledge-discussion-wrapper">72799ecde4d1ac5180318bc017e3d71f</custom_renderer><custom_renderer_tag>sn-knowledge-discussion-wrapper</custom_renderer_tag><macroponent/><module_flag>false</module_flag><renderer_type/><sys_class_name>sys_aw_renderer</sys_class_name><sys_created_by>admin</sys_created_by><sys_created_on>2020-11-12 13:07:58</sys_created_on><sys_id>3b8c613f2f102010ff58c886f699b61c</sys_id><sys_mod_count>0</sys_mod_count><sys_name/><sys_package display_value="inSubnet" source="x_8302_insubnet">80d913ffdb231010f9282737489619ea</sys_package><sys_policy/><sys_scope display_value="inSubnet">80d913ffdb231010f9282737489619ea</sys_scope><sys_update_name>sys_aw_renderer_3b8c613f2f102010ff58c886f699b61c</sys_update_name><sys_updated_by>admin</sys_updated_by><sys_updated_on>2020-11-12 13:07:58</sys_updated_on><table>kb_knowledge</table><type_ext display_value="record">56a1aaa10f513300bb57f4a1ff767ede</type_ext><workspace_config display_value="inSubnet">cb8c6dfb2f102010ff58c886f699b6b9</workspace_config><workspace_module/></sys_aw_renderer></record_update>]]></payload>
+        <payload_hash>-212630675</payload_hash>
+        <record_name/>
+        <reverted_from/>
+        <source>4d672e1f2fcc2010ff58c886f699b616</source>
+        <source_table>sys_update_set</source_table>
+        <state>previous</state>
+        <sys_created_by>admin</sys_created_by>
+        <sys_created_on>2020-11-12 13:07:58</sys_created_on>
+        <sys_id>ff8c613f2f102010ff58c886f699b61d</sys_id>
+        <sys_mod_count>0</sys_mod_count>
+        <sys_recorded_at>175bc91e0550000001</sys_recorded_at>
+        <sys_updated_by>admin</sys_updated_by>
+        <sys_updated_on>2020-11-12 13:07:58</sys_updated_on>
+        <type>Workspace Renderer</type>
+        <update_guid>3b8c613ff310201034477cc3eb0bc11d</update_guid>
+        <update_guid_history>3b8c613ff310201034477cc3eb0bc11d:-212630675</update_guid_history>
+    </sys_update_version>
+    <sys_metadata_delete action="INSERT_OR_UPDATE">
+        <sys_audit_delete/>
+        <sys_class_name>sys_metadata_delete</sys_class_name>
+        <sys_created_by>admin</sys_created_by>
+        <sys_created_on>2020-11-12 13:07:59</sys_created_on>
+        <sys_db_object display_value="" name="sys_aw_renderer">sys_aw_renderer</sys_db_object>
+        <sys_id>3591a35b67454f10926c94017310b900</sys_id>
+        <sys_metadata>3b8c613f2f102010ff58c886f699b61c</sys_metadata>
+        <sys_mod_count>0</sys_mod_count>
+        <sys_name/>
+        <sys_package display_value="inSubnet" source="x_8302_insubnet">80d913ffdb231010f9282737489619ea</sys_package>
+        <sys_parent/>
+        <sys_policy/>
+        <sys_scope display_value="inSubnet">80d913ffdb231010f9282737489619ea</sys_scope>
+        <sys_scope_delete display_value="">02cdb062db124b0f8471b9b5066e6be1</sys_scope_delete>
+        <sys_update_name>sys_aw_renderer_3b8c613f2f102010ff58c886f699b61c</sys_update_name>
+        <sys_update_version display_value="sys_aw_renderer_3b8c613f2f102010ff58c886f699b61c">ff8c613f2f102010ff58c886f699b61d</sys_update_version>
+        <sys_updated_by>admin</sys_updated_by>
+        <sys_updated_on>2020-11-12 13:07:59</sys_updated_on>
+    </sys_metadata_delete>
+</record_update>

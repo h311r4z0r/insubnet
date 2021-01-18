@@ -1,0 +1,78 @@
+<?xml version="1.0" encoding="UTF-8"?><record_update table="sys_ux_page_element">
+    <sys_ux_content_placeholder_elem action="DELETE">
+        <attrs/>
+        <children/>
+        <component/>
+        <is_root>false</is_root>
+        <layout/>
+        <limit>1</limit>
+        <macroponent/>
+        <macroponent_config/>
+        <name>Landing Page Placeholder</name>
+        <order>0</order>
+        <page display_value="Workspace Core">b70867ad0f603300bb57f4a1ff767e15</page>
+        <parent display_value="">df8cadfb2f102010ff58c886f699b6fa</parent>
+        <parent_slot/>
+        <picker/>
+        <picker_condition/>
+        <sys_class_name>sys_ux_content_placeholder_elem</sys_class_name>
+        <sys_created_by>admin</sys_created_by>
+        <sys_created_on>2020-11-12 13:07:58</sys_created_on>
+        <sys_id>b78c613f2f102010ff58c886f699b61e</sys_id>
+        <sys_mod_count>0</sys_mod_count>
+        <sys_name>Landing Page Placeholder</sys_name>
+        <sys_package display_value="inSubnet" source="x_8302_insubnet">80d913ffdb231010f9282737489619ea</sys_package>
+        <sys_policy/>
+        <sys_scope display_value="inSubnet">80d913ffdb231010f9282737489619ea</sys_scope>
+        <sys_update_name>sys_ux_content_placeholder_elem_b78c613f2f102010ff58c886f699b61e</sys_update_name>
+        <sys_updated_by>admin</sys_updated_by>
+        <sys_updated_on>2020-11-12 13:07:58</sys_updated_on>
+        <tree_root/>
+    </sys_ux_content_placeholder_elem>
+    <sys_variable_value action="DELETE" query="document_key=b78c613f2f102010ff58c886f699b61e"/>
+    <sys_update_version action="INSERT_OR_UPDATE">
+        <action>DELETE</action>
+        <application display_value="inSubnet">80d913ffdb231010f9282737489619ea</application>
+        <file_path/>
+        <instance_id>e7486de4dbb4dcd89a4dcac505961986</instance_id>
+        <instance_name>dev103201</instance_name>
+        <name>sys_ux_content_placeholder_elem_b78c613f2f102010ff58c886f699b61e</name>
+        <payload><![CDATA[<?xml version="1.0" encoding="UTF-8"?><record_update table="sys_ux_page_element"><sys_ux_content_placeholder_elem action="INSERT_OR_UPDATE"><attrs/><children/><component/><is_root>false</is_root><layout/><limit>1</limit><macroponent/><macroponent_config/><name>Landing Page Placeholder</name><order>0</order><page display_value="Workspace Core">b70867ad0f603300bb57f4a1ff767e15</page><parent display_value="">df8cadfb2f102010ff58c886f699b6fa</parent><parent_slot/><picker/><picker_condition/><sys_class_name>sys_ux_content_placeholder_elem</sys_class_name><sys_created_by>admin</sys_created_by><sys_created_on>2020-11-12 13:07:58</sys_created_on><sys_id>b78c613f2f102010ff58c886f699b61e</sys_id><sys_mod_count>0</sys_mod_count><sys_name>Landing Page Placeholder</sys_name><sys_package display_value="inSubnet" source="x_8302_insubnet">80d913ffdb231010f9282737489619ea</sys_package><sys_policy/><sys_scope display_value="inSubnet">80d913ffdb231010f9282737489619ea</sys_scope><sys_update_name>sys_ux_content_placeholder_elem_b78c613f2f102010ff58c886f699b61e</sys_update_name><sys_updated_by>admin</sys_updated_by><sys_updated_on>2020-11-12 13:07:58</sys_updated_on><tree_root/></sys_ux_content_placeholder_elem><sys_variable_value action="delete_multiple" query="document_key=b78c613f2f102010ff58c886f699b61e"/></record_update>]]></payload>
+        <payload_hash>1562151755</payload_hash>
+        <record_name>Landing Page Placeholder</record_name>
+        <reverted_from/>
+        <source>4d672e1f2fcc2010ff58c886f699b616</source>
+        <source_table>sys_update_set</source_table>
+        <state>previous</state>
+        <sys_created_by>admin</sys_created_by>
+        <sys_created_on>2020-11-12 13:08:01</sys_created_on>
+        <sys_id>209c253f2f102010ff58c886f699b67f</sys_id>
+        <sys_mod_count>0</sys_mod_count>
+        <sys_recorded_at>175bc91eca60000001</sys_recorded_at>
+        <sys_updated_by>admin</sys_updated_by>
+        <sys_updated_on>2020-11-12 13:08:01</sys_updated_on>
+        <type>UX Content Placeholder</type>
+        <update_guid>fb8c613fe81020109fd2cd467f84232c</update_guid>
+        <update_guid_history>fb8c613fe81020109fd2cd467f84232c:557299943,fb8c613fe81020109fd2cd467f84232c:557299943</update_guid_history>
+    </sys_update_version>
+    <sys_metadata_delete action="INSERT_OR_UPDATE">
+        <sys_audit_delete/>
+        <sys_class_name>sys_metadata_delete</sys_class_name>
+        <sys_created_by>admin</sys_created_by>
+        <sys_created_on>2020-11-12 13:08:01</sys_created_on>
+        <sys_db_object display_value="" name="sys_ux_content_placeholder_elem">sys_ux_content_placeholder_elem</sys_db_object>
+        <sys_id>095807c8c19b4b7282455c5d38a2fee9</sys_id>
+        <sys_metadata>b78c613f2f102010ff58c886f699b61e</sys_metadata>
+        <sys_mod_count>0</sys_mod_count>
+        <sys_name>Landing Page Placeholder</sys_name>
+        <sys_package display_value="inSubnet" source="x_8302_insubnet">80d913ffdb231010f9282737489619ea</sys_package>
+        <sys_parent/>
+        <sys_policy/>
+        <sys_scope display_value="inSubnet">80d913ffdb231010f9282737489619ea</sys_scope>
+        <sys_scope_delete display_value="">02cdb062db124b0f8471b9b5066e6be1</sys_scope_delete>
+        <sys_update_name>sys_ux_content_placeholder_elem_b78c613f2f102010ff58c886f699b61e</sys_update_name>
+        <sys_update_version display_value="sys_ux_content_placeholder_elem_b78c613f2f102010ff58c886f699b61e">209c253f2f102010ff58c886f699b67f</sys_update_version>
+        <sys_updated_by>admin</sys_updated_by>
+        <sys_updated_on>2020-11-12 13:08:01</sys_updated_on>
+    </sys_metadata_delete>
+</record_update>

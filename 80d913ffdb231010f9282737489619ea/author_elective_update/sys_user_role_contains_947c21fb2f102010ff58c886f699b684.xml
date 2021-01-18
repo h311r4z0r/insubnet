@@ -1,0 +1,63 @@
+<?xml version="1.0" encoding="UTF-8"?><record_update table="sys_user_role_contains">
+    <sys_user_role_contains action="DELETE">
+        <contains display_value="workspace_user" name="workspace_user">3bf8d5b65344130084acddeeff7b122b</contains>
+        <role display_value="insubnet" name="insubnet">9c7c21fb2f102010ff58c886f699b67a</role>
+        <sys_class_name>sys_user_role_contains</sys_class_name>
+        <sys_created_by>admin</sys_created_by>
+        <sys_created_on>2020-11-12 13:07:28</sys_created_on>
+        <sys_id>947c21fb2f102010ff58c886f699b684</sys_id>
+        <sys_mod_count>0</sys_mod_count>
+        <sys_name>workspace_user.insubnet</sys_name>
+        <sys_package display_value="inSubnet" source="x_8302_insubnet">80d913ffdb231010f9282737489619ea</sys_package>
+        <sys_policy/>
+        <sys_scope display_value="inSubnet">80d913ffdb231010f9282737489619ea</sys_scope>
+        <sys_update_name>sys_user_role_contains_947c21fb2f102010ff58c886f699b684</sys_update_name>
+        <sys_updated_by>admin</sys_updated_by>
+        <sys_updated_on>2020-11-12 13:07:28</sys_updated_on>
+    </sys_user_role_contains>
+    <sys_update_version action="INSERT_OR_UPDATE">
+        <action>DELETE</action>
+        <application display_value="inSubnet">80d913ffdb231010f9282737489619ea</application>
+        <file_path/>
+        <instance_id>e7486de4dbb4dcd89a4dcac505961986</instance_id>
+        <instance_name>dev103201</instance_name>
+        <name>sys_user_role_contains_947c21fb2f102010ff58c886f699b684</name>
+        <payload><![CDATA[<?xml version="1.0" encoding="UTF-8"?><record_update table="sys_user_role_contains"><sys_user_role_contains action="INSERT_OR_UPDATE"><contains display_value="workspace_user" name="workspace_user">3bf8d5b65344130084acddeeff7b122b</contains><role display_value="insubnet" name="insubnet">9c7c21fb2f102010ff58c886f699b67a</role><sys_class_name>sys_user_role_contains</sys_class_name><sys_created_by>admin</sys_created_by><sys_created_on>2020-11-12 13:07:28</sys_created_on><sys_id>947c21fb2f102010ff58c886f699b684</sys_id><sys_mod_count>0</sys_mod_count><sys_name>workspace_user.insubnet</sys_name><sys_package display_value="inSubnet" source="x_8302_insubnet">80d913ffdb231010f9282737489619ea</sys_package><sys_policy/><sys_scope display_value="inSubnet">80d913ffdb231010f9282737489619ea</sys_scope><sys_update_name>sys_user_role_contains_947c21fb2f102010ff58c886f699b684</sys_update_name><sys_updated_by>admin</sys_updated_by><sys_updated_on>2020-11-12 13:07:28</sys_updated_on></sys_user_role_contains></record_update>]]></payload>
+        <payload_hash>-1196997274</payload_hash>
+        <record_name>workspace_user.insubnet</record_name>
+        <reverted_from/>
+        <source>4d672e1f2fcc2010ff58c886f699b616</source>
+        <source_table>sys_update_set</source_table>
+        <state>previous</state>
+        <sys_created_by>admin</sys_created_by>
+        <sys_created_on>2020-11-12 13:07:28</sys_created_on>
+        <sys_id>107c21fb2f102010ff58c886f699b689</sys_id>
+        <sys_mod_count>0</sys_mod_count>
+        <sys_recorded_at>175bc916b6e0000001</sys_recorded_at>
+        <sys_updated_by>admin</sys_updated_by>
+        <sys_updated_on>2020-11-12 13:07:28</sys_updated_on>
+        <type>Contained Role</type>
+        <update_guid>587c21fb1b1020100fa270f7c8adcf88</update_guid>
+        <update_guid_history>587c21fb1b1020100fa270f7c8adcf88:-1196997274</update_guid_history>
+    </sys_update_version>
+    <sys_metadata_delete action="INSERT_OR_UPDATE">
+        <sys_audit_delete/>
+        <sys_class_name>sys_metadata_delete</sys_class_name>
+        <sys_created_by>admin</sys_created_by>
+        <sys_created_on>2020-11-12 13:07:34</sys_created_on>
+        <sys_db_object display_value="" name="sys_user_role_contains">sys_user_role_contains</sys_db_object>
+        <sys_id>108f4c57b1504074a315fe94bb0ff379</sys_id>
+        <sys_metadata>947c21fb2f102010ff58c886f699b684</sys_metadata>
+        <sys_mod_count>0</sys_mod_count>
+        <sys_name>workspace_user.insubnet</sys_name>
+        <sys_package display_value="inSubnet" source="x_8302_insubnet">80d913ffdb231010f9282737489619ea</sys_package>
+        <sys_parent/>
+        <sys_policy/>
+        <sys_scope display_value="inSubnet">80d913ffdb231010f9282737489619ea</sys_scope>
+        <sys_scope_delete display_value="">02cdb062db124b0f8471b9b5066e6be1</sys_scope_delete>
+        <sys_update_name>sys_user_role_contains_947c21fb2f102010ff58c886f699b684</sys_update_name>
+        <sys_update_version display_value="sys_user_role_contains_947c21fb2f102010ff58c886f699b684">107c21fb2f102010ff58c886f699b689</sys_update_version>
+        <sys_updated_by>admin</sys_updated_by>
+        <sys_updated_on>2020-11-12 13:07:34</sys_updated_on>
+    </sys_metadata_delete>
+</record_update>

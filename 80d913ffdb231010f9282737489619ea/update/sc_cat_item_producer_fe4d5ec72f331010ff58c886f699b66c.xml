@@ -52,7 +52,7 @@
         <redirect_url>generated_record</redirect_url>
         <request_method/>
         <roles/>
-        <sc_catalogs/>
+        <sc_catalogs>e0d08b13c3330100c8b837659bba8fb4</sc_catalogs>
         <sc_ic_item_staging/>
         <sc_ic_version/>
         <script><![CDATA[var record = producer.name;
@@ -75,14 +75,14 @@ producer.redirect="/discovery_schedule.do?sys_id="+oobSchedule.toString();]]></s
         <sys_created_by>admin</sys_created_by>
         <sys_created_on>2020-10-16 12:14:04</sys_created_on>
         <sys_id>fe4d5ec72f331010ff58c886f699b66c</sys_id>
-        <sys_mod_count>7</sys_mod_count>
+        <sys_mod_count>8</sys_mod_count>
         <sys_name>Add-to Schedule</sys_name>
         <sys_package display_value="inSubnet" source="x_8302_insubnet">80d913ffdb231010f9282737489619ea</sys_package>
         <sys_policy/>
         <sys_scope display_value="inSubnet">80d913ffdb231010f9282737489619ea</sys_scope>
         <sys_update_name>sc_cat_item_producer_fe4d5ec72f331010ff58c886f699b66c</sys_update_name>
         <sys_updated_by>admin</sys_updated_by>
-        <sys_updated_on>2020-10-16 16:03:45</sys_updated_on>
+        <sys_updated_on>2021-01-07 17:31:33</sys_updated_on>
         <table_name>discovery_schedule</table_name>
         <template/>
         <type>item</type>

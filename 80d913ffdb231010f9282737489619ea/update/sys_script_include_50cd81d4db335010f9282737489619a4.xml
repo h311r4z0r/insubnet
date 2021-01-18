@@ -111,12 +111,16 @@ inSubnetFunctions.prototype = {
 			dCMDBDiscoRanges.deleteMultiple();
 
 			var getCMDBtoDiscovery = new GlideRecord('x_8302_insubnet_m2m_range_to_discovery');
+			getCMDBtoDiscovery.addEncodedQuery('range.parent='+id);
 			getCMDBtoDiscovery.query();
 			while(getCMDBtoDiscovery.next()){
-				if(getCMDBtoDiscovery.schedule){
-					this._deleteCMDBSchedule(getCMDBtoDiscovery.schedule.toString());
-					this._deleteSchedule(getCMDBtoDiscovery.schedule.toString());
-				}
+				discoSchedule = getCMDBtoDiscovery.schedule.toString();
+				//if(getCMDBtoDiscovery.schedule){
+				//this._deleteSchedule(getCMDBtoDiscovery.schedule.toString());
+				//this._deleteCMDBSchedule(getCMDBtoDiscovery.schedule.toString());
+				//}
+				this._deleteCMDBSchedule(discoSchedule);
+				this._deleteSchedule(discoSchedule);
 			}
 		}
 
@@ -316,16 +320,16 @@ inSubnetFunctions.prototype = {
 		//var splitRanges = stringRanges.split(",");
 
 		//for(i=0;i<splitRanges.length;i++){
-			var getRanges = new GlideRecord('x_8302_insubnet_network');
-			getRanges.get(range.toString());
-			getRanges.query();
-			while(getRanges.next()){
-				var address = getRanges.address;
-				this._createM2MrangetoDiscovery(schedule.toString(),range.toString());
-				if(property == "true"){
-					this._insertCMDBscheduleRel(CMDBscheduleID.toString(),range.toString());
-				}
+		var getRanges = new GlideRecord('x_8302_insubnet_network');
+		getRanges.get(range.toString());
+		getRanges.query();
+		while(getRanges.next()){
+			var address = getRanges.address;
+			this._createM2MrangetoDiscovery(schedule.toString(),range.toString());
+			if(property == "true"){
+				this._insertCMDBscheduleRel(CMDBscheduleID.toString(),range.toString());
 			}
+		}
 		//}
 	},
 
@@ -442,7 +446,7 @@ inSubnetFunctions.prototype = {
 			while(getRanges.next()){
 				var address = getRanges.address;
 				var rangeItemID = this._deleteDiscoveryRange(address,oobSchedule.toString());
-					this._deleteM2MrangetoDiscovery(oobSchedule.toString(),splitRanges[i].toString());
+				this._deleteM2MrangetoDiscovery(oobSchedule.toString(),splitRanges[i].toString());
 				if(property == "true"){
 					this._deleteCMDBscheduleRel(record.toString(),splitRanges[i].toString());
 				}
@@ -485,7 +489,7 @@ inSubnetFunctions.prototype = {
 			delSchedule.deleteRecord();
 		}
 	},
-	
+
 	_deleteM2MrangetoDiscovery: function(schedule,range){
 		var lookupRec = new GlideRecord('x_8302_insubnet_m2m_range_to_discovery');
 		lookupRec.addEncodedQuery('schedule='+schedule+'^range='+range);
@@ -527,7 +531,7 @@ inSubnetFunctions.prototype = {
 			lookupRangeItem.deleteRecord();
 		}
 	},
-	
+
 	_updateDiscoveryRange: function(address,schedule){
 		var splitAdd = address.split("/");
 		var recordID = new global.QuickRanges().createItem('discovery_schedule',schedule.toString(),'IP Network'); 
@@ -545,7 +549,7 @@ inSubnetFunctions.prototype = {
 			this._insertRangeToCI(getIP.sys_id.toString(),id);
 		}
 	},
-	
+
 	_deleteCMDBscheduleRel: function(schedule,range){
 		var getCMDBrange = new GlideRecord('x_8302_insubnet_discovery_range');
 		getCMDBrange.addEncodedQuery('insubnet_range='+range);
@@ -787,13 +791,13 @@ inSubnetFunctions.prototype = {
         <sys_created_by>admin</sys_created_by>
         <sys_created_on>2020-10-07 17:28:05</sys_created_on>
         <sys_id>50cd81d4db335010f9282737489619a4</sys_id>
-        <sys_mod_count>201</sys_mod_count>
+        <sys_mod_count>204</sys_mod_count>
         <sys_name>inSubnetFunctions</sys_name>
         <sys_package display_value="inSubnet" source="x_8302_insubnet">80d913ffdb231010f9282737489619ea</sys_package>
         <sys_policy>read</sys_policy>
         <sys_scope display_value="inSubnet">80d913ffdb231010f9282737489619ea</sys_scope>
         <sys_update_name>sys_script_include_50cd81d4db335010f9282737489619a4</sys_update_name>
         <sys_updated_by>admin</sys_updated_by>
-        <sys_updated_on>2020-11-06 15:07:21</sys_updated_on>
+        <sys_updated_on>2021-01-18 14:16:18</sys_updated_on>
     </sys_script_include>
 </record_update>
