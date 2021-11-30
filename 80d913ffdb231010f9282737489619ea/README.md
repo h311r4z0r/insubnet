@@ -24,9 +24,9 @@ If you find yourself unable to import your repository due to the presence of fil
    2.2 Activate/install all required dependencies
    2.3 Re-import the application from source control
    Currently listed dependencies:
-   * Configuration Management (CMDB)
    * Discovery Schedule Configuration
    * Discovery API
    * Discovery
    * Discovery - IP Based
    * Discovery Core
+   * Configuration Management (CMDB)
