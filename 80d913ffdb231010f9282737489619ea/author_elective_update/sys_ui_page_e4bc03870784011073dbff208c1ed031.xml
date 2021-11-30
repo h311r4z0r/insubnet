@@ -1,0 +1,77 @@
+<?xml version="1.0" encoding="UTF-8"?><record_update table="sys_ui_page">
+    <sys_ui_page action="DELETE">
+        <category>general</category>
+        <client_script/>
+        <description/>
+        <direct>true</direct>
+        <endpoint>x_8302_insubnet_Add AD Sites and Subnets.do</endpoint>
+        <html><![CDATA[<?xml version="1.0" encoding="utf-8" ?>
+<j:jelly trim="false" xmlns:j="jelly:core" xmlns:g="glide" xmlns:j2="null" xmlns:g2="null">
+
+</j:jelly>]]></html>
+        <name>Add AD Sites and Subnets</name>
+        <processing_script><![CDATA[sn_fd.FlowAPI.executeSubflow('x_8302_insubnet.process_subnets_from_ad_sites');
+//gs.setRedirect('x_8302_insubnet_calculator_list.do');]]></processing_script>
+        <sys_class_name>sys_ui_page</sys_class_name>
+        <sys_created_by>admin</sys_created_by>
+        <sys_created_on>2021-11-30 18:22:32</sys_created_on>
+        <sys_id>e4bc03870784011073dbff208c1ed031</sys_id>
+        <sys_mod_count>2</sys_mod_count>
+        <sys_name>Add AD Sites and Subnets</sys_name>
+        <sys_package display_value="inSubnet" source="x_8302_insubnet">80d913ffdb231010f9282737489619ea</sys_package>
+        <sys_policy/>
+        <sys_scope display_value="inSubnet">80d913ffdb231010f9282737489619ea</sys_scope>
+        <sys_update_name>sys_ui_page_e4bc03870784011073dbff208c1ed031</sys_update_name>
+        <sys_updated_by>admin</sys_updated_by>
+        <sys_updated_on>2021-11-30 18:27:46</sys_updated_on>
+    </sys_ui_page>
+    <sys_update_version action="INSERT_OR_UPDATE">
+        <action>DELETE</action>
+        <application display_value="inSubnet">80d913ffdb231010f9282737489619ea</application>
+        <file_path/>
+        <instance_id>a034e22e9b805fc0bb2e6b8af359fffa</instance_id>
+        <instance_name>dev49221</instance_name>
+        <name>sys_ui_page_e4bc03870784011073dbff208c1ed031</name>
+        <payload>&lt;?xml version="1.0" encoding="UTF-8"?&gt;&lt;record_update table="sys_ui_page"&gt;&lt;sys_ui_page action="INSERT_OR_UPDATE"&gt;&lt;category&gt;general&lt;/category&gt;&lt;client_script/&gt;&lt;description/&gt;&lt;direct&gt;true&lt;/direct&gt;&lt;endpoint&gt;x_8302_insubnet_Add AD Sites and Subnets.do&lt;/endpoint&gt;&lt;html&gt;&lt;![CDATA[&lt;?xml version="1.0" encoding="utf-8" ?&gt;
+&lt;j:jelly trim="false" xmlns:j="jelly:core" xmlns:g="glide" xmlns:j2="null" xmlns:g2="null"&gt;
+
+&lt;/j:jelly&gt;]]&gt;&lt;/html&gt;&lt;name&gt;Add AD Sites and Subnets&lt;/name&gt;&lt;processing_script&gt;&lt;![CDATA[sn_fd.FlowAPI.executeSubflow('x_8302_insubnet.process_subnets_from_ad_sites');
+//gs.setRedirect('x_8302_insubnet_calculator_list.do');]]&gt;&lt;/processing_script&gt;&lt;sys_class_name&gt;sys_ui_page&lt;/sys_class_name&gt;&lt;sys_created_by&gt;admin&lt;/sys_created_by&gt;&lt;sys_created_on&gt;2021-11-30 18:22:32&lt;/sys_created_on&gt;&lt;sys_id&gt;e4bc03870784011073dbff208c1ed031&lt;/sys_id&gt;&lt;sys_mod_count&gt;2&lt;/sys_mod_count&gt;&lt;sys_name&gt;Add AD Sites and Subnets&lt;/sys_name&gt;&lt;sys_package display_value="inSubnet" source="x_8302_insubnet"&gt;80d913ffdb231010f9282737489619ea&lt;/sys_package&gt;&lt;sys_policy/&gt;&lt;sys_scope display_value="inSubnet"&gt;80d913ffdb231010f9282737489619ea&lt;/sys_scope&gt;&lt;sys_update_name&gt;sys_ui_page_e4bc03870784011073dbff208c1ed031&lt;/sys_update_name&gt;&lt;sys_updated_by&gt;admin&lt;/sys_updated_by&gt;&lt;sys_updated_on&gt;2021-11-30 18:27:46&lt;/sys_updated_on&gt;&lt;/sys_ui_page&gt;&lt;/record_update&gt;</payload>
+        <payload_hash>708895591</payload_hash>
+        <record_name>Add AD Sites and Subnets</record_name>
+        <reverted_from/>
+        <source>b7828ec70740011073dbff208c1ed0b3</source>
+        <source_table>sys_update_set</source_table>
+        <state>previous</state>
+        <sys_created_by>admin</sys_created_by>
+        <sys_created_on>2021-11-30 18:27:46</sys_created_on>
+        <sys_id>deae870b0784011073dbff208c1ed092</sys_id>
+        <sys_mod_count>0</sys_mod_count>
+        <sys_recorded_at>17d721a4d6d0000001</sys_recorded_at>
+        <sys_updated_by>admin</sys_updated_by>
+        <sys_updated_on>2021-11-30 18:27:46</sys_updated_on>
+        <type>UI Page</type>
+        <update_guid>d6ae870b4084011054e1daa33bbcf092</update_guid>
+        <update_guid_history>d6ae870b4084011054e1daa33bbcf092:708895591,216e4bc7dd84011057b922e4e3a8cedd:712020462,fd7d0f87778401109fe7598ea745e5a1:-1101426418</update_guid_history>
+    </sys_update_version>
+    <sys_metadata_delete action="INSERT_OR_UPDATE">
+        <sys_audit_delete/>
+        <sys_class_name>sys_metadata_delete</sys_class_name>
+        <sys_created_by>admin</sys_created_by>
+        <sys_created_on>2021-11-30 18:28:48</sys_created_on>
+        <sys_db_object display_value="" name="sys_ui_page">sys_ui_page</sys_db_object>
+        <sys_id>51319d8916a842809ff990a347a95590</sys_id>
+        <sys_metadata>e4bc03870784011073dbff208c1ed031</sys_metadata>
+        <sys_mod_count>0</sys_mod_count>
+        <sys_name>Add AD Sites and Subnets</sys_name>
+        <sys_package display_value="inSubnet" source="x_8302_insubnet">80d913ffdb231010f9282737489619ea</sys_package>
+        <sys_parent/>
+        <sys_policy/>
+        <sys_scope display_value="inSubnet">80d913ffdb231010f9282737489619ea</sys_scope>
+        <sys_scope_delete display_value="">02cdb062db124b0f8471b9b5066e6be1</sys_scope_delete>
+        <sys_update_name>sys_ui_page_e4bc03870784011073dbff208c1ed031</sys_update_name>
+        <sys_update_version display_value="sys_ui_page_e4bc03870784011073dbff208c1ed031">deae870b0784011073dbff208c1ed092</sys_update_version>
+        <sys_updated_by>admin</sys_updated_by>
+        <sys_updated_on>2021-11-30 18:28:48</sys_updated_on>
+    </sys_metadata_delete>
+</record_update>
