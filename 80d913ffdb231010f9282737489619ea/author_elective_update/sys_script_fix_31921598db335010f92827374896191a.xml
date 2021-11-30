@@ -1,0 +1,72 @@
+<?xml version="1.0" encoding="UTF-8"?><record_update table="sys_script_fix">
+    <sys_script_fix action="DELETE">
+        <active>true</active>
+        <before>false</before>
+        <description/>
+        <flush_cache>false</flush_cache>
+        <name>Subnet - Script Include Test</name>
+        <record_for_rollback>false</record_for_rollback>
+        <run_once>true</run_once>
+        <script><![CDATA[var res = new inSubnetFunctions().calculateNetwork("10.120.5.25","26");
+gs.info(res);]]></script>
+        <sys_class_name>sys_script_fix</sys_class_name>
+        <sys_created_by>admin</sys_created_by>
+        <sys_created_on>2020-10-07 17:46:18</sys_created_on>
+        <sys_id>31921598db335010f92827374896191a</sys_id>
+        <sys_mod_count>10</sys_mod_count>
+        <sys_name>Subnet - Script Include Test</sys_name>
+        <sys_package display_value="inSubnet" source="x_8302_insubnet">80d913ffdb231010f9282737489619ea</sys_package>
+        <sys_policy/>
+        <sys_scope display_value="inSubnet">80d913ffdb231010f9282737489619ea</sys_scope>
+        <sys_update_name>sys_script_fix_31921598db335010f92827374896191a</sys_update_name>
+        <sys_updated_by>admin</sys_updated_by>
+        <sys_updated_on>2020-10-07 19:22:46</sys_updated_on>
+        <unloadable>false</unloadable>
+    </sys_script_fix>
+    <sys_update_version action="INSERT_OR_UPDATE">
+        <action>DELETE</action>
+        <application display_value="inSubnet">80d913ffdb231010f9282737489619ea</application>
+        <file_path/>
+        <instance_id>1b3b271adb097f04b847ac44d4961904</instance_id>
+        <instance_name>dev84107</instance_name>
+        <name>sys_script_fix_31921598db335010f92827374896191a</name>
+        <payload>&lt;?xml version="1.0" encoding="UTF-8"?&gt;&lt;record_update table="sys_script_fix"&gt;&lt;sys_script_fix action="INSERT_OR_UPDATE"&gt;&lt;active&gt;true&lt;/active&gt;&lt;before&gt;false&lt;/before&gt;&lt;description/&gt;&lt;flush_cache&gt;false&lt;/flush_cache&gt;&lt;name&gt;Subnet - Script Include Test&lt;/name&gt;&lt;record_for_rollback&gt;false&lt;/record_for_rollback&gt;&lt;run_once&gt;true&lt;/run_once&gt;&lt;script&gt;&lt;![CDATA[var res = new inSubnetFunctions().calculateNetwork("10.120.5.25","26");
+gs.info(res);]]&gt;&lt;/script&gt;&lt;sys_class_name&gt;sys_script_fix&lt;/sys_class_name&gt;&lt;sys_created_by&gt;admin&lt;/sys_created_by&gt;&lt;sys_created_on&gt;2020-10-07 17:46:18&lt;/sys_created_on&gt;&lt;sys_id&gt;31921598db335010f92827374896191a&lt;/sys_id&gt;&lt;sys_mod_count&gt;10&lt;/sys_mod_count&gt;&lt;sys_name&gt;Subnet - Script Include Test&lt;/sys_name&gt;&lt;sys_package display_value="inSubnet" source="x_8302_insubnet"&gt;80d913ffdb231010f9282737489619ea&lt;/sys_package&gt;&lt;sys_policy/&gt;&lt;sys_scope display_value="inSubnet"&gt;80d913ffdb231010f9282737489619ea&lt;/sys_scope&gt;&lt;sys_update_name&gt;sys_script_fix_31921598db335010f92827374896191a&lt;/sys_update_name&gt;&lt;sys_updated_by&gt;admin&lt;/sys_updated_by&gt;&lt;sys_updated_on&gt;2020-10-07 19:22:46&lt;/sys_updated_on&gt;&lt;unloadable&gt;false&lt;/unloadable&gt;&lt;/sys_script_fix&gt;&lt;/record_update&gt;</payload>
+        <payload_hash>733027834</payload_hash>
+        <record_name>Subnet - Script Include Test</record_name>
+        <reverted_from/>
+        <source>14d913ffdb231010f9282737489619ec</source>
+        <source_table>sys_update_set</source_table>
+        <state>previous</state>
+        <sys_created_by>admin</sys_created_by>
+        <sys_created_on>2020-10-07 19:22:46</sys_created_on>
+        <sys_id>b6192d18db735010f92827374896193b</sys_id>
+        <sys_mod_count>0</sys_mod_count>
+        <sys_recorded_at>175048414760000001</sys_recorded_at>
+        <sys_updated_by>admin</sys_updated_by>
+        <sys_updated_on>2020-10-07 19:22:46</sys_updated_on>
+        <type>Fix Script</type>
+        <update_guid>32192d18b77350105ab8cfded10dba3b</update_guid>
+        <update_guid_history>32192d18b77350105ab8cfded10dba3b:733027834,55096918c8735010e7cf1ced5abc38c8:-1569400105,4ae86918527350105bc9bde4e5277988:1589309057,a8d86518ce73501003e08e2a26406e18:939620222,ffb86dd4e273501057db2b05ab8709eb:186635193,0fa8e5180a735010473a6dfbbb23dbce:836324028,0db7a1d45873501094e15b53040c1fd7:-1519212824,abcf5d5037735010ba24273afe7a042b:-221312040,af9399987c3350106eba27b2558d7f7e:-876746167,9f131598d8335010081800efd487bf21:-1965556262,7903199829335010973a236c875bf59b:-1817607150</update_guid_history>
+    </sys_update_version>
+    <sys_metadata_delete action="INSERT_OR_UPDATE">
+        <sys_audit_delete/>
+        <sys_class_name>sys_metadata_delete</sys_class_name>
+        <sys_created_by>admin</sys_created_by>
+        <sys_created_on>2020-10-08 21:38:43</sys_created_on>
+        <sys_db_object display_value="" name="sys_script_fix">sys_script_fix</sys_db_object>
+        <sys_id>0403c5f0e2844ea080160557f8af65c1</sys_id>
+        <sys_metadata>31921598db335010f92827374896191a</sys_metadata>
+        <sys_mod_count>0</sys_mod_count>
+        <sys_name>Subnet - Script Include Test</sys_name>
+        <sys_package display_value="inSubnet" source="x_8302_insubnet">80d913ffdb231010f9282737489619ea</sys_package>
+        <sys_parent/>
+        <sys_policy/>
+        <sys_scope display_value="inSubnet">80d913ffdb231010f9282737489619ea</sys_scope>
+        <sys_scope_delete display_value="">02cdb062db124b0f8471b9b5066e6be1</sys_scope_delete>
+        <sys_update_name>sys_script_fix_31921598db335010f92827374896191a</sys_update_name>
+        <sys_update_version display_value="sys_script_fix_31921598db335010f92827374896191a">b6192d18db735010f92827374896193b</sys_update_version>
+        <sys_updated_by>admin</sys_updated_by>
+        <sys_updated_on>2020-10-08 21:38:43</sys_updated_on>
+    </sys_metadata_delete>
+</record_update>

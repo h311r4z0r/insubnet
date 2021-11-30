@@ -1,0 +1,77 @@
+<?xml version="1.0" encoding="UTF-8"?><record_update table="sys_aw_master_config">
+    <sys_aw_master_config action="DELETE">
+        <active>false</active>
+        <brand_color/>
+        <compiled_page display_value="Workspace Core">b70867ad0f603300bb57f4a1ff767e15</compiled_page>
+        <compiled_page_registry/>
+        <description>IPAM solution for ServiceNow</description>
+        <global_search display_value="Default search settings">97a574ea53c0130084acddeeff7b12a6</global_search>
+        <global_search_data display_value="inSubnet Search Context Config">ac6fa5bf2f102010ff58c886f699b601</global_search_data>
+        <hide_search_results_count>false</hide_search_results_count>
+        <name>inSubnet</name>
+        <navigation_type>breadcrumb</navigation_type>
+        <notifications_enabled>false</notifications_enabled>
+        <primary_color/>
+        <search_enabled>true</search_enabled>
+        <sys_class_name>sys_aw_master_config</sys_class_name>
+        <sys_created_by>admin</sys_created_by>
+        <sys_created_on>2020-11-12 13:20:19</sys_created_on>
+        <sys_id>a86fa5bf2f102010ff58c886f699b603</sys_id>
+        <sys_mod_count>3</sys_mod_count>
+        <sys_name>inSubnet</sys_name>
+        <sys_package display_value="inSubnet" source="x_8302_insubnet">80d913ffdb231010f9282737489619ea</sys_package>
+        <sys_policy/>
+        <sys_scope display_value="inSubnet">80d913ffdb231010f9282737489619ea</sys_scope>
+        <sys_update_name>sys_aw_master_config_a86fa5bf2f102010ff58c886f699b603</sys_update_name>
+        <sys_updated_by>admin</sys_updated_by>
+        <sys_updated_on>2020-11-12 13:56:18</sys_updated_on>
+        <user_preference_controls_enabled>false</user_preference_controls_enabled>
+        <workspace_logo/>
+        <workspace_url>insubnet</workspace_url>
+    </sys_aw_master_config>
+    <sys_update_version action="INSERT_OR_UPDATE">
+        <action>DELETE</action>
+        <application display_value="inSubnet">80d913ffdb231010f9282737489619ea</application>
+        <file_path/>
+        <instance_id>e7486de4dbb4dcd89a4dcac505961986</instance_id>
+        <instance_name>dev103201</instance_name>
+        <name>sys_aw_master_config_a86fa5bf2f102010ff58c886f699b603</name>
+        <payload><![CDATA[<?xml version="1.0" encoding="UTF-8"?><record_update table="sys_aw_master_config"><sys_aw_master_config action="INSERT_OR_UPDATE"><active>false</active><brand_color/><compiled_page display_value="Workspace Core">b70867ad0f603300bb57f4a1ff767e15</compiled_page><compiled_page_registry/><description>IPAM solution for ServiceNow</description><global_search display_value="Default search settings">97a574ea53c0130084acddeeff7b12a6</global_search><global_search_data display_value="inSubnet Search Context Config">ac6fa5bf2f102010ff58c886f699b601</global_search_data><hide_search_results_count>false</hide_search_results_count><name>inSubnet</name><navigation_type>breadcrumb</navigation_type><notifications_enabled>false</notifications_enabled><primary_color/><search_enabled>true</search_enabled><sys_class_name>sys_aw_master_config</sys_class_name><sys_created_by>admin</sys_created_by><sys_created_on>2020-11-12 13:20:19</sys_created_on><sys_id>a86fa5bf2f102010ff58c886f699b603</sys_id><sys_mod_count>3</sys_mod_count><sys_name>inSubnet</sys_name><sys_package display_value="inSubnet" source="x_8302_insubnet">80d913ffdb231010f9282737489619ea</sys_package><sys_policy/><sys_scope display_value="inSubnet">80d913ffdb231010f9282737489619ea</sys_scope><sys_update_name>sys_aw_master_config_a86fa5bf2f102010ff58c886f699b603</sys_update_name><sys_updated_by>admin</sys_updated_by><sys_updated_on>2020-11-12 13:56:18</sys_updated_on><user_preference_controls_enabled>false</user_preference_controls_enabled><workspace_logo/><workspace_url>insubnet</workspace_url></sys_aw_master_config></record_update>]]></payload>
+        <payload_hash>-57781928</payload_hash>
+        <record_name>inSubnet</record_name>
+        <reverted_from/>
+        <source>4d672e1f2fcc2010ff58c886f699b616</source>
+        <source_table>sys_update_set</source_table>
+        <state>previous</state>
+        <sys_created_by>admin</sys_created_by>
+        <sys_created_on>2020-11-12 14:00:42</sys_created_on>
+        <sys_id>9ca8b17b2f502010ff58c886f699b693</sys_id>
+        <sys_mod_count>0</sys_mod_count>
+        <sys_recorded_at>175bcc22a3a0000001</sys_recorded_at>
+        <sys_updated_by>admin</sys_updated_by>
+        <sys_updated_on>2020-11-12 14:00:42</sys_updated_on>
+        <type>Workspace</type>
+        <update_guid>b797353bf3502010772745e151e23c83</update_guid>
+        <update_guid_history>b797353bf3502010772745e151e23c83:1130144321,b797353bf3502010772745e151e23c83:1130144321,a127b5f7e15020108c59f53ea7abebf8:90131994,4694b9773a5020103e9823a91e4f730d:1601260485,b86fa133b85020102698105c3fc5dc41:-1462203063</update_guid_history>
+    </sys_update_version>
+    <sys_metadata_delete action="INSERT_OR_UPDATE">
+        <sys_audit_delete/>
+        <sys_class_name>sys_metadata_delete</sys_class_name>
+        <sys_created_by>admin</sys_created_by>
+        <sys_created_on>2020-11-12 14:00:44</sys_created_on>
+        <sys_db_object display_value="" name="sys_aw_master_config">sys_aw_master_config</sys_db_object>
+        <sys_id>38dd7d4ce8764ac080c06da4c88ea640</sys_id>
+        <sys_metadata>a86fa5bf2f102010ff58c886f699b603</sys_metadata>
+        <sys_mod_count>0</sys_mod_count>
+        <sys_name>inSubnet</sys_name>
+        <sys_package display_value="inSubnet" source="x_8302_insubnet">80d913ffdb231010f9282737489619ea</sys_package>
+        <sys_parent/>
+        <sys_policy/>
+        <sys_scope display_value="inSubnet">80d913ffdb231010f9282737489619ea</sys_scope>
+        <sys_scope_delete display_value="">02cdb062db124b0f8471b9b5066e6be1</sys_scope_delete>
+        <sys_update_name>sys_aw_master_config_a86fa5bf2f102010ff58c886f699b603</sys_update_name>
+        <sys_update_version display_value="sys_aw_master_config_a86fa5bf2f102010ff58c886f699b603">9ca8b17b2f502010ff58c886f699b693</sys_update_version>
+        <sys_updated_by>admin</sys_updated_by>
+        <sys_updated_on>2020-11-12 14:00:44</sys_updated_on>
+    </sys_metadata_delete>
+</record_update>

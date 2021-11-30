@@ -1,0 +1,31 @@
+<?xml version="1.0" encoding="UTF-8"?><record_update table="sys_wizard_answer">
+    <sys_wizard_answer action="INSERT_OR_UPDATE">
+        <active>true</active>
+        <answer>Discovery</answer>
+        <button_label/>
+        <dependent_value/>
+        <element/>
+        <name>Discovery</name>
+        <next_question/>
+        <order>100</order>
+        <payload_name/>
+        <question display_value="Base Configuration Item" name="Base Configuration Item">9d9705ca7102101091f9db5cf8a37219</question>
+        <roles/>
+        <script/>
+        <sys_class_name>sys_wizard_answer</sys_class_name>
+        <sys_created_by>admin</sys_created_by>
+        <sys_created_on>2020-10-15 18:26:59</sys_created_on>
+        <sys_id>ab0922be2f335010ff58c886f699b68e</sys_id>
+        <sys_mod_count>0</sys_mod_count>
+        <sys_name>Discovery</sys_name>
+        <sys_package display_value="inSubnet" source="x_8302_insubnet">80d913ffdb231010f9282737489619ea</sys_package>
+        <sys_policy/>
+        <sys_scope display_value="inSubnet">80d913ffdb231010f9282737489619ea</sys_scope>
+        <sys_update_name>sys_wizard_answer_ab0922be2f335010ff58c886f699b68e</sys_update_name>
+        <sys_updated_by>admin</sys_updated_by>
+        <sys_updated_on>2020-10-15 18:26:59</sys_updated_on>
+        <table/>
+        <target_url>x_8302_insubnet_discovery.do</target_url>
+        <type>1</type>
+    </sys_wizard_answer>
+</record_update>

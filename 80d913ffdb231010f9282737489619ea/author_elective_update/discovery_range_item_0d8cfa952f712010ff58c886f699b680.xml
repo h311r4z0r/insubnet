@@ -1,0 +1,74 @@
+<?xml version="1.0" encoding="UTF-8"?><record_update sys_domain="global" table="discovery_range_item">
+    <discovery_range_item action="DELETE">
+        <active>true</active>
+        <attributes/>
+        <end_ip_address/>
+        <name>10.0.240.0/20</name>
+        <netmask>20</netmask>
+        <network_ip>10.0.240.0</network_ip>
+        <parent/>
+        <schedule display_value="">0a7c3ad52f712010ff58c886f699b6f1</schedule>
+        <start_ip_address/>
+        <summary>10.0.240.0/20</summary>
+        <sys_class_name>discovery_range_item</sys_class_name>
+        <sys_created_by>admin</sys_created_by>
+        <sys_created_on>2021-01-18 14:06:41</sys_created_on>
+        <sys_domain>global</sys_domain>
+        <sys_domain_path>/</sys_domain_path>
+        <sys_id>0d8cfa952f712010ff58c886f699b680</sys_id>
+        <sys_mod_count>0</sys_mod_count>
+        <sys_name>10.0.240.0/20</sys_name>
+        <sys_package display_value="inSubnet" source="x_8302_insubnet">80d913ffdb231010f9282737489619ea</sys_package>
+        <sys_policy/>
+        <sys_scope display_value="inSubnet">80d913ffdb231010f9282737489619ea</sys_scope>
+        <sys_update_name>discovery_range_item_0d8cfa952f712010ff58c886f699b680</sys_update_name>
+        <sys_updated_by>admin</sys_updated_by>
+        <sys_updated_on>2021-01-18 14:06:41</sys_updated_on>
+        <type>IP Network</type>
+    </discovery_range_item>
+    <sys_update_version action="INSERT_OR_UPDATE">
+        <action>DELETE</action>
+        <application display_value="inSubnet">80d913ffdb231010f9282737489619ea</application>
+        <file_path/>
+        <instance_id>e7486de4dbb4dcd89a4dcac505961986</instance_id>
+        <instance_name>dev103201</instance_name>
+        <name>discovery_range_item_0d8cfa952f712010ff58c886f699b680</name>
+        <payload><![CDATA[<?xml version="1.0" encoding="UTF-8"?><record_update sys_domain="global" table="discovery_range_item"><discovery_range_item action="INSERT_OR_UPDATE"><active>true</active><attributes/><end_ip_address/><name>10.0.240.0/20</name><netmask>20</netmask><network_ip>10.0.240.0</network_ip><parent/><schedule display_value="">0a7c3ad52f712010ff58c886f699b6f1</schedule><start_ip_address/><summary>10.0.240.0/20</summary><sys_class_name>discovery_range_item</sys_class_name><sys_created_by>admin</sys_created_by><sys_created_on>2021-01-18 14:06:41</sys_created_on><sys_domain>global</sys_domain><sys_domain_path>/</sys_domain_path><sys_id>0d8cfa952f712010ff58c886f699b680</sys_id><sys_mod_count>0</sys_mod_count><sys_name>10.0.240.0/20</sys_name><sys_package display_value="inSubnet" source="x_8302_insubnet">80d913ffdb231010f9282737489619ea</sys_package><sys_policy/><sys_scope display_value="inSubnet">80d913ffdb231010f9282737489619ea</sys_scope><sys_update_name>discovery_range_item_0d8cfa952f712010ff58c886f699b680</sys_update_name><sys_updated_by>admin</sys_updated_by><sys_updated_on>2021-01-18 14:06:41</sys_updated_on><type>IP Network</type></discovery_range_item></record_update>]]></payload>
+        <payload_hash>-1950239958</payload_hash>
+        <record_name>10.0.240.0/20</record_name>
+        <reverted_from/>
+        <source>4d672e1f2fcc2010ff58c886f699b616</source>
+        <source_table>sys_update_set</source_table>
+        <state>previous</state>
+        <sys_created_by>admin</sys_created_by>
+        <sys_created_on>2021-01-18 14:06:41</sys_created_on>
+        <sys_id>458c76192f712010ff58c886f699b6f0</sys_id>
+        <sys_mod_count>0</sys_mod_count>
+        <sys_recorded_at>17715d1b7c60000001</sys_recorded_at>
+        <sys_updated_by>admin</sys_updated_by>
+        <sys_updated_on>2021-01-18 14:06:41</sys_updated_on>
+        <type>Discovery IP Range</type>
+        <update_guid>8d8c7619c5712010cd7383bfb1d68cef</update_guid>
+        <update_guid_history>8d8c7619c5712010cd7383bfb1d68cef:-1950239958</update_guid_history>
+    </sys_update_version>
+    <sys_metadata_delete action="INSERT_OR_UPDATE">
+        <sys_audit_delete display_value="10.0.240.0/20">febcfa592f712010ff58c886f699b693</sys_audit_delete>
+        <sys_class_name>sys_metadata_delete</sys_class_name>
+        <sys_created_by>admin</sys_created_by>
+        <sys_created_on>2021-01-18 14:07:37</sys_created_on>
+        <sys_db_object display_value="" name="discovery_range_item">discovery_range_item</sys_db_object>
+        <sys_id>51bbe29da6a2479c9b53deb326a11e59</sys_id>
+        <sys_metadata>0d8cfa952f712010ff58c886f699b680</sys_metadata>
+        <sys_mod_count>0</sys_mod_count>
+        <sys_name>10.0.240.0/20</sys_name>
+        <sys_package display_value="inSubnet" source="x_8302_insubnet">80d913ffdb231010f9282737489619ea</sys_package>
+        <sys_parent/>
+        <sys_policy/>
+        <sys_scope display_value="inSubnet">80d913ffdb231010f9282737489619ea</sys_scope>
+        <sys_scope_delete display_value="">02cdb062db124b0f8471b9b5066e6be1</sys_scope_delete>
+        <sys_update_name>discovery_range_item_0d8cfa952f712010ff58c886f699b680</sys_update_name>
+        <sys_update_version display_value="discovery_range_item_0d8cfa952f712010ff58c886f699b680">458c76192f712010ff58c886f699b6f0</sys_update_version>
+        <sys_updated_by>admin</sys_updated_by>
+        <sys_updated_on>2021-01-18 14:07:37</sys_updated_on>
+    </sys_metadata_delete>
+</record_update>

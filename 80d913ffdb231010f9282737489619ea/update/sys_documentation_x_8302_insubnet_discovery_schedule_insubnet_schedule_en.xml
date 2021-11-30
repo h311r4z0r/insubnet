@@ -1,0 +1,27 @@
+<?xml version="1.0" encoding="UTF-8"?><record_update>
+    <sys_documentation element="insubnet_schedule" label="inSubnet Schedule" language="en" table="x_8302_insubnet_discovery_schedule">
+        <sys_documentation action="INSERT_OR_UPDATE">
+            <element>insubnet_schedule</element>
+            <help/>
+            <hint/>
+            <label>inSubnet Schedule</label>
+            <language>en</language>
+            <name>x_8302_insubnet_discovery_schedule</name>
+            <plural>inSubnet Schedules</plural>
+            <sys_class_name>sys_documentation</sys_class_name>
+            <sys_created_by>admin</sys_created_by>
+            <sys_created_on>2020-10-15 20:51:11</sys_created_on>
+            <sys_id>bb0acfba2ff35010ff58c886f699b639</sys_id>
+            <sys_mod_count>0</sys_mod_count>
+            <sys_name>inSubnet Schedule</sys_name>
+            <sys_package display_value="inSubnet" source="x_8302_insubnet">80d913ffdb231010f9282737489619ea</sys_package>
+            <sys_policy/>
+            <sys_scope display_value="inSubnet">80d913ffdb231010f9282737489619ea</sys_scope>
+            <sys_update_name>sys_documentation_x_8302_insubnet_discovery_schedule_insubnet_schedule_en</sys_update_name>
+            <sys_updated_by>admin</sys_updated_by>
+            <sys_updated_on>2020-10-15 20:51:11</sys_updated_on>
+            <url/>
+            <url_target/>
+        </sys_documentation>
+    </sys_documentation>
+</record_update>

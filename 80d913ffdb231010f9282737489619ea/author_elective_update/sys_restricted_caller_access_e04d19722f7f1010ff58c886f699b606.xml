@@ -1,0 +1,71 @@
+<?xml version="1.0" encoding="UTF-8"?><record_update table="sys_restricted_caller_access">
+    <sys_restricted_caller_access action="DELETE">
+        <operation>read</operation>
+        <source/>
+        <source_scope display_value="inSubnet">80d913ffdb231010f9282737489619ea</source_scope>
+        <source_table/>
+        <source_type>5</source_type>
+        <status>2</status>
+        <sys_class_name>sys_restricted_caller_access</sys_class_name>
+        <sys_created_by>admin</sys_created_by>
+        <sys_created_on>2020-10-15 12:56:32</sys_created_on>
+        <sys_id>e04d19722f7f1010ff58c886f699b606</sys_id>
+        <sys_mod_count>0</sys_mod_count>
+        <sys_name>80d913ffdb231010f9282737489619ea</sys_name>
+        <sys_package display_value="inSubnet" source="x_8302_insubnet">80d913ffdb231010f9282737489619ea</sys_package>
+        <sys_policy/>
+        <sys_scope display_value="inSubnet">80d913ffdb231010f9282737489619ea</sys_scope>
+        <sys_update_name>sys_restricted_caller_access_e04d19722f7f1010ff58c886f699b606</sys_update_name>
+        <sys_updated_by>admin</sys_updated_by>
+        <sys_updated_on>2020-10-15 12:56:32</sys_updated_on>
+        <target/>
+        <target_scope display_value="Studio">5d9789f3eb51310007e48c1cf106fe9e</target_scope>
+        <target_table/>
+        <target_type>3</target_type>
+    </sys_restricted_caller_access>
+    <sys_update_version action="INSERT_OR_UPDATE">
+        <action>DELETE</action>
+        <application display_value="inSubnet">80d913ffdb231010f9282737489619ea</application>
+        <file_path/>
+        <instance_id>e7486de4dbb4dcd89a4dcac505961986</instance_id>
+        <instance_name>dev103201</instance_name>
+        <name>sys_restricted_caller_access_e04d19722f7f1010ff58c886f699b606</name>
+        <payload><![CDATA[<?xml version="1.0" encoding="UTF-8"?><record_update table="sys_restricted_caller_access"><sys_restricted_caller_access action="INSERT_OR_UPDATE"><operation>read</operation><source/><source_scope display_value="inSubnet">80d913ffdb231010f9282737489619ea</source_scope><source_table/><source_type>5</source_type><status>2</status><sys_class_name>sys_restricted_caller_access</sys_class_name><sys_created_by>admin</sys_created_by><sys_created_on>2020-10-15 12:56:32</sys_created_on><sys_id>e04d19722f7f1010ff58c886f699b606</sys_id><sys_mod_count>0</sys_mod_count><sys_name>80d913ffdb231010f9282737489619ea</sys_name><sys_package display_value="inSubnet" source="x_8302_insubnet">80d913ffdb231010f9282737489619ea</sys_package><sys_policy/><sys_scope display_value="inSubnet">80d913ffdb231010f9282737489619ea</sys_scope><sys_update_name>sys_restricted_caller_access_e04d19722f7f1010ff58c886f699b606</sys_update_name><sys_updated_by>admin</sys_updated_by><sys_updated_on>2020-10-15 12:56:32</sys_updated_on><target/><target_scope display_value="Studio">5d9789f3eb51310007e48c1cf106fe9e</target_scope><target_table/><target_type>3</target_type></sys_restricted_caller_access></record_update>]]></payload>
+        <payload_hash>1200419671</payload_hash>
+        <record_name>80d913ffdb231010f9282737489619ea</record_name>
+        <reverted_from/>
+        <source>801c7d2a2f331010ff58c886f699b6a4</source>
+        <source_table>sys_update_set</source_table>
+        <state>previous</state>
+        <sys_created_by>admin</sys_created_by>
+        <sys_created_on>2020-10-15 12:56:32</sys_created_on>
+        <sys_id>036d55722f7f1010ff58c886f699b660</sys_id>
+        <sys_mod_count>0</sys_mod_count>
+        <sys_recorded_at>1752c555a510000001</sys_recorded_at>
+        <sys_updated_by>admin</sys_updated_by>
+        <sys_updated_on>2020-10-15 12:56:32</sys_updated_on>
+        <type>Restricted Caller Access Privilege</type>
+        <update_guid>4b6d5572a07f1010505d1c2ab9c8645f</update_guid>
+        <update_guid_history>4b6d5572a07f1010505d1c2ab9c8645f:1200419671</update_guid_history>
+    </sys_update_version>
+    <sys_metadata_delete action="INSERT_OR_UPDATE">
+        <sys_audit_delete/>
+        <sys_class_name>sys_metadata_delete</sys_class_name>
+        <sys_created_by>admin</sys_created_by>
+        <sys_created_on>2020-10-15 13:01:59</sys_created_on>
+        <sys_db_object display_value="" name="sys_restricted_caller_access">sys_restricted_caller_access</sys_db_object>
+        <sys_id>235c627b96f245aa87439d93dba6ce44</sys_id>
+        <sys_metadata>e04d19722f7f1010ff58c886f699b606</sys_metadata>
+        <sys_mod_count>0</sys_mod_count>
+        <sys_name>80d913ffdb231010f9282737489619ea</sys_name>
+        <sys_package display_value="inSubnet" source="x_8302_insubnet">80d913ffdb231010f9282737489619ea</sys_package>
+        <sys_parent/>
+        <sys_policy/>
+        <sys_scope display_value="inSubnet">80d913ffdb231010f9282737489619ea</sys_scope>
+        <sys_scope_delete display_value="">02cdb062db124b0f8471b9b5066e6be1</sys_scope_delete>
+        <sys_update_name>sys_restricted_caller_access_e04d19722f7f1010ff58c886f699b606</sys_update_name>
+        <sys_update_version display_value="sys_restricted_caller_access_e04d19722f7f1010ff58c886f699b606">036d55722f7f1010ff58c886f699b660</sys_update_version>
+        <sys_updated_by>admin</sys_updated_by>
+        <sys_updated_on>2020-10-15 13:01:59</sys_updated_on>
+    </sys_metadata_delete>
+</record_update>

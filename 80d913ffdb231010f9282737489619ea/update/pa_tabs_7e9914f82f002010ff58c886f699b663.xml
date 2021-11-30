@@ -1,0 +1,22 @@
+<?xml version="1.0" encoding="UTF-8"?><record_update sys_domain="global" table="pa_tabs">
+    <pa_tabs action="INSERT_OR_UPDATE">
+        <canvas_page display_value="PA inSubnet Dashboard - New Tab">729914f82f002010ff58c886f699b662</canvas_page>
+        <name>inSubnet Dashboard - New Tab</name>
+        <page display_value="inSubnet Dashboard">3a9914f82f002010ff58c886f699b661</page>
+        <sys_class_name>pa_tabs</sys_class_name>
+        <sys_created_by>admin</sys_created_by>
+        <sys_created_on>2020-10-21 13:08:05</sys_created_on>
+        <sys_domain>global</sys_domain>
+        <sys_domain_path>/</sys_domain_path>
+        <sys_id>7e9914f82f002010ff58c886f699b663</sys_id>
+        <sys_mod_count>0</sys_mod_count>
+        <sys_name>inSubnet Dashboard - New Tab</sys_name>
+        <sys_overrides/>
+        <sys_package display_value="inSubnet" source="x_8302_insubnet">80d913ffdb231010f9282737489619ea</sys_package>
+        <sys_policy/>
+        <sys_scope display_value="inSubnet">80d913ffdb231010f9282737489619ea</sys_scope>
+        <sys_update_name>pa_tabs_7e9914f82f002010ff58c886f699b663</sys_update_name>
+        <sys_updated_by>admin</sys_updated_by>
+        <sys_updated_on>2020-10-21 13:08:05</sys_updated_on>
+    </pa_tabs>
+</record_update>

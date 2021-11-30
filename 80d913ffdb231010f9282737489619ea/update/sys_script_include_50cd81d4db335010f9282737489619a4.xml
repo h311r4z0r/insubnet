@@ -1,0 +1,803 @@
+<?xml version="1.0" encoding="UTF-8"?><record_update table="sys_script_include">
+    <sys_script_include action="INSERT_OR_UPDATE">
+        <access>public</access>
+        <active>true</active>
+        <api_name>x_8302_insubnet.inSubnetFunctions</api_name>
+        <caller_access/>
+        <client_callable>false</client_callable>
+        <description/>
+        <name>inSubnetFunctions</name>
+        <script><![CDATA[var inSubnetFunctions = Class.create();
+inSubnetFunctions.prototype = {
+	initialize: function() {
+	},
+
+	insertNetwork: function(name,address,netmask,sub_supernet,id){
+		var mainNetwork = this.calculateNetwork(address,netmask).toString();
+		var objMain = JSON.parse(mainNetwork);
+		var mainInsert = new GlideRecord('x_8302_insubnet_network');
+		mainInsert.initialize(); 
+		mainInsert.parent = id;
+		mainInsert.name = name+'_'+objMain.networkIP; 
+		mainInsert.address = objMain.networkIP;
+		mainInsert.hosts = objMain.hostCount;
+		mainInsert.range = objMain.startingIP+'-'+objMain.endingIP;
+		var parentID = mainInsert.insert();
+
+		var property = gs.getProperty('x_8302_insubnet.cmdb.integration');
+		if(property == "true"){
+			var cmdbRangeInsert = new GlideRecord('x_8302_insubnet_discovery_range');
+			cmdbRangeInsert.initialize();
+			cmdbRangeInsert.name = objMain.networkIP;
+			cmdbRangeInsert.short_description = 'Range: '+objMain.startingIP+'-'+objMain.endingIP;
+			cmdbRangeInsert.insubnet_range = parentID;
+			cmdbRangeInsert.insert();
+		}
+
+		if(sub_supernet){
+			var rangesNetwork = this.calculateNetwork(address,netmask,sub_supernet).toString();
+			var objRanges = JSON.parse(rangesNetwork);
+			for(i=0;i<objRanges.length;i++){
+				this._insertRanges(id,name,objRanges[i].newNetwork,objRanges[i].maskCount,objRanges[i].newStartIP,objRanges[i].newEndingIP);
+			}
+		}
+		return parentID;
+	},
+
+	calculateNetwork: function(ip,mask,subnet){
+		var binIP = this._convertToBinary(ip);
+		var getMask = new GlideRecord('x_8302_insubnet_subnet');
+		getMask.get('mask_bit',mask);
+		getMask.query();
+		while(getMask.next()){
+			var subMask = getMask.netmask;
+			var hostCount = getMask.count;
+			var binMask = this._convertToBinary(getMask.netmask);
+		}
+
+		var networkBinary = this._compareMaskToIP(binMask,binIP);
+		var networkIP = this._convertToAddress(networkBinary);
+		var wildcardBinary = this._getWildcardBinary(binMask);
+		var wildcardIP = this._convertToAddress(wildcardBinary);
+		var startingIP = this._getStartingIP(networkIP);
+		var broadcastIP = this._getBroadcast(networkIP,wildcardIP);
+		var endingIP = this._getEndingIP(broadcastIP);
+
+		if(subnet){
+			var getCount = new GlideRecord('x_8302_insubnet_subnet');
+			getCount.get('mask_bit',subnet);
+			getCount.query();
+			while(getCount.next()){
+				var maskCount = getCount.count;
+				var binSubnet = this._convertToBinary(getCount.netmask);
+			}
+			var incHosts = parseInt(maskCount)+2;
+			var broadcastDecimal = this._octetToDecimal(broadcastIP);
+			var networkDecimal = this._octetToDecimal(networkIP);
+			var increaseCount = ((parseInt(broadcastDecimal)-parseInt(networkDecimal))+1)/(parseInt(maskCount)+2);
+
+			var subnetData = [];
+
+			for(i=0;i<parseInt(increaseCount);i++){
+				var newNetwork = this._decimalToOctet(networkDecimal);
+				var newStartIP = this._getStartingIP(newNetwork);
+				var newWildcardBinary = this._getWildcardBinary(binSubnet);
+				var newWildcardIP = this._convertToAddress(newWildcardBinary);
+				var newBroadcastIP = this._getBroadcast(newNetwork,newWildcardIP);
+				var newEndingIP = this._getEndingIP(newBroadcastIP);
+
+				subnetData.push({
+					'newNetwork':newNetwork+"/"+subnet,
+					'maskCount':maskCount.toString(),
+					'newStartIP':newStartIP,
+					'newEndingIP':newEndingIP
+				});
+				networkDecimal = parseInt(networkDecimal) + parseInt(incHosts);
+			}
+			subnetData = new global.JSON().encode(subnetData);
+			return subnetData;
+		}else{
+			return this._buildNetworkResult(networkIP,mask,subMask,wildcardIP,hostCount,startingIP,broadcastIP,endingIP);
+		}
+
+	},
+
+	deleteNetworks: function(id,opt){
+		var property = gs.getProperty('x_8302_insubnet.cmdb.integration');
+		if(property == "true"){
+			var dCMDBDiscoRanges = new GlideRecord('x_8302_insubnet_discovery_range');
+			dCMDBDiscoRanges.addEncodedQuery('insubnet_range.parent='+id);
+			dCMDBDiscoRanges.query();
+			dCMDBDiscoRanges.deleteMultiple();
+
+			var getCMDBtoDiscovery = new GlideRecord('x_8302_insubnet_m2m_range_to_discovery');
+			getCMDBtoDiscovery.addEncodedQuery('range.parent='+id);
+			getCMDBtoDiscovery.query();
+			while(getCMDBtoDiscovery.next()){
+				discoSchedule = getCMDBtoDiscovery.schedule.toString();
+				//if(getCMDBtoDiscovery.schedule){
+				//this._deleteSchedule(getCMDBtoDiscovery.schedule.toString());
+				//this._deleteCMDBSchedule(getCMDBtoDiscovery.schedule.toString());
+				//}
+				this._deleteCMDBSchedule(discoSchedule);
+				this._deleteSchedule(discoSchedule);
+			}
+		}
+
+		var dDiscovery = new GlideRecord('x_8302_insubnet_m2m_range_to_discovery');
+		dDiscovery.addEncodedQuery('range.parent='+id);
+		dDiscovery.query();
+		dDiscovery.deleteMultiple();
+
+		var dRelated = new GlideRecord('x_8302_insubnet_m2m_range_to_ci');
+		dRelated.addEncodedQuery('range.parent='+id);
+		dRelated.query();
+		dRelated.deleteMultiple();
+
+		var dMulti = new GlideRecord('x_8302_insubnet_network');
+		dMulti.addEncodedQuery('parent='+id);
+		dMulti.query();
+		dMulti.deleteMultiple();
+
+		if(!opt){
+			var dParent = new GlideRecord('x_8302_insubnet_calculator');
+			dParent.get(id);
+			dParent.query();
+			if(dParent.next()){
+				dParent.deleteRecord();
+			}
+		}
+	},
+
+	updateNetworks: function(name,address,netmask,sub_supernet,id){
+		this.deleteNetworks(id,"netonly");
+		this.insertNetwork(name,address,netmask,sub_supernet,id);
+	},
+
+	getIPsFromRange: function(range,id){
+		var clearCurrent = new GlideRecord('x_8302_insubnet_m2m_range_to_ci');
+		clearCurrent.addEncodedQuery('range='+id);
+		clearCurrent.query();
+		clearCurrent.deleteMultiple();
+
+		var clearRangeCalc = new GlideRecord('x_8302_insubnet_network');
+		clearRangeCalc.addEncodedQuery('sys_id='+id);
+		clearRangeCalc.query();
+		while(clearRangeCalc.next()){
+			clearRangeCalc.ci_count = 0;
+			clearRangeCalc.update;
+		}
+
+		var property = gs.getProperty('x_8302_insubnet.cmdb.integration');
+		if(property == "true"){
+			var clearCMDBrelRanges = new GlideRecord('cmdb_rel_ci');
+			clearCMDBrelRanges.addEncodedQuery('parent.insubnet_range='+id+'^type.name=Discovers::Discovered from');
+			clearCMDBrelRanges.query();
+			clearCMDBrelRanges.deleteMultiple();
+		}
+
+		var splitRange = range.split("-");
+		var startingDec = this._octetToDecimal(splitRange[0]);
+		var endingDec = this._octetToDecimal(splitRange[1]);
+		var difference = parseInt(endingDec) - parseInt(startingDec);
+		for(i=0;i<parseInt(difference);i++){
+			var newIP = this._decimalToOctet(startingDec);
+			this._createM2MrangeToCI(newIP,id);
+			startingDec = parseInt(startingDec)+1;
+		}
+
+		var getCount = new GlideAggregate('x_8302_insubnet_m2m_range_to_ci');
+		getCount.addEncodedQuery('range='+id);
+		getCount.addAggregate('COUNT');
+		getCount.query();
+		if (getCount.next()) {
+			var updateCount = new GlideRecord('x_8302_insubnet_network');
+			updateCount.get(id);
+			updateCount.query();
+			while(updateCount.next()){
+				updateCount.ci_count = getCount.getAggregate('COUNT');
+				updateCount.update();
+			}	
+		}
+	},
+
+	sameAsParent: function(id){
+		var getParMask = new GlideRecord('x_8302_insubnet_calculator');
+		getParMask.get(id);
+		getParMask.query();
+		while(getParMask.next()){
+			var getMaskCount = new GlideRecord('x_8302_insubnet_subnet');
+			getMaskCount.addEncodedQuery('mask_bit='+getParMask.netmask);
+			getMaskCount.query();
+			while(getMaskCount.next()){
+				var hostCount = getMaskCount.count;
+			}
+		}
+		return hostCount;
+	},
+
+	validateNetwork: function(ip,mask){
+		var binIP = this._convertToBinary(ip);
+		var getMask = new GlideRecord('x_8302_insubnet_subnet');
+		getMask.get('mask_bit',mask);
+		getMask.query();
+		while(getMask.next()){
+			var subMask = getMask.netmask;
+			var binMask = this._convertToBinary(getMask.netmask);
+		}
+
+		var networkBinary = this._compareMaskToIP(binMask,binIP);
+		var networkIP = this._convertToAddress(networkBinary);
+		var wildcardBinary = this._getWildcardBinary(binMask);
+		var wildcardIP = this._convertToAddress(wildcardBinary);
+		var startingIP = this._getStartingIP(networkIP);
+		var startingDec = this._octetToDecimal(startingIP);
+		var broadcastIP = this._getBroadcast(networkIP,wildcardIP);
+		var endingIP = this._getEndingIP(broadcastIP);
+		var endingDec = this._octetToDecimal(endingIP);
+
+		var validData = [];
+
+		var getNetworks = new GlideRecord('x_8302_insubnet_network');
+		getNetworks.addEncodedQuery('nameNOT LIKELDS');
+		getNetworks.query();
+		while(getNetworks.next()){
+			var range = getNetworks.range;
+			var splitRange = range.split("-");
+			var startingNetDec = this._octetToDecimal(splitRange[0]);
+			var endingNetDec = this._octetToDecimal(splitRange[1]);
+
+			if((startingNetDec >= startingDec && startingNetDec <= endingDec) || (endingNetDec >= startingDec && endingNetDec <= endingDec)){
+				validData.push({
+					'network':getNetworks.name.toString(),
+				});
+			}
+		}
+
+		validData = new global.JSON().encode(validData);
+		return validData;
+
+	},
+
+	validateSchedule: function(schedule){
+		var result = "no";
+		var checkSchedule = new GlideRecord('discovery_schedule');
+		checkSchedule.addEncodedQuery('name='+schedule);
+		checkSchedule.query();
+		if(checkSchedule.next()){
+			result = "yes";
+		}
+		return result;
+	},
+
+	discoveryRanges: function(ranges,schedule,name){
+		var property = gs.getProperty('x_8302_insubnet.cmdb.integration');
+		if(property == "true"){
+			var insertCMDBschedule = new GlideRecord('x_8302_insubnet_discovery_schedule');
+			insertCMDBschedule.initialize();
+			insertCMDBschedule.name = name;
+			insertCMDBschedule.insubnet_schedule = schedule.toString();
+			var CMDBscheduleID = insertCMDBschedule.insert();					
+		}
+
+		var stringRanges = ranges.toString();
+		var splitRanges = stringRanges.split(",");
+
+		for(i=0;i<splitRanges.length;i++){
+			var getRanges = new GlideRecord('x_8302_insubnet_network');
+			getRanges.get(splitRanges[i].toString());
+			getRanges.query();
+			while(getRanges.next()){
+				var address = getRanges.address;
+				var rangeItemID = this._insertDiscoveryRange(address,schedule.toString());
+				this._createM2MrangetoDiscovery(schedule.toString(),splitRanges[i].toString());
+				if(property == "true"){
+					this._insertCMDBscheduleRel(CMDBscheduleID.toString(),splitRanges[i].toString());
+				}
+			}
+		}
+	},
+
+	discoveryRangesNoInsert: function(range,schedule,name){
+		var property = gs.getProperty('x_8302_insubnet.cmdb.integration');
+		if(property == "true"){
+			var CMDBscheduleID = '';
+			var lookupCMDBschedule = new GlideRecord('x_8302_insubnet_discovery_schedule');
+			lookupCMDBschedule.addEncodedQuery('name='+name);
+			lookupCMDBschedule.query();
+			if(!lookupCMDBschedule.next()){
+				var insertCMDBschedule = new GlideRecord('x_8302_insubnet_discovery_schedule');
+				insertCMDBschedule.initialize();
+				insertCMDBschedule.name = name;
+				insertCMDBschedule.insubnet_schedule = schedule.toString();
+				CMDBscheduleID = insertCMDBschedule.insert();	
+			}else{
+				CMDBscheduleID = lookupCMDBschedule.getValue('sys_id').toString();
+			}
+		}
+
+		//var stringRanges = ranges.toString();
+		//var splitRanges = stringRanges.split(",");
+
+		//for(i=0;i<splitRanges.length;i++){
+		var getRanges = new GlideRecord('x_8302_insubnet_network');
+		getRanges.get(range.toString());
+		getRanges.query();
+		while(getRanges.next()){
+			var address = getRanges.address;
+			this._createM2MrangetoDiscovery(schedule.toString(),range.toString());
+			if(property == "true"){
+				this._insertCMDBscheduleRel(CMDBscheduleID.toString(),range.toString());
+			}
+		}
+		//}
+	},
+
+	getAvailableRanges: function(name){
+		var qResult = '';
+		if(!name){
+			qResult = 'sys_idIN';
+		}else{
+			var getSchedule = new GlideRecord('x_8302_insubnet_discovery_schedule');
+			getSchedule.get(name);
+			getSchedule.query();
+			while(getSchedule.next()){
+				var oobDiscoveryScheduleID = getSchedule.insubnet_schedule.toString();
+			}
+
+			var rangeScheduleArr = [];
+			var getRangesfromSchedule = new GlideRecord('discovery_range_item');
+			getRangesfromSchedule.addEncodedQuery('schedule='+oobDiscoveryScheduleID);
+			getRangesfromSchedule.query();
+			while(getRangesfromSchedule.next()){
+				var rangeSchedule = getRangesfromSchedule.getValue('name');
+				rangeScheduleArr.push(rangeSchedule);
+			}
+
+			var rangeNetworkArr = [];
+			var getRangesfromNetwork = new GlideRecord('x_8302_insubnet_network');
+			getRangesfromNetwork.query();
+			while(getRangesfromNetwork.next()){
+				var rangeNetwork = getRangesfromNetwork.getValue('address');
+				rangeNetworkArr.push(rangeNetwork);
+			}
+			var arrayUtil = new global.ArrayUtil();  
+			rangeScheduleArr= arrayUtil.unique(rangeScheduleArr);
+			rangeNetworkArr= arrayUtil.unique(rangeNetworkArr);
+
+			var diffResult = this._getArrayDifference(rangeScheduleArr,rangeNetworkArr);
+
+			var finalRangeArray = [];
+			var getFinalRangesfromNetwork = new GlideRecord('x_8302_insubnet_network');
+			getFinalRangesfromNetwork.addEncodedQuery('addressIN'+diffResult.toString()+'^nameNOT LIKELDS');
+			getFinalRangesfromNetwork.query();
+			while(getFinalRangesfromNetwork.next()){
+				var finalArray = getFinalRangesfromNetwork.getValue('sys_id').toString();
+				finalRangeArray.push(finalArray);
+			}
+			qResult = 'sys_idIN'+finalRangeArray.toString();
+		}
+		return qResult;
+	},
+
+	getCurrentRanges: function(name){
+		if(!name){
+			qResult = 'sys_idIN';
+		}else{
+			var getSchedule = new GlideRecord('x_8302_insubnet_discovery_schedule');
+			getSchedule.get(name);
+			getSchedule.query();
+			while(getSchedule.next()){
+				var oobDiscoveryScheduleID = getSchedule.insubnet_schedule.toString();
+			}
+
+			var rangeScheduleArr = [];
+			var getRangesfromSchedule = new GlideRecord('discovery_range_item');
+			getRangesfromSchedule.addEncodedQuery('schedule='+oobDiscoveryScheduleID);
+			getRangesfromSchedule.query();
+			while(getRangesfromSchedule.next()){
+				var rangeSchedule = getRangesfromSchedule.getValue('name');
+				rangeScheduleArr.push(rangeSchedule);
+			}
+
+			var finalRangeArray = [];
+			var getFinalRangesfromNetwork = new GlideRecord('x_8302_insubnet_network');
+			getFinalRangesfromNetwork.addEncodedQuery('addressIN'+rangeScheduleArr.toString()+'^nameNOT LIKELDS');
+			getFinalRangesfromNetwork.query();
+			while(getFinalRangesfromNetwork.next()){
+				var finalArray = getFinalRangesfromNetwork.getValue('sys_id').toString();
+				finalRangeArray.push(finalArray);
+			}
+			qResult = 'sys_idIN'+finalRangeArray.toString();
+		}
+		return qResult;
+	},
+
+	updateDiscoveryRanges: function(ranges,record,oobSchedule){
+		var property = gs.getProperty('x_8302_insubnet.cmdb.integration');
+		var stringRanges = ranges.toString();
+		var splitRanges = stringRanges.split(",");
+
+		for(i=0;i<splitRanges.length;i++){
+			var getRanges = new GlideRecord('x_8302_insubnet_network');
+			getRanges.get(splitRanges[i].toString());
+			getRanges.query();
+			while(getRanges.next()){
+				var address = getRanges.address;
+				var rangeItemID = this._updateDiscoveryRange(address,oobSchedule.toString());
+				this._createM2MrangetoDiscovery(oobSchedule.toString(),splitRanges[i].toString());
+				if(property == "true"){
+					this._insertCMDBscheduleRel(record.toString(),splitRanges[i].toString());
+				}
+			}
+		}
+
+	},
+
+	removeDiscoveryRanges: function(ranges,record,oobSchedule){
+		var property = gs.getProperty('x_8302_insubnet.cmdb.integration');
+		var stringRanges = ranges.toString();
+		var splitRanges = stringRanges.split(",");
+
+		for(i=0;i<splitRanges.length;i++){
+			var getRanges = new GlideRecord('x_8302_insubnet_network');
+			getRanges.get(splitRanges[i].toString());
+			getRanges.query();
+			while(getRanges.next()){
+				var address = getRanges.address;
+				var rangeItemID = this._deleteDiscoveryRange(address,oobSchedule.toString());
+				this._deleteM2MrangetoDiscovery(oobSchedule.toString(),splitRanges[i].toString());
+				if(property == "true"){
+					this._deleteCMDBscheduleRel(record.toString(),splitRanges[i].toString());
+				}
+			}
+		}
+	},
+
+	_getArrayDifference: function(arr1,arr2){
+		var c = [], diff = [];
+		for (var a = 0; a < arr1.length; a++) {
+			c[arr1[a]] = true;
+		}
+		for (var b = 0; b < arr2.length; b++) {
+			if (c[arr2[b]]) {
+				delete c[arr2[b]];
+			} else {
+				c[arr2[b]] = true;
+			}
+		}
+		for (var k in c) {
+			diff.push(k);
+		}
+		return diff;
+	},
+
+	_deleteSchedule: function(id){
+		var delSchedule = new GlideRecord('discovery_schedule');
+		delSchedule.get(id);
+		delSchedule.query();
+		if(delSchedule.next()){
+			delSchedule.deleteRecord();
+		}
+	},
+
+	_deleteCMDBSchedule: function(id){
+		var delSchedule = new GlideRecord('x_8302_insubnet_discovery_schedule');
+		delSchedule.addEncodedQuery('insubnet_schedule='+id);
+		delSchedule.query();
+		if(delSchedule.next()){
+			delSchedule.deleteRecord();
+		}
+	},
+
+	_deleteM2MrangetoDiscovery: function(schedule,range){
+		var lookupRec = new GlideRecord('x_8302_insubnet_m2m_range_to_discovery');
+		lookupRec.addEncodedQuery('schedule='+schedule+'^range='+range);
+		lookupRec.query();
+		while(lookupRec.next()){		
+			lookupRec.deleteRecord();
+		} 
+	},
+
+	_createM2MrangetoDiscovery: function(schedule,range){
+		var lookupRec = new GlideRecord('x_8302_insubnet_m2m_range_to_discovery');
+		lookupRec.addEncodedQuery('schedule='+schedule+'^range='+range);
+		lookupRec.query();
+
+		if(!lookupRec.next()){		
+			var insertRtoD = new GlideRecord('x_8302_insubnet_m2m_range_to_discovery');
+			insertRtoD.initialize(); 
+			insertRtoD.schedule = schedule;
+			insertRtoD.range = range; 
+			insertRtoD.insert();
+		} 
+	},
+
+	_insertDiscoveryRange: function(address,schedule){
+		var splitAdd = address.split("/");
+		var recordID = new global.QuickRanges().createItem('discovery_schedule',schedule.toString(),'IP Network'); 
+		recordID.setValue('network_ip',splitAdd[0]);
+		recordID.setValue('netmask',splitAdd[1]);
+		recordID.insert();
+		return recordID;
+	},
+
+	_deleteDiscoveryRange: function(address,schedule){
+		var splitAdd = address.split("/");
+		var lookupRangeItem = new GlideRecord('discovery_range_item');
+		lookupRangeItem.addEncodedQuery('name='+address+'^schedule='+schedule+'^network_ip='+splitAdd[0]+'^netmask='+splitAdd[1]);
+		lookupRangeItem.query();
+		while(lookupRangeItem.next()){
+			lookupRangeItem.deleteRecord();
+		}
+	},
+
+	_updateDiscoveryRange: function(address,schedule){
+		var splitAdd = address.split("/");
+		var recordID = new global.QuickRanges().createItem('discovery_schedule',schedule.toString(),'IP Network'); 
+		recordID.setValue('network_ip',splitAdd[0]);
+		recordID.setValue('netmask',splitAdd[1]);
+		recordID.insert();
+		return recordID;
+	},
+
+	_createM2MrangeToCI:function(ip,id){
+		var getIP = new GlideRecord('cmdb_ci_hardware');
+		getIP.addEncodedQuery('ip_address='+ip+'^install_status=1');
+		getIP.query();
+		while(getIP.next()){
+			this._insertRangeToCI(getIP.sys_id.toString(),id);
+		}
+	},
+
+	_deleteCMDBscheduleRel: function(schedule,range){
+		var getCMDBrange = new GlideRecord('x_8302_insubnet_discovery_range');
+		getCMDBrange.addEncodedQuery('insubnet_range='+range);
+		getCMDBrange.query();
+		while(getCMDBrange.next()){
+			var CMDBrangeID = getCMDBrange.sys_id.toString();
+		}
+
+		var getRelType = new GlideRecord('cmdb_rel_type');
+		getRelType.addEncodedQuery('name=Managed by::Manages');
+		getRelType.query();
+		while(getRelType.next()){
+			var relTypeID = getRelType.sys_id.toString();
+		}
+
+		var lookupCMDBRel = new GlideRecord('cmdb_rel_ci');
+		lookupCMDBRel.addEncodedQuery('parent='+schedule+'^child='+CMDBrangeID+'^type='+relTypeID);
+		lookupCMDBRel.query();
+		while(lookupCMDBRel.next()){
+			lookupCMDBRel.deleteRecord();
+		}	
+	},
+
+	_insertCMDBscheduleRel: function(schedule,range){
+		var getCMDBrange = new GlideRecord('x_8302_insubnet_discovery_range');
+		getCMDBrange.addEncodedQuery('insubnet_range='+range);
+		getCMDBrange.query();
+		while(getCMDBrange.next()){
+			var CMDBrangeID = getCMDBrange.sys_id.toString();
+		}
+
+		var getRelType = new GlideRecord('cmdb_rel_type');
+		getRelType.addEncodedQuery('name=Managed by::Manages');
+		getRelType.query();
+		while(getRelType.next()){
+			var relTypeID = getRelType.sys_id.toString();
+		}
+
+		var lookupCMDBRel = new GlideRecord('cmdb_rel_ci');
+		lookupCMDBRel.addEncodedQuery('parent='+schedule+'^child='+CMDBrangeID+'^type='+relTypeID);
+		lookupCMDBRel.query();
+		if(!lookupCMDBRel.next()){
+			var insertRelRec = new GlideRecord('cmdb_rel_ci');
+			insertRelRec.initialize(); 
+			insertRelRec.parent = schedule;
+			insertRelRec.child = CMDBrangeID; 
+			insertRelRec.type = relTypeID;
+			insertRelRec.insert();
+		}	
+	},
+
+	_insertRangeToCI: function(ipID,rangeID){
+		var lookupRec = new GlideRecord('x_8302_insubnet_m2m_range_to_ci');
+		lookupRec.addEncodedQuery('range='+rangeID+'^hardware='+ipID);
+		lookupRec.query();
+
+		if(!lookupRec.next()){		
+			var insertRtoCI = new GlideRecord('x_8302_insubnet_m2m_range_to_ci');
+			insertRtoCI.initialize(); 
+			insertRtoCI.hardware = ipID;
+			insertRtoCI.range = rangeID; 
+			insertRtoCI.insert();
+
+			var property = gs.getProperty('x_8302_insubnet.cmdb.integration');
+			if(property == "true"){
+				var getCMDBrange = new GlideRecord('x_8302_insubnet_discovery_range');
+				getCMDBrange.addEncodedQuery('insubnet_range='+rangeID);
+				getCMDBrange.query();
+				while(getCMDBrange.next()){
+					var CMDBrangeID = getCMDBrange.sys_id.toString();
+				}
+
+				var getRelType = new GlideRecord('cmdb_rel_type');
+				getRelType.addEncodedQuery('name=Discovers::Discovered from');
+				getRelType.query();
+				while(getRelType.next()){
+					var relTypeID = getRelType.sys_id.toString();
+				}
+
+				var lookupCMDBRel = new GlideRecord('cmdb_rel_ci');
+				lookupCMDBRel.addEncodedQuery('parent='+CMDBrangeID+'^child='+ipID+'^type='+relTypeID);
+				lookupCMDBRel.query();
+				if(!lookupCMDBRel.next()){
+					var insertRelRec = new GlideRecord('cmdb_rel_ci');
+					insertRelRec.initialize(); 
+					insertRelRec.parent = CMDBrangeID;
+					insertRelRec.child = ipID; 
+					insertRelRec.type = relTypeID;
+					insertRelRec.insert();
+				}
+			}
+		}
+	},
+
+	_buildNetworkResult: function(networkIP,mask,subMask,wildcardIP,hostCount,startingIP,broadcastIP,endingIP){
+		var data = {};
+		var object = {
+			'networkIP':networkIP+"/"+mask,
+			'subnetMask':subMask.toString(),
+			'wildcardIP':wildcardIP,
+			'hostCount':hostCount.toString(),
+			'startingIP':startingIP,
+			'broadcastIP':broadcastIP,
+			'endingIP':endingIP
+		};
+		data = new global.JSON().encode(object);
+		return data;
+	},
+
+	_insertRanges: function(parent,name,network,count,startIP,endIP){
+		var rangesInsert = new GlideRecord('x_8302_insubnet_network');
+		rangesInsert.initialize(); 
+		rangesInsert.parent = parent;
+		rangesInsert.name = name+'_'+network; 
+		rangesInsert.address = network;
+		rangesInsert.hosts = count;
+		rangesInsert.range = startIP+'-'+endIP;
+		var rangeID = rangesInsert.insert();
+
+		var property = gs.getProperty('x_8302_insubnet.cmdb.integration');
+		if(property == "true"){
+			var cmdbRangeInsert = new GlideRecord('x_8302_insubnet_discovery_range');
+			cmdbRangeInsert.initialize();
+			cmdbRangeInsert.name = network;
+			cmdbRangeInsert.short_description = 'Range: '+startIP+'-'+endIP;
+			cmdbRangeInsert.insubnet_range = rangeID;
+			cmdbRangeInsert.insert();
+		}
+	},
+
+	_convertToAddress: function(binary){
+		var splitBinary = binary.split(".");
+		var octA = parseInt(splitBinary[0], 2);
+		var octB = parseInt(splitBinary[1], 2);
+		var octC = parseInt(splitBinary[2], 2);
+		var octD = parseInt(splitBinary[3], 2);
+		return octA+"."+octB+"."+octC+"."+octD;
+	},
+
+	_convertToBinary: function(ip){
+		var splitIP = ip.split(".");
+		var octA = this._padBinaryNum(splitIP[0],8);
+		var octB = this._padBinaryNum(splitIP[1],8);
+		var octC = this._padBinaryNum(splitIP[2],8);
+		var octD = this._padBinaryNum(splitIP[3],8);
+		return octA+"."+octB+"."+octC+"."+octD;
+	},
+
+	_padBinaryNum: function(num,size){
+		var binaryNum = parseInt(num).toString(2);
+		var s = "00000000" + binaryNum;
+		return s.substr(s.length-size);
+	},
+
+	_compareMaskToIP: function(mask,address){
+		var maskSplit = mask.split(".");
+		var addressSplit = address.split(".");
+		var octA = this._compareOctets(maskSplit[0],addressSplit[0]);
+		var octB = this._compareOctets(maskSplit[1],addressSplit[1]);
+		var octC = this._compareOctets(maskSplit[2],addressSplit[2]);
+		var octD = this._compareOctets(maskSplit[3],addressSplit[3]);
+		return octA+"."+octB+"."+octC+"."+octD;
+	},
+
+	_compareOctets: function(mask,address){
+		var same = "";
+		mask.split('').forEach(function(val, i){
+			if (val == address.charAt(i)){
+				same += val; }else{ same += "0";}});
+		return same;
+	},
+
+	_flipOctet: function(octet){
+		var flip = "";
+		octet.split('').forEach(function(val){
+			if (val == "1"){
+				flip += "0"; }else{ flip += "1";}});
+		return flip;
+	},
+
+	_getWildcardBinary: function(mask){
+		var maskSplit = mask.split(".");
+		var octA = this._flipOctet(maskSplit[0]);
+		var octB = this._flipOctet(maskSplit[1]);
+		var octC = this._flipOctet(maskSplit[2]);
+		var octD = this._flipOctet(maskSplit[3]);
+		return octA+"."+octB+"."+octC+"."+octD;
+	},
+
+	_getStartingIP: function(network){
+		var d = this._octetToDecimal(network);
+		d = parseInt(d)+1;
+		return this._decimalToOctet(d);
+	},
+
+	_getEndingIP: function(broadcast){
+		var d = this._octetToDecimal(broadcast);
+		d = parseInt(d)-1;
+		return this._decimalToOctet(d);
+	},
+
+	_getBroadcast: function(network,wildcard){
+		var a = new Array(0,0,0,0);
+		var b = network.split(".");
+		var c = wildcard.split(".");
+		for(var i=0;i<4;i++){
+			a[i] = b[i] | c[i];
+		}
+		return a[0]+"."+a[1]+"."+a[2]+"."+a[3];
+	},
+
+	_octetToDecimal: function(network){
+		var a = network.split(".");
+		var d = 0;
+		d = d + parseInt(a[0])*16777216;
+		d = d + parseInt(a[1])*65536;
+		d = d + parseInt(a[2])*256;
+		d = d + parseInt(a[3]);
+		return d;
+	},
+
+	_decimalToOctet: function(total){
+		var zeros = "00000000000000000000000000000000";
+		var b = parseInt(total).toString(2);
+		b = zeros.substring(0,32-b.length) + b;
+		var a = new Array(
+			parseInt(b.substring(0,8),2)
+			, (total & 16711680)/65536
+			, (total & 65280)/256
+			, (total & 255)
+		);
+		o = a[0]+"."+a[1]+"."+a[2]+"."+a[3];
+		return o;
+	},
+
+	type: 'inSubnetFunctions'
+};]]></script>
+        <sys_class_name>sys_script_include</sys_class_name>
+        <sys_created_by>admin</sys_created_by>
+        <sys_created_on>2020-10-07 17:28:05</sys_created_on>
+        <sys_id>50cd81d4db335010f9282737489619a4</sys_id>
+        <sys_mod_count>204</sys_mod_count>
+        <sys_name>inSubnetFunctions</sys_name>
+        <sys_package display_value="inSubnet" source="x_8302_insubnet">80d913ffdb231010f9282737489619ea</sys_package>
+        <sys_policy>read</sys_policy>
+        <sys_scope display_value="inSubnet">80d913ffdb231010f9282737489619ea</sys_scope>
+        <sys_update_name>sys_script_include_50cd81d4db335010f9282737489619a4</sys_update_name>
+        <sys_updated_by>admin</sys_updated_by>
+        <sys_updated_on>2021-01-18 14:16:18</sys_updated_on>
+    </sys_script_include>
+</record_update>

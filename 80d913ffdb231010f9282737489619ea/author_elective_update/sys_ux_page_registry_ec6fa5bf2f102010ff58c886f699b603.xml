@@ -1,0 +1,67 @@
+<?xml version="1.0" encoding="UTF-8"?><record_update table="sys_ux_page_registry">
+    <sys_ux_page_registry action="DELETE">
+        <active>false</active>
+        <admin_panel>a86fa5bf2f102010ff58c886f699b603</admin_panel>
+        <admin_panel_table>sys_aw_master_config</admin_panel_table>
+        <page display_value="Workspace Core">b70867ad0f603300bb57f4a1ff767e15</page>
+        <path>workspace/insubnet</path>
+        <sys_class_name>sys_ux_page_registry</sys_class_name>
+        <sys_created_by>admin</sys_created_by>
+        <sys_created_on>2020-11-12 13:20:19</sys_created_on>
+        <sys_id>ec6fa5bf2f102010ff58c886f699b603</sys_id>
+        <sys_mod_count>1</sys_mod_count>
+        <sys_name>inSubnet</sys_name>
+        <sys_package display_value="inSubnet" source="x_8302_insubnet">80d913ffdb231010f9282737489619ea</sys_package>
+        <sys_policy/>
+        <sys_scope display_value="inSubnet">80d913ffdb231010f9282737489619ea</sys_scope>
+        <sys_update_name>sys_ux_page_registry_ec6fa5bf2f102010ff58c886f699b603</sys_update_name>
+        <sys_updated_by>admin</sys_updated_by>
+        <sys_updated_on>2020-11-12 13:56:18</sys_updated_on>
+        <title>inSubnet</title>
+    </sys_ux_page_registry>
+    <sys_update_version action="INSERT_OR_UPDATE">
+        <action>DELETE</action>
+        <application display_value="inSubnet">80d913ffdb231010f9282737489619ea</application>
+        <file_path/>
+        <instance_id>e7486de4dbb4dcd89a4dcac505961986</instance_id>
+        <instance_name>dev103201</instance_name>
+        <name>sys_ux_page_registry_ec6fa5bf2f102010ff58c886f699b603</name>
+        <payload><![CDATA[<?xml version="1.0" encoding="UTF-8"?><record_update table="sys_ux_page_registry"><sys_ux_page_registry action="INSERT_OR_UPDATE"><active>false</active><admin_panel>a86fa5bf2f102010ff58c886f699b603</admin_panel><admin_panel_table>sys_aw_master_config</admin_panel_table><page display_value="Workspace Core">b70867ad0f603300bb57f4a1ff767e15</page><path>workspace/insubnet</path><sys_class_name>sys_ux_page_registry</sys_class_name><sys_created_by>admin</sys_created_by><sys_created_on>2020-11-12 13:20:19</sys_created_on><sys_id>ec6fa5bf2f102010ff58c886f699b603</sys_id><sys_mod_count>1</sys_mod_count><sys_name>inSubnet</sys_name><sys_package display_value="inSubnet" source="x_8302_insubnet">80d913ffdb231010f9282737489619ea</sys_package><sys_policy/><sys_scope display_value="inSubnet">80d913ffdb231010f9282737489619ea</sys_scope><sys_update_name>sys_ux_page_registry_ec6fa5bf2f102010ff58c886f699b603</sys_update_name><sys_updated_by>admin</sys_updated_by><sys_updated_on>2020-11-12 13:56:18</sys_updated_on><title>inSubnet</title></sys_ux_page_registry></record_update>]]></payload>
+        <payload_hash>-636117700</payload_hash>
+        <record_name>inSubnet</record_name>
+        <reverted_from/>
+        <source>4d672e1f2fcc2010ff58c886f699b616</source>
+        <source_table>sys_update_set</source_table>
+        <state>previous</state>
+        <sys_created_by>admin</sys_created_by>
+        <sys_created_on>2020-11-12 13:56:18</sys_created_on>
+        <sys_id>3397353b2f502010ff58c886f699b681</sys_id>
+        <sys_mod_count>0</sys_mod_count>
+        <sys_recorded_at>175bcbe20350000001</sys_recorded_at>
+        <sys_updated_by>admin</sys_updated_by>
+        <sys_updated_on>2020-11-12 13:56:18</sys_updated_on>
+        <type>UX Page Registry</type>
+        <update_guid>7b97353bcc5020103b3b380d5b28d980</update_guid>
+        <update_guid_history>7b97353bcc5020103b3b380d5b28d980:-636117700,e46fa5bf8d102010cdbd1335ab38de05:-1835771389</update_guid_history>
+    </sys_update_version>
+    <sys_metadata_delete action="INSERT_OR_UPDATE">
+        <sys_audit_delete/>
+        <sys_class_name>sys_metadata_delete</sys_class_name>
+        <sys_created_by>admin</sys_created_by>
+        <sys_created_on>2020-11-12 14:00:43</sys_created_on>
+        <sys_db_object display_value="" name="sys_ux_page_registry">sys_ux_page_registry</sys_db_object>
+        <sys_id>7ce610af1d6340518eaeb8c116f91969</sys_id>
+        <sys_metadata>ec6fa5bf2f102010ff58c886f699b603</sys_metadata>
+        <sys_mod_count>0</sys_mod_count>
+        <sys_name>inSubnet</sys_name>
+        <sys_package display_value="inSubnet" source="x_8302_insubnet">80d913ffdb231010f9282737489619ea</sys_package>
+        <sys_parent/>
+        <sys_policy/>
+        <sys_scope display_value="inSubnet">80d913ffdb231010f9282737489619ea</sys_scope>
+        <sys_scope_delete display_value="">02cdb062db124b0f8471b9b5066e6be1</sys_scope_delete>
+        <sys_update_name>sys_ux_page_registry_ec6fa5bf2f102010ff58c886f699b603</sys_update_name>
+        <sys_update_version display_value="sys_ux_page_registry_ec6fa5bf2f102010ff58c886f699b603">3397353b2f502010ff58c886f699b681</sys_update_version>
+        <sys_updated_by>admin</sys_updated_by>
+        <sys_updated_on>2020-11-12 14:00:43</sys_updated_on>
+    </sys_metadata_delete>
+</record_update>

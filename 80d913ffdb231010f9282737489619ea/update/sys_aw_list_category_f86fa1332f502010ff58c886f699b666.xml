@@ -1,0 +1,24 @@
+<?xml version="1.0" encoding="UTF-8"?><record_update sys_domain="global" table="sys_aw_list_category">
+    <sys_aw_list_category action="INSERT_OR_UPDATE">
+        <active>true</active>
+        <description/>
+        <order>300</order>
+        <sys_class_name>sys_aw_list_category</sys_class_name>
+        <sys_created_by>admin</sys_created_by>
+        <sys_created_on>2020-11-12 13:20:20</sys_created_on>
+        <sys_domain>global</sys_domain>
+        <sys_domain_path>/</sys_domain_path>
+        <sys_id>f86fa1332f502010ff58c886f699b666</sys_id>
+        <sys_mod_count>0</sys_mod_count>
+        <sys_name>Discovery Schedules</sys_name>
+        <sys_overrides/>
+        <sys_package display_value="inSubnet" source="x_8302_insubnet">80d913ffdb231010f9282737489619ea</sys_package>
+        <sys_policy/>
+        <sys_scope display_value="inSubnet">80d913ffdb231010f9282737489619ea</sys_scope>
+        <sys_update_name>sys_aw_list_category_f86fa1332f502010ff58c886f699b666</sys_update_name>
+        <sys_updated_by>admin</sys_updated_by>
+        <sys_updated_on>2020-11-12 13:20:20</sys_updated_on>
+        <title>Discovery Schedules</title>
+        <workspace/>
+    </sys_aw_list_category>
+</record_update>

@@ -1,0 +1,127 @@
+<?xml version="1.0" encoding="UTF-8"?><record_update table="sys_ux_macroponent">
+    <sys_ux_macroponent action="INSERT_OR_UPDATE">
+        <associated_types/>
+        <component_dependencies/>
+        <composition>[ {
+  "elementId" : "ckhevwwddfaaaaaaccddbhhffffdtddpfdds",
+  "elementLabel" : "Container",
+  "propertyValues" : {
+    "label" : "Reports",
+    "bare" : false,
+    "type" : "default",
+    "bgvar" : "",
+    "border" : false,
+    "canCollapse" : false,
+    "collapsed" : false
+  },
+  "slot" : "ckhevww3f00033b7599qllj6m",
+  "definition" : {
+    "id" : "80653115e23949b501e719ae9b0b42a6",
+    "type" : "MACROPONENT"
+  },
+  "overrides" : {
+    "layout" : {
+      "default" : {
+        "type" : "rowColumn",
+        "root" : {"type":"row","id":"ckhevx8ig00093b75ltoqwb3s","columns":[{"type":"column","id":"ckhevx8ig000a3b75x9u5loas","slotName":"ckhevx8ig00083b75b912wpvl","size":"4"},{"type":"column","id":"ckhevy562000e3b754jr8nhqp","slotName":"ckhevy562000d3b75q05bgt4k","size":"4"},{"type":"column","slotName":"ckhevyg4p000h3b75g248sjdf","id":"ckhevyg4p000i3b75xplaangm","size":"4"}]},
+        "items" : null,
+        "rules" : null,
+        "styles" : null
+      }
+    },
+    "composition" : [ {
+      "elementId" : "ckhevxiiigaaaaaahhddbhhffdaaxiibznf",
+      "elementLabel" : "Report/PA Widget",
+      "propertyValues" : {
+        "label" : "",
+        "reportSysId" : "9345c5702fc02010ff58c886f699b658",
+        "paWidgetSysId" : "",
+        "variant" : "auto",
+        "border" : false,
+        "refreshInterval" : "",
+        "isRealtime" : false,
+        "refreshFrequency" : "0",
+        "kpiDetailsNavigation" : false
+      },
+      "slot" : "ckhevx8ig00083b75b912wpvl",
+      "definition" : {
+        "id" : "7dbc62b27efa88d6d910579a68c7a65d",
+        "type" : "MACROPONENT"
+      },
+      "overrides" : null
+    }, {
+      "elementId" : "ckhevyffggccaaaaaacddbhhffccxprgpee",
+      "elementLabel" : "Report/PA Widget",
+      "propertyValues" : {
+        "label" : "",
+        "reportSysId" : "cd4615782f042010ff58c886f699b6e1",
+        "paWidgetSysId" : "",
+        "variant" : "auto",
+        "border" : false,
+        "refreshInterval" : "",
+        "isRealtime" : false,
+        "refreshFrequency" : "0",
+        "kpiDetailsNavigation" : false
+      },
+      "slot" : "ckhevy562000d3b75q05bgt4k",
+      "definition" : {
+        "id" : "7dbc62b27efa88d6d910579a68c7a65d",
+        "type" : "MACROPONENT"
+      },
+      "overrides" : null
+    }, {
+      "elementId" : "ckhevygeepaaaaaagddbhhfflnxkyxiis",
+      "elementLabel" : "Report/PA Widget",
+      "propertyValues" : {
+        "label" : "",
+        "reportSysId" : "881889742fc02010ff58c886f699b65d",
+        "paWidgetSysId" : "",
+        "variant" : "auto",
+        "border" : false,
+        "refreshInterval" : "",
+        "isRealtime" : false,
+        "refreshFrequency" : "0",
+        "kpiDetailsNavigation" : false
+      },
+      "slot" : "ckhevyg4p000h3b75g248sjdf",
+      "definition" : {
+        "id" : "7dbc62b27efa88d6d910579a68c7a65d",
+        "type" : "MACROPONENT"
+      },
+      "overrides" : null
+    } ]
+  }
+} ]</composition>
+        <data/>
+        <events/>
+        <extends display_value="Landing Page Template">19be392623033300f4b4c50947bf65ba</extends>
+        <interactions/>
+        <layout>{
+  "default" : {
+    "type" : "rowColumn",
+    "root" : {"type":"row","columns":[{"type":"column","slotName":"ckhevww3f00033b7599qllj6m","size":"12","rows":[],"id":"ckhevww3f00053b75qursl5aj"}],"id":"ckhevww3f00043b759lgfcark"},
+    "items" : null,
+    "rules" : null,
+    "styles" : null
+  }
+}</layout>
+        <macroponent_dependencies/>
+        <name>inSubnet</name>
+        <props/>
+        <root_component/>
+        <root_component_config/>
+        <schema_version>1.0.0</schema_version>
+        <sys_class_name>sys_ux_macroponent</sys_class_name>
+        <sys_created_by>admin</sys_created_by>
+        <sys_created_on>2020-11-12 13:44:27</sys_created_on>
+        <sys_id>86e4f1b72f502010ff58c886f699b6ae</sys_id>
+        <sys_mod_count>1</sys_mod_count>
+        <sys_name>inSubnet</sys_name>
+        <sys_package display_value="inSubnet" source="x_8302_insubnet">80d913ffdb231010f9282737489619ea</sys_package>
+        <sys_policy>read</sys_policy>
+        <sys_scope display_value="inSubnet">80d913ffdb231010f9282737489619ea</sys_scope>
+        <sys_update_name>sys_ux_macroponent_86e4f1b72f502010ff58c886f699b6ae</sys_update_name>
+        <sys_updated_by>admin</sys_updated_by>
+        <sys_updated_on>2020-11-12 13:46:47</sys_updated_on>
+    </sys_ux_macroponent>
+</record_update>

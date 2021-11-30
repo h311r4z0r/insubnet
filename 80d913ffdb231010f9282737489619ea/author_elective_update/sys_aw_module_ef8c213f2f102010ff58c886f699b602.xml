@@ -1,0 +1,84 @@
+<?xml version="1.0" encoding="UTF-8"?><record_update sys_domain="global" table="sys_aw_module">
+    <sys_aw_module action="DELETE">
+        <active>true</active>
+        <content/>
+        <content_attrs/>
+        <content_component display_value="sn-inbox">15415f6bc913d31534330f91530c944c</content_component>
+        <content_tag/>
+        <detail/>
+        <detail_attrs/>
+        <detail_component display_value="sn-inbox-empty">ee222d2bff222300294153bd6338f113</detail_component>
+        <detail_tag/>
+        <hide_until_ready>false</hide_until_ready>
+        <icon>inbox-outline</icon>
+        <id>inbox</id>
+        <label>Inbox</label>
+        <order>200</order>
+        <roles/>
+        <sys_class_name>sys_aw_module</sys_class_name>
+        <sys_created_by>admin</sys_created_by>
+        <sys_created_on>2020-11-12 13:07:57</sys_created_on>
+        <sys_domain>global</sys_domain>
+        <sys_domain_path>/</sys_domain_path>
+        <sys_id>ef8c213f2f102010ff58c886f699b602</sys_id>
+        <sys_mod_count>0</sys_mod_count>
+        <sys_name>inbox</sys_name>
+        <sys_overrides/>
+        <sys_package display_value="inSubnet" source="x_8302_insubnet">80d913ffdb231010f9282737489619ea</sys_package>
+        <sys_policy/>
+        <sys_props/>
+        <sys_scope display_value="inSubnet">80d913ffdb231010f9282737489619ea</sys_scope>
+        <sys_update_name>sys_aw_module_ef8c213f2f102010ff58c886f699b602</sys_update_name>
+        <sys_updated_by>admin</sys_updated_by>
+        <sys_updated_on>2020-11-12 13:07:57</sys_updated_on>
+        <toolbar_button/>
+        <type>master_detail</type>
+        <workspace_config display_value="inSubnet">cb8c6dfb2f102010ff58c886f699b6b9</workspace_config>
+    </sys_aw_module>
+    <sys_variable_value action="DELETE" query="document_key=ef8c213f2f102010ff58c886f699b602"/>
+    <sys_update_version action="INSERT_OR_UPDATE">
+        <action>DELETE</action>
+        <application display_value="inSubnet">80d913ffdb231010f9282737489619ea</application>
+        <file_path/>
+        <instance_id>e7486de4dbb4dcd89a4dcac505961986</instance_id>
+        <instance_name>dev103201</instance_name>
+        <name>sys_aw_module_ef8c213f2f102010ff58c886f699b602</name>
+        <payload><![CDATA[<?xml version="1.0" encoding="UTF-8"?><record_update sys_domain="global" table="sys_aw_module"><sys_aw_module action="INSERT_OR_UPDATE"><active>true</active><content/><content_attrs/><content_component display_value="sn-inbox">15415f6bc913d31534330f91530c944c</content_component><content_tag/><detail/><detail_attrs/><detail_component display_value="sn-inbox-empty">ee222d2bff222300294153bd6338f113</detail_component><detail_tag/><hide_until_ready>false</hide_until_ready><icon>inbox-outline</icon><id>inbox</id><label>Inbox</label><order>200</order><roles/><sys_class_name>sys_aw_module</sys_class_name><sys_created_by>admin</sys_created_by><sys_created_on>2020-11-12 13:07:57</sys_created_on><sys_domain>global</sys_domain><sys_domain_path>/</sys_domain_path><sys_id>ef8c213f2f102010ff58c886f699b602</sys_id><sys_mod_count>0</sys_mod_count><sys_name>inbox</sys_name><sys_overrides/><sys_package display_value="inSubnet" source="x_8302_insubnet">80d913ffdb231010f9282737489619ea</sys_package><sys_policy/><sys_props/><sys_scope display_value="inSubnet">80d913ffdb231010f9282737489619ea</sys_scope><sys_update_name>sys_aw_module_ef8c213f2f102010ff58c886f699b602</sys_update_name><sys_updated_by>admin</sys_updated_by><sys_updated_on>2020-11-12 13:07:57</sys_updated_on><toolbar_button/><type>master_detail</type><workspace_config display_value="inSubnet">cb8c6dfb2f102010ff58c886f699b6b9</workspace_config></sys_aw_module><sys_variable_value action="delete_multiple" query="document_key=ef8c213f2f102010ff58c886f699b602"/></record_update>]]></payload>
+        <payload_hash>-728939525</payload_hash>
+        <record_name>inbox</record_name>
+        <reverted_from/>
+        <source>4d672e1f2fcc2010ff58c886f699b616</source>
+        <source_table>sys_update_set</source_table>
+        <state>previous</state>
+        <sys_created_by>admin</sys_created_by>
+        <sys_created_on>2020-11-12 13:08:02</sys_created_on>
+        <sys_id>b89c653f2f102010ff58c886f699b6ae</sys_id>
+        <sys_mod_count>0</sys_mod_count>
+        <sys_recorded_at>175bc91f0710000001</sys_recorded_at>
+        <sys_updated_by>admin</sys_updated_by>
+        <sys_updated_on>2020-11-12 13:08:02</sys_updated_on>
+        <type>Workspace Module</type>
+        <update_guid>638c213f2610201018fb68df8f06b31c</update_guid>
+        <update_guid_history>638c213f2610201018fb68df8f06b31c:-1788579477,638c213f2610201018fb68df8f06b31c:-1788579477,638c213f2610201018fb68df8f06b31c:-1788579477,638c213f2610201018fb68df8f06b31c:-1788579477</update_guid_history>
+    </sys_update_version>
+    <sys_metadata_delete action="INSERT_OR_UPDATE">
+        <sys_audit_delete/>
+        <sys_class_name>sys_metadata_delete</sys_class_name>
+        <sys_created_by>admin</sys_created_by>
+        <sys_created_on>2020-11-12 13:08:02</sys_created_on>
+        <sys_db_object display_value="" name="sys_aw_module">sys_aw_module</sys_db_object>
+        <sys_id>3bf0231b5983416892836ee58e7aeb90</sys_id>
+        <sys_metadata>ef8c213f2f102010ff58c886f699b602</sys_metadata>
+        <sys_mod_count>0</sys_mod_count>
+        <sys_name>inbox</sys_name>
+        <sys_package display_value="inSubnet" source="x_8302_insubnet">80d913ffdb231010f9282737489619ea</sys_package>
+        <sys_parent/>
+        <sys_policy/>
+        <sys_scope display_value="inSubnet">80d913ffdb231010f9282737489619ea</sys_scope>
+        <sys_scope_delete display_value="">02cdb062db124b0f8471b9b5066e6be1</sys_scope_delete>
+        <sys_update_name>sys_aw_module_ef8c213f2f102010ff58c886f699b602</sys_update_name>
+        <sys_update_version display_value="sys_aw_module_ef8c213f2f102010ff58c886f699b602">b89c653f2f102010ff58c886f699b6ae</sys_update_version>
+        <sys_updated_by>admin</sys_updated_by>
+        <sys_updated_on>2020-11-12 13:08:02</sys_updated_on>
+    </sys_metadata_delete>
+</record_update>
