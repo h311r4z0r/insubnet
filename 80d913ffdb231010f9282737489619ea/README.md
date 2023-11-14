@@ -26,7 +26,7 @@ If you find yourself unable to import your repository due to the presence of fil
    Currently listed dependencies:
    * Discovery Schedule Configuration
    * Discovery API
-   * Discovery
+   * Configuration Management (CMDB)
+   * 
    * Discovery - IP Based
    * Discovery Core
-   * Configuration Management (CMDB)
