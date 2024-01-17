@@ -4,27 +4,69 @@
             <element>name</element>
             <position>0</position>
             <sys_created_by>admin</sys_created_by>
-            <sys_created_on>2020-10-13 15:08:52</sys_created_on>
-            <sys_id>ca88674edb3fd010f92827374896194d</sys_id>
+            <sys_created_on>2024-01-17 20:00:16</sys_created_on>
+            <sys_id>3eb88ea193bf311031b7b97a7bba10ff</sys_id>
             <sys_mod_count>0</sys_mod_count>
             <sys_ui_formatter/>
             <sys_ui_section caption="NULL" display_value="" name="x_8302_insubnet_network_type" sys_domain="global" view="Default view">4288674edb3fd010f928273748961947</sys_ui_section>
             <sys_updated_by>admin</sys_updated_by>
-            <sys_updated_on>2020-10-13 15:08:52</sys_updated_on>
+            <sys_updated_on>2024-01-17 20:00:16</sys_updated_on>
             <sys_user/>
             <type/>
         </sys_ui_element>
         <sys_ui_element action="INSERT_OR_UPDATE">
-            <element>description</element>
+            <element>.split</element>
             <position>1</position>
             <sys_created_by>admin</sys_created_by>
-            <sys_created_on>2020-10-13 15:08:52</sys_created_on>
-            <sys_id>4e88674edb3fd010f92827374896194d</sys_id>
+            <sys_created_on>2024-01-17 20:00:16</sys_created_on>
+            <sys_id>beb88ea193bf311031b7b97a7bba10ff</sys_id>
             <sys_mod_count>0</sys_mod_count>
             <sys_ui_formatter/>
             <sys_ui_section caption="NULL" display_value="" name="x_8302_insubnet_network_type" sys_domain="global" view="Default view">4288674edb3fd010f928273748961947</sys_ui_section>
             <sys_updated_by>admin</sys_updated_by>
-            <sys_updated_on>2020-10-13 15:08:52</sys_updated_on>
+            <sys_updated_on>2024-01-17 20:00:16</sys_updated_on>
+            <sys_user/>
+            <type>.split</type>
+        </sys_ui_element>
+        <sys_ui_element action="INSERT_OR_UPDATE">
+            <element>parent</element>
+            <position>2</position>
+            <sys_created_by>admin</sys_created_by>
+            <sys_created_on>2024-01-17 20:00:16</sys_created_on>
+            <sys_id>32b8cea193bf311031b7b97a7bba1000</sys_id>
+            <sys_mod_count>0</sys_mod_count>
+            <sys_ui_formatter/>
+            <sys_ui_section caption="NULL" display_value="" name="x_8302_insubnet_network_type" sys_domain="global" view="Default view">4288674edb3fd010f928273748961947</sys_ui_section>
+            <sys_updated_by>admin</sys_updated_by>
+            <sys_updated_on>2024-01-17 20:00:16</sys_updated_on>
+            <sys_user/>
+            <type/>
+        </sys_ui_element>
+        <sys_ui_element action="INSERT_OR_UPDATE">
+            <element>.end_split</element>
+            <position>3</position>
+            <sys_created_by>admin</sys_created_by>
+            <sys_created_on>2024-01-17 20:00:16</sys_created_on>
+            <sys_id>b2b8cea193bf311031b7b97a7bba1000</sys_id>
+            <sys_mod_count>0</sys_mod_count>
+            <sys_ui_formatter/>
+            <sys_ui_section caption="NULL" display_value="" name="x_8302_insubnet_network_type" sys_domain="global" view="Default view">4288674edb3fd010f928273748961947</sys_ui_section>
+            <sys_updated_by>admin</sys_updated_by>
+            <sys_updated_on>2024-01-17 20:00:16</sys_updated_on>
+            <sys_user/>
+            <type>.end_split</type>
+        </sys_ui_element>
+        <sys_ui_element action="INSERT_OR_UPDATE">
+            <element>description</element>
+            <position>4</position>
+            <sys_created_by>admin</sys_created_by>
+            <sys_created_on>2024-01-17 20:00:16</sys_created_on>
+            <sys_id>36b8cea193bf311031b7b97a7bba1000</sys_id>
+            <sys_mod_count>0</sys_mod_count>
+            <sys_ui_formatter/>
+            <sys_ui_section caption="NULL" display_value="" name="x_8302_insubnet_network_type" sys_domain="global" view="Default view">4288674edb3fd010f928273748961947</sys_ui_section>
+            <sys_updated_by>admin</sys_updated_by>
+            <sys_updated_on>2024-01-17 20:00:16</sys_updated_on>
             <sys_user/>
             <type/>
         </sys_ui_element>

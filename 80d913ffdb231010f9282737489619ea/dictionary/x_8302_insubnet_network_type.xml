@@ -1,6 +1,10 @@
 <?xml version="1.0" encoding="UTF-8"?><database>
-    <element label="Network Type" max_length="40" name="x_8302_insubnet_network_type" sizeclass="7" type="collection">
+    <element db_object_id="248aed6193fb311031b7b97a7bba100c" label="Network Type" max_length="40" name="x_8302_insubnet_network_type" type="collection">
         <element label="Description" max_length="10000" name="description" type="string"/>
         <element label="Name" max_length="255" name="name" type="string"/>
+        <element label="Parent" max_length="32" name="parent" reference="x_8302_insubnet_network_type" type="reference"/>
+        <index name="index">
+            <element name="parent"/>
+        </index>
     </element>
 </database>
