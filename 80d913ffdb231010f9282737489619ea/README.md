@@ -27,6 +27,6 @@ If you find yourself unable to import your repository due to the presence of fil
    * Discovery Schedule Configuration
    * Discovery API
    * Configuration Management (CMDB)
-   * 
+   * Discovery
    * Discovery - IP Based
    * Discovery Core
