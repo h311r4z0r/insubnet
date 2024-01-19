@@ -1,6 +1,6 @@
 <?xml version="1.0" encoding="UTF-8"?><database>
     <element db_object_id="dd7aa16193fb311031b7b97a7bba109c" label="Network" max_length="40" name="x_8302_insubnet_network" text_index="true" type="collection">
-        <element label="Address" max_length="40" name="address" read_only="true" type="string"/>
+        <element display="true" label="Address" max_length="40" name="address" read_only="true" type="string"/>
         <element label="Available IPs" max_length="40" name="available_ips" read_only="true" type="integer"/>
         <element label="Business Unit" max_length="32" name="business_unit" reference="business_unit" type="reference"/>
         <element label="Consumed IPs" max_length="40" name="ci_count" read_only="true" type="integer"/>

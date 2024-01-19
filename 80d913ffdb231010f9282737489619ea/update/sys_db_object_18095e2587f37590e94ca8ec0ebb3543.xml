@@ -9,7 +9,7 @@
         <create_access>false</create_access>
         <create_access_controls>true</create_access_controls>
         <delete_access>false</delete_access>
-        <extension_model/>
+        <is_document_table>false</is_document_table>
         <is_extendable>true</is_extendable>
         <label>Discovery</label>
         <live_feed_enabled>false</live_feed_enabled>
@@ -18,21 +18,19 @@
         <provider_class/>
         <read_access>true</read_access>
         <scriptable_table>false</scriptable_table>
-        <super_class display_value="Configuration Item" name="cmdb_ci">659705ca7102101091f9db5cf8a3726e</super_class>
-        <sys_class_code>$$</sys_class_code>
+        <super_class display_value="Configuration Item" name="cmdb_ci">6a9c96fc87300110c50631583cbb354e</super_class>
         <sys_class_name>sys_db_object</sys_class_name>
-        <sys_class_path>/!!/$$</sys_class_path>
         <sys_created_by>admin</sys_created_by>
         <sys_created_on>2020-10-15 18:26:52</sys_created_on>
-        <sys_id>44e8e67e2f335010ff58c886f699b673</sys_id>
-        <sys_mod_count>0</sys_mod_count>
+        <sys_id>18095e2587f37590e94ca8ec0ebb3543</sys_id>
+        <sys_mod_count>3</sys_mod_count>
         <sys_name>Discovery</sys_name>
         <sys_package display_value="inSubnet" source="x_8302_insubnet">80d913ffdb231010f9282737489619ea</sys_package>
         <sys_policy/>
         <sys_scope display_value="inSubnet">80d913ffdb231010f9282737489619ea</sys_scope>
-        <sys_update_name>sys_db_object_44e8e67e2f335010ff58c886f699b673</sys_update_name>
-        <sys_updated_by>admin</sys_updated_by>
-        <sys_updated_on>2020-10-15 18:26:52</sys_updated_on>
+        <sys_update_name>sys_db_object_18095e2587f37590e94ca8ec0ebb3543</sys_update_name>
+        <sys_updated_by>chris.layman@infocenter.io</sys_updated_by>
+        <sys_updated_on>2024-01-19 19:13:57</sys_updated_on>
         <update_access>false</update_access>
         <user_role display_value="x_8302_insubnet.discovery_user" name="x_8302_insubnet.discovery_user">68c9cc96dbbfd010f92827374896198c</user_role>
         <ws_access>true</ws_access>
