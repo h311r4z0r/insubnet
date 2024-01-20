@@ -1,0 +1,28 @@
+<?xml version="1.0" encoding="UTF-8"?><database>
+    <element db_object_id="bc23d52e87b731d0e94ca8ec0ebb3549" label="IP Assignment" max_length="40" name="x_8302_insubnet_ip_assignment" type="collection">
+        <element label="Decimal Conversion" max_length="40" name="decimal_conversion" type="integer"/>
+        <element label="IP Address" max_length="40" name="ip_address" type="string"/>
+        <element choice="1" label="IP Type" max_length="40" name="ip_type" type="choice">
+            <choice>
+                <element inactive_on_update="false" label="Dynamic" value="Dynamic"/>
+                <element inactive_on_update="false" label="Static" value="Static"/>
+            </choice>
+        </element>
+        <element label="Network" max_length="32" name="network" reference="x_8302_insubnet_network" type="reference"/>
+        <element label="Resource" max_length="32" name="resource" reference="cmdb_ci" type="reference"/>
+        <element choice="1" label="State" max_length="40" name="state" type="choice">
+            <choice>
+                <element inactive_on_update="false" label="Available" value="Available"/>
+                <element inactive_on_update="false" label="Excluded" value="Excluded"/>
+                <element inactive_on_update="false" label="In Use" value="In Use"/>
+                <element inactive_on_update="false" label="Reserved" value="Reserved"/>
+            </choice>
+        </element>
+        <index name="index">
+            <element name="network"/>
+        </index>
+        <index name="index2">
+            <element name="resource"/>
+        </index>
+    </element>
+</database>
