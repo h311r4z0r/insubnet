@@ -1,0 +1,108 @@
+<?xml version="1.0" encoding="UTF-8"?><record_update sys_domain="global" table="sys_ui_action">
+    <sys_ui_action action="DELETE">
+        <action_name>sysverb_updateip</action_name>
+        <active>true</active>
+        <client>false</client>
+        <client_script_v2><![CDATA[function onClick(g_form) {
+
+}]]></client_script_v2>
+        <comments>Inserts IPs for the current range if the range fits certain criteria.</comments>
+        <condition>current.isValidRecord()</condition>
+        <form_action>true</form_action>
+        <form_button>true</form_button>
+        <form_button_v2>false</form_button_v2>
+        <form_context_menu>false</form_context_menu>
+        <form_link>false</form_link>
+        <form_menu_button_v2>false</form_menu_button_v2>
+        <form_style/>
+        <format_for_configurable_workspace>false</format_for_configurable_workspace>
+        <hint/>
+        <isolate_script>false</isolate_script>
+        <list_action>false</list_action>
+        <list_banner_button>false</list_banner_button>
+        <list_button>false</list_button>
+        <list_choice>false</list_choice>
+        <list_context_menu>false</list_context_menu>
+        <list_link>false</list_link>
+        <list_save_with_form_button>false</list_save_with_form_button>
+        <list_style/>
+        <messages/>
+        <name>Insert IPs</name>
+        <onclick/>
+        <order>100</order>
+        <script><![CDATA[new x_8302_insubnet.inSubnetFunctions().insertIPaddress(current.sys_id,current.name,current.range,current.supernet);
+action.setRedirectURL(current);
+gs.addInfoMessage('IP addresses added to IP Assignment.');]]></script>
+        <show_insert>false</show_insert>
+        <show_multiple_update>false</show_multiple_update>
+        <show_query>false</show_query>
+        <show_update>true</show_update>
+        <sys_class_name>sys_ui_action</sys_class_name>
+        <sys_created_by>chris.layman@infocenter.io</sys_created_by>
+        <sys_created_on>2024-01-21 18:58:16</sys_created_on>
+        <sys_domain>global</sys_domain>
+        <sys_domain_path>/</sys_domain_path>
+        <sys_id>43102ebe87f3f1d0e94ca8ec0ebb35e2</sys_id>
+        <sys_mod_count>14</sys_mod_count>
+        <sys_name>Insert IPs</sys_name>
+        <sys_overrides/>
+        <sys_package display_value="inSubnet" source="x_8302_insubnet">80d913ffdb231010f9282737489619ea</sys_package>
+        <sys_policy/>
+        <sys_scope display_value="inSubnet">80d913ffdb231010f9282737489619ea</sys_scope>
+        <sys_update_name>sys_ui_action_43102ebe87f3f1d0e94ca8ec0ebb35e2</sys_update_name>
+        <sys_updated_by>chris.layman@infocenter.io</sys_updated_by>
+        <sys_updated_on>2024-01-21 20:07:02</sys_updated_on>
+        <table>x_8302_insubnet_network</table>
+        <ui11_compatible>true</ui11_compatible>
+        <ui16_compatible>false</ui16_compatible>
+    </sys_ui_action>
+    <sys_update_version action="INSERT_OR_UPDATE">
+        <action>DELETE</action>
+        <application display_value="inSubnet">80d913ffdb231010f9282737489619ea</application>
+        <file_path/>
+        <instance_id>4ea6d630dbbc0910f37acac505961995</instance_id>
+        <instance_name>forwardairdev</instance_name>
+        <name>sys_ui_action_43102ebe87f3f1d0e94ca8ec0ebb35e2</name>
+        <payload>&lt;?xml version="1.0" encoding="UTF-8"?&gt;&lt;record_update sys_domain="global" table="sys_ui_action"&gt;&lt;sys_ui_action action="INSERT_OR_UPDATE"&gt;&lt;action_name&gt;sysverb_updateip&lt;/action_name&gt;&lt;active&gt;true&lt;/active&gt;&lt;client&gt;false&lt;/client&gt;&lt;client_script_v2&gt;&lt;![CDATA[function onClick(g_form) {
+
+}]]&gt;&lt;/client_script_v2&gt;&lt;comments&gt;Inserts IPs for the current range if the range fits certain criteria.&lt;/comments&gt;&lt;condition&gt;current.isValidRecord()&lt;/condition&gt;&lt;form_action&gt;true&lt;/form_action&gt;&lt;form_button&gt;true&lt;/form_button&gt;&lt;form_button_v2&gt;false&lt;/form_button_v2&gt;&lt;form_context_menu&gt;false&lt;/form_context_menu&gt;&lt;form_link&gt;false&lt;/form_link&gt;&lt;form_menu_button_v2&gt;false&lt;/form_menu_button_v2&gt;&lt;form_style/&gt;&lt;format_for_configurable_workspace&gt;false&lt;/format_for_configurable_workspace&gt;&lt;hint/&gt;&lt;isolate_script&gt;false&lt;/isolate_script&gt;&lt;list_action&gt;false&lt;/list_action&gt;&lt;list_banner_button&gt;false&lt;/list_banner_button&gt;&lt;list_button&gt;false&lt;/list_button&gt;&lt;list_choice&gt;false&lt;/list_choice&gt;&lt;list_context_menu&gt;false&lt;/list_context_menu&gt;&lt;list_link&gt;false&lt;/list_link&gt;&lt;list_save_with_form_button&gt;false&lt;/list_save_with_form_button&gt;&lt;list_style/&gt;&lt;messages/&gt;&lt;name&gt;Insert IPs&lt;/name&gt;&lt;onclick/&gt;&lt;order&gt;100&lt;/order&gt;&lt;script&gt;&lt;![CDATA[new x_8302_insubnet.inSubnetFunctions().insertIPaddress(current.sys_id,current.name,current.range,current.supernet);
+action.setRedirectURL(current);
+gs.addInfoMessage('IP addresses added to IP Assignment.');]]&gt;&lt;/script&gt;&lt;show_insert&gt;false&lt;/show_insert&gt;&lt;show_multiple_update&gt;false&lt;/show_multiple_update&gt;&lt;show_query&gt;false&lt;/show_query&gt;&lt;show_update&gt;true&lt;/show_update&gt;&lt;sys_class_name&gt;sys_ui_action&lt;/sys_class_name&gt;&lt;sys_created_by&gt;chris.layman@infocenter.io&lt;/sys_created_by&gt;&lt;sys_created_on&gt;2024-01-21 18:58:16&lt;/sys_created_on&gt;&lt;sys_domain&gt;global&lt;/sys_domain&gt;&lt;sys_domain_path&gt;/&lt;/sys_domain_path&gt;&lt;sys_id&gt;43102ebe87f3f1d0e94ca8ec0ebb35e2&lt;/sys_id&gt;&lt;sys_mod_count&gt;14&lt;/sys_mod_count&gt;&lt;sys_name&gt;Insert IPs&lt;/sys_name&gt;&lt;sys_overrides/&gt;&lt;sys_package display_value="inSubnet" source="x_8302_insubnet"&gt;80d913ffdb231010f9282737489619ea&lt;/sys_package&gt;&lt;sys_policy/&gt;&lt;sys_scope display_value="inSubnet"&gt;80d913ffdb231010f9282737489619ea&lt;/sys_scope&gt;&lt;sys_update_name&gt;sys_ui_action_43102ebe87f3f1d0e94ca8ec0ebb35e2&lt;/sys_update_name&gt;&lt;sys_updated_by&gt;chris.layman@infocenter.io&lt;/sys_updated_by&gt;&lt;sys_updated_on&gt;2024-01-21 20:07:02&lt;/sys_updated_on&gt;&lt;table&gt;x_8302_insubnet_network&lt;/table&gt;&lt;ui11_compatible&gt;true&lt;/ui11_compatible&gt;&lt;ui16_compatible&gt;false&lt;/ui16_compatible&gt;&lt;/sys_ui_action&gt;&lt;/record_update&gt;</payload>
+        <payload_hash>638095993</payload_hash>
+        <record_name>Insert IPs</record_name>
+        <reverted_from/>
+        <source>67c9dea187f37590e94ca8ec0ebb35d6</source>
+        <source_table>sys_update_set</source_table>
+        <state>previous</state>
+        <sys_created_by>chris.layman@infocenter.io</sys_created_by>
+        <sys_created_on>2024-01-21 20:07:02</sys_created_on>
+        <sys_id>51a0363687b7f1d0e94ca8ec0ebb358e</sys_id>
+        <sys_mod_count>0</sys_mod_count>
+        <sys_recorded_at>18d2da239030000001</sys_recorded_at>
+        <sys_updated_by>chris.layman@infocenter.io</sys_updated_by>
+        <sys_updated_on>2024-01-21 20:07:02</sys_updated_on>
+        <type>UI Action</type>
+        <update_guid>15a03636f6b7f1d0b287f2054adb968d</update_guid>
+        <update_guid_history>15a03636f6b7f1d0b287f2054adb968d:638095993,637eeab293b7f1d08f3118159043c968:-1704394907,6a6cea7e6f77f1d060f575dbb3ec4180:1674306762,81ca627aaa77f1d026b56edee12240eb:1549576340,b9e7e2b24477f1d0c5bd5104f13eabe4:-1782505535,ea276e32e477f1d045c1745794ca913d:699589756,8db666be0c37f1d0dc73be441a33a29b:-1395172850,8c1522fac737f1d08216dee23493e8a7:1532414254,4194aeba8d37f1d0ab8a17247fd8b59a:-1332262512,648466baec37f1d01660b777f527e16d:1065744782,85042a7a1537f1d007da3123f82808e2:-527007656,ce736e36ca37f1d00ec16596b8fe1883:-2022808258,8aa12eb2f837f1d00654a201636b25c5:1520034464,47512ab2d537f1d0a59c019437c0bfc6:-103003436,75e062b2a737f1d0c51566eb6ec218cd:2107063616</update_guid_history>
+    </sys_update_version>
+    <sys_metadata_delete action="INSERT_OR_UPDATE">
+        <sys_audit_delete/>
+        <sys_class_name>sys_metadata_delete</sys_class_name>
+        <sys_created_by>chris.layman@infocenter.io</sys_created_by>
+        <sys_created_on>2024-01-21 20:13:59</sys_created_on>
+        <sys_db_object display_value="" name="sys_ui_action">sys_ui_action</sys_db_object>
+        <sys_id>14bc36d9925a45eeae6becf9b1670624</sys_id>
+        <sys_metadata>43102ebe87f3f1d0e94ca8ec0ebb35e2</sys_metadata>
+        <sys_mod_count>0</sys_mod_count>
+        <sys_name>Insert IPs</sys_name>
+        <sys_package display_value="inSubnet" source="x_8302_insubnet">80d913ffdb231010f9282737489619ea</sys_package>
+        <sys_parent display_value="Network">dd7aa16193fb311031b7b97a7bba109c</sys_parent>
+        <sys_policy/>
+        <sys_scope display_value="inSubnet">80d913ffdb231010f9282737489619ea</sys_scope>
+        <sys_scope_delete display_value="">02cdb062db124b0f8471b9b5066e6be1</sys_scope_delete>
+        <sys_update_name>sys_ui_action_43102ebe87f3f1d0e94ca8ec0ebb35e2</sys_update_name>
+        <sys_update_version display_value="sys_ui_action_43102ebe87f3f1d0e94ca8ec0ebb35e2">51a0363687b7f1d0e94ca8ec0ebb358e</sys_update_version>
+        <sys_updated_by>chris.layman@infocenter.io</sys_updated_by>
+        <sys_updated_on>2024-01-21 20:13:59</sys_updated_on>
+    </sys_metadata_delete>
+</record_update>
