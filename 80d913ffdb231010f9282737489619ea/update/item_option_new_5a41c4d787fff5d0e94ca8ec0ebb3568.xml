@@ -2,11 +2,11 @@
     <item_option_new action="INSERT_OR_UPDATE">
         <active>true</active>
         <attributes/>
-        <cat_item display_value="Update IP Type">d7295b838777f5d0e94ca8ec0ebb351d</cat_item>
+        <cat_item display_value="Remove IP Address">4a41c05787fff5d0e94ca8ec0ebb352d</cat_item>
         <category/>
         <choice_direction>down</choice_direction>
-        <choice_field>ip_type</choice_field>
-        <choice_table>x_8302_insubnet_ip_assignment</choice_table>
+        <choice_field/>
+        <choice_table/>
         <create_roles/>
         <default_html_value/>
         <default_value/>
@@ -26,7 +26,7 @@
         <help_tag>More information</help_tag>
         <help_text/>
         <hidden>false</hidden>
-        <include_none>true</include_none>
+        <include_none>false</include_none>
         <instructions/>
         <layout>normal</layout>
         <list_table/>
@@ -37,17 +37,17 @@
         <lookup_value/>
         <macro/>
         <macroponent/>
-        <mandatory>false</mandatory>
+        <mandatory>true</mandatory>
         <map_to_field>false</map_to_field>
         <mask_use_confirmation>false</mask_use_confirmation>
         <mask_use_encryption>false</mask_use_encryption>
-        <name>u_slb_iptype</name>
-        <order>350</order>
+        <name>u_ref_network</name>
+        <order>100</order>
         <post_insert_script/>
         <price_if_checked>0</price_if_checked>
         <pricing_implications>false</pricing_implications>
         <published_ref/>
-        <question_text>IP Type</question_text>
+        <question_text>Network</question_text>
         <read_only>false</read_only>
         <read_roles/>
         <read_script/>
@@ -55,7 +55,7 @@
         <rec_price_if_checked>0</rec_price_if_checked>
         <record/>
         <record_producer_table>x_8302_insubnet_ip_assignment</record_producer_table>
-        <reference/>
+        <reference>x_8302_insubnet_network</reference>
         <reference_qual/>
         <reference_qual_condition/>
         <rich_text/>
@@ -75,19 +75,19 @@
         <summary_macro/>
         <sys_class_name>item_option_new</sys_class_name>
         <sys_created_by>chris.layman@infocenter.io</sys_created_by>
-        <sys_created_on>2024-01-22 20:25:53</sys_created_on>
-        <sys_id>a25e778787bff5d0e94ca8ec0ebb3555</sys_id>
+        <sys_created_on>2024-01-22 20:37:51</sys_created_on>
+        <sys_id>5a41c4d787fff5d0e94ca8ec0ebb3568</sys_id>
         <sys_mod_count>0</sys_mod_count>
-        <sys_name>IP Type</sys_name>
+        <sys_name>Network</sys_name>
         <sys_package display_value="inSubnet" source="x_8302_insubnet">80d913ffdb231010f9282737489619ea</sys_package>
         <sys_policy/>
         <sys_scope display_value="inSubnet">80d913ffdb231010f9282737489619ea</sys_scope>
-        <sys_update_name>item_option_new_a25e778787bff5d0e94ca8ec0ebb3555</sys_update_name>
+        <sys_update_name>item_option_new_5a41c4d787fff5d0e94ca8ec0ebb3568</sys_update_name>
         <sys_updated_by>chris.layman@infocenter.io</sys_updated_by>
-        <sys_updated_on>2024-01-22 20:25:53</sys_updated_on>
+        <sys_updated_on>2024-01-22 20:37:51</sys_updated_on>
         <table/>
         <tooltip/>
-        <type>5</type>
+        <type>8</type>
         <ui_page/>
         <unique>false</unique>
         <use_dynamic_default>false</use_dynamic_default>
@@ -103,22 +103,22 @@
         <visible_summary>true</visible_summary>
         <write_roles/>
     </item_option_new>
-    <sys_translated_text action="delete_multiple" query="documentkey=a25e778787bff5d0e94ca8ec0ebb3555"/>
-    <fx_price action="delete_multiple" query="id=a25e778787bff5d0e94ca8ec0ebb3555"/>
+    <sys_translated_text action="delete_multiple" query="documentkey=5a41c4d787fff5d0e94ca8ec0ebb3568"/>
+    <fx_price action="delete_multiple" query="id=5a41c4d787fff5d0e94ca8ec0ebb3568"/>
     <fx_price action="INSERT_OR_UPDATE">
         <amount>0</amount>
         <currency display_value="USD">USD</currency>
         <field>price_if_checked</field>
-        <id>a25e778787bff5d0e94ca8ec0ebb3555</id>
+        <id>5a41c4d787fff5d0e94ca8ec0ebb3568</id>
         <parent/>
         <reference_amount>0</reference_amount>
         <reference_currency display_value="USD">USD</reference_currency>
         <sys_created_by>chris.layman@infocenter.io</sys_created_by>
-        <sys_created_on>2024-01-22 20:25:53</sys_created_on>
-        <sys_id>038e3f0f87bff5d0e94ca8ec0ebb35ee</sys_id>
+        <sys_created_on>2024-01-22 20:37:51</sys_created_on>
+        <sys_id>5a41c4d787fff5d0e94ca8ec0ebb356f</sys_id>
         <sys_mod_count>0</sys_mod_count>
         <sys_updated_by>chris.layman@infocenter.io</sys_updated_by>
-        <sys_updated_on>2024-01-22 20:25:53</sys_updated_on>
+        <sys_updated_on>2024-01-22 20:37:51</sys_updated_on>
         <table>item_option_new</table>
         <type>calculated</type>
     </fx_price>
@@ -126,16 +126,16 @@
         <amount>0</amount>
         <currency display_value="USD">USD</currency>
         <field>rec_price_if_checked</field>
-        <id>a25e778787bff5d0e94ca8ec0ebb3555</id>
+        <id>5a41c4d787fff5d0e94ca8ec0ebb3568</id>
         <parent/>
         <reference_amount>0</reference_amount>
         <reference_currency display_value="USD">USD</reference_currency>
         <sys_created_by>chris.layman@infocenter.io</sys_created_by>
-        <sys_created_on>2024-01-22 20:25:53</sys_created_on>
-        <sys_id>c78e3f0f87bff5d0e94ca8ec0ebb35ed</sys_id>
+        <sys_created_on>2024-01-22 20:37:51</sys_created_on>
+        <sys_id>1241c4d787fff5d0e94ca8ec0ebb356f</sys_id>
         <sys_mod_count>0</sys_mod_count>
         <sys_updated_by>chris.layman@infocenter.io</sys_updated_by>
-        <sys_updated_on>2024-01-22 20:25:53</sys_updated_on>
+        <sys_updated_on>2024-01-22 20:37:51</sys_updated_on>
         <table>item_option_new</table>
         <type>calculated</type>
     </fx_price>

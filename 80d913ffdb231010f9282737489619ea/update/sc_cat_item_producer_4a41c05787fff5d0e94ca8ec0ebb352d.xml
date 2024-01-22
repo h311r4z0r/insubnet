@@ -13,7 +13,7 @@
         <delivery_plan/>
         <delivery_plan_script/>
         <delivery_time>1970-01-03 00:00:00</delivery_time>
-        <description><![CDATA[<p>Bulk or single update to IP Addresses.</p>]]></description>
+        <description><![CDATA[<p>Bulk or single removal of IP Addresses.</p>]]></description>
         <display_price_property>non_zero</display_price_property>
         <entitlement_script/>
         <flow_designer_flow/>
@@ -21,7 +21,7 @@
         <group/>
         <hide_sp>false</hide_sp>
         <icon/>
-        <ignore_price>true</ignore_price>
+        <ignore_price>false</ignore_price>
         <image/>
         <location/>
         <mandatory_attachment>false</mandatory_attachment>
@@ -30,7 +30,7 @@
         <mobile_picture/>
         <mobile_picture_type>use_desktop_picture</mobile_picture_type>
         <model/>
-        <name>Update IP Type</name>
+        <name>Remove IP Address</name>
         <no_attachment_v2>false</no_attachment_v2>
         <no_cart>false</no_cart>
         <no_cart_v2>false</no_cart_v2>
@@ -53,7 +53,7 @@
 * To access the variables, use `producer.var1` where var1 is the name of the variable
 * To access the Record Producer use `cat_item`
 */]]></post_insert_script>
-        <preview>JavaScript: popupOpenStandard("com.glideapp.servicecatalog_cat_item_view.do?v=1&amp;sysparm_id=d7295b838777f5d0e94ca8ec0ebb351d&amp;sysparm_preview=true", "summary");</preview>
+        <preview>JavaScript: popupOpenStandard("com.glideapp.servicecatalog_cat_item_view.do?v=1&amp;sysparm_id=4a41c05787fff5d0e94ca8ec0ebb352d&amp;sysparm_preview=true", "summary");</preview>
         <price>0</price>
         <published_ref/>
         <recurring_frequency/>
@@ -79,22 +79,22 @@
 * Avoid `current.setAbortAction()` and generate a separate record
 * Use `producer.var1` to access variables
 */]]></script>
-        <short_description>Update IP Type</short_description>
+        <short_description>Remove IP Address</short_description>
         <show_variable_help_on_load>false</show_variable_help_on_load>
         <start_closed>false</start_closed>
         <state/>
         <sys_class_name>sc_cat_item_producer</sys_class_name>
         <sys_created_by>chris.layman@infocenter.io</sys_created_by>
-        <sys_created_on>2024-01-22 17:43:54</sys_created_on>
-        <sys_id>d7295b838777f5d0e94ca8ec0ebb351d</sys_id>
-        <sys_mod_count>6</sys_mod_count>
-        <sys_name>Update IP Type</sys_name>
+        <sys_created_on>2024-01-22 20:37:50</sys_created_on>
+        <sys_id>4a41c05787fff5d0e94ca8ec0ebb352d</sys_id>
+        <sys_mod_count>4</sys_mod_count>
+        <sys_name>Remove IP Address</sys_name>
         <sys_package display_value="inSubnet" source="x_8302_insubnet">80d913ffdb231010f9282737489619ea</sys_package>
         <sys_policy/>
         <sys_scope display_value="inSubnet">80d913ffdb231010f9282737489619ea</sys_scope>
-        <sys_update_name>sc_cat_item_producer_d7295b838777f5d0e94ca8ec0ebb351d</sys_update_name>
+        <sys_update_name>sc_cat_item_producer_4a41c05787fff5d0e94ca8ec0ebb352d</sys_update_name>
         <sys_updated_by>chris.layman@infocenter.io</sys_updated_by>
-        <sys_updated_on>2024-01-22 20:41:34</sys_updated_on>
+        <sys_updated_on>2024-01-22 20:42:22</sys_updated_on>
         <table_name>x_8302_insubnet_ip_assignment</table_name>
         <taxonomy_topic/>
         <template/>
@@ -103,29 +103,29 @@
         <u_featured_item>false</u_featured_item>
         <use_sc_layout>true</use_sc_layout>
         <vendor/>
-        <version>6</version>
+        <version>7</version>
         <view/>
         <visible_bundle>true</visible_bundle>
         <visible_guide>true</visible_guide>
         <visible_standalone>true</visible_standalone>
         <workflow/>
     </sc_cat_item_producer>
-    <sys_translated_text action="delete_multiple" query="documentkey=d7295b838777f5d0e94ca8ec0ebb351d"/>
-    <fx_price action="delete_multiple" query="id=d7295b838777f5d0e94ca8ec0ebb351d"/>
+    <sys_translated_text action="delete_multiple" query="documentkey=4a41c05787fff5d0e94ca8ec0ebb352d"/>
+    <fx_price action="delete_multiple" query="id=4a41c05787fff5d0e94ca8ec0ebb352d"/>
     <fx_price action="INSERT_OR_UPDATE">
         <amount>0</amount>
         <currency display_value="USD">USD</currency>
         <field>price</field>
-        <id>d7295b838777f5d0e94ca8ec0ebb351d</id>
+        <id>4a41c05787fff5d0e94ca8ec0ebb352d</id>
         <parent/>
         <reference_amount>0</reference_amount>
         <reference_currency display_value="USD">USD</reference_currency>
         <sys_created_by>chris.layman@infocenter.io</sys_created_by>
-        <sys_created_on>2024-01-22 17:43:54</sys_created_on>
-        <sys_id>9a7913478777f5d0e94ca8ec0ebb3579</sys_id>
-        <sys_mod_count>0</sys_mod_count>
+        <sys_created_on>2024-01-22 20:37:50</sys_created_on>
+        <sys_id>c24184d787fff5d0e94ca8ec0ebb35f8</sys_id>
+        <sys_mod_count>1</sys_mod_count>
         <sys_updated_by>chris.layman@infocenter.io</sys_updated_by>
-        <sys_updated_on>2024-01-22 17:43:54</sys_updated_on>
+        <sys_updated_on>2024-01-22 20:37:52</sys_updated_on>
         <table>sc_cat_item_producer</table>
         <type>calculated</type>
     </fx_price>
