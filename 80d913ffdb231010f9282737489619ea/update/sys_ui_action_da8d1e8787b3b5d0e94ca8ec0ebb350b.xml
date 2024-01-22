@@ -1,0 +1,71 @@
+<?xml version="1.0" encoding="UTF-8"?><record_update sys_domain="global" table="sys_ui_action">
+    <sys_ui_action action="INSERT_OR_UPDATE">
+        <action_name>sysverb_insertip</action_name>
+        <active>true</active>
+        <client>false</client>
+        <client_script_v2><![CDATA[function onClick(g_form) {
+
+}]]></client_script_v2>
+        <comments>Insert IP assignments for current network</comments>
+        <condition>current.isValidRecord() &amp;&amp; current.canWrite() &amp;&amp; gs.getProperty('glide.ui.update_is_submit') != 'true' &amp;&amp; new x_8302_insubnet.inSubnetFunctions().insertIPaddressUIAction(current.sys_id)  == 'false'</condition>
+        <form_action>true</form_action>
+        <form_button>true</form_button>
+        <form_button_v2>false</form_button_v2>
+        <form_context_menu>false</form_context_menu>
+        <form_link>false</form_link>
+        <form_menu_button_v2>false</form_menu_button_v2>
+        <form_style/>
+        <format_for_configurable_workspace>false</format_for_configurable_workspace>
+        <hint/>
+        <isolate_script>false</isolate_script>
+        <list_action>false</list_action>
+        <list_banner_button>false</list_banner_button>
+        <list_button>false</list_button>
+        <list_choice>false</list_choice>
+        <list_context_menu>false</list_context_menu>
+        <list_link>false</list_link>
+        <list_save_with_form_button>false</list_save_with_form_button>
+        <list_style/>
+        <messages/>
+        <name>Insert IP Assignment</name>
+        <onclick/>
+        <order>1000</order>
+        <script><![CDATA[var id = current.sys_id.toString();
+var network_name = current.name.toString();
+var address = current.address.toString();
+var range = current.range.toString();
+var supernet = current.supernet.toString();
+
+var iia = new x_8302_insubnet.inSubnetFunctions().insertIPaddress(id,network_name,address,range,supernet);
+if(iia == 'error'){
+	gs.addErrorMessage('There was an issue creating the IP Assignments.  This could be caused by a supernet that is subnetted - if so, please be sure to set IP Assignments based on the subnet of the supernet.  Please reach out to the ServiceNow team if this is not the case.');
+}
+if(iia == 'success'){
+	gs.addInfoMessage('IP Assignments were added, if you can not see them in the related list below be sure to refresh the page.');
+}
+
+action.setRedirectURL(current);]]></script>
+        <show_insert>false</show_insert>
+        <show_multiple_update>false</show_multiple_update>
+        <show_query>false</show_query>
+        <show_update>true</show_update>
+        <sys_class_name>sys_ui_action</sys_class_name>
+        <sys_created_by>chris.layman@infocenter.io</sys_created_by>
+        <sys_created_on>2024-01-22 13:22:02</sys_created_on>
+        <sys_domain>global</sys_domain>
+        <sys_domain_path>/</sys_domain_path>
+        <sys_id>da8d1e8787b3b5d0e94ca8ec0ebb350b</sys_id>
+        <sys_mod_count>10</sys_mod_count>
+        <sys_name>Insert IP Assignment</sys_name>
+        <sys_overrides/>
+        <sys_package display_value="inSubnet" source="x_8302_insubnet">80d913ffdb231010f9282737489619ea</sys_package>
+        <sys_policy/>
+        <sys_scope display_value="inSubnet">80d913ffdb231010f9282737489619ea</sys_scope>
+        <sys_update_name>sys_ui_action_da8d1e8787b3b5d0e94ca8ec0ebb350b</sys_update_name>
+        <sys_updated_by>chris.layman@infocenter.io</sys_updated_by>
+        <sys_updated_on>2024-01-22 17:20:13</sys_updated_on>
+        <table>x_8302_insubnet_network</table>
+        <ui11_compatible>true</ui11_compatible>
+        <ui16_compatible>false</ui16_compatible>
+    </sys_ui_action>
+</record_update>
