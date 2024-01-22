@@ -1,7 +1,7 @@
 <?xml version="1.0" encoding="UTF-8"?><database>
     <element db_object_id="bc23d52e87b731d0e94ca8ec0ebb3549" label="IP Assignment" max_length="40" name="x_8302_insubnet_ip_assignment" type="collection">
         <element label="Decimal Conversion" max_length="40" name="decimal_conversion" type="integer"/>
-        <element label="IP Address" max_length="40" name="ip_address" type="string"/>
+        <element display="true" label="IP Address" max_length="40" name="ip_address" type="string"/>
         <element choice="1" label="IP Type" max_length="40" name="ip_type" type="choice">
             <choice>
                 <element inactive_on_update="false" label="Dynamic" value="Dynamic"/>
