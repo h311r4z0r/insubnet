@@ -41,7 +41,7 @@ current.setAbortAction(true);
         <sys_domain>global</sys_domain>
         <sys_domain_path>/</sys_domain_path>
         <sys_id>f87dd0e387333dd0e94ca8ec0ebb35c4</sys_id>
-        <sys_mod_count>0</sys_mod_count>
+        <sys_mod_count>2</sys_mod_count>
         <sys_name>Do not process empty record</sys_name>
         <sys_overrides/>
         <sys_package display_value="inSubnet" source="x_8302_insubnet">80d913ffdb231010f9282737489619ea</sys_package>
@@ -49,7 +49,7 @@ current.setAbortAction(true);
         <sys_scope display_value="inSubnet">80d913ffdb231010f9282737489619ea</sys_scope>
         <sys_update_name>sys_script_f87dd0e387333dd0e94ca8ec0ebb35c4</sys_update_name>
         <sys_updated_by>chris.layman@infocenter.io</sys_updated_by>
-        <sys_updated_on>2024-01-23 17:23:20</sys_updated_on>
+        <sys_updated_on>2024-01-24 20:22:05</sys_updated_on>
         <template/>
         <when>before</when>
     </sys_script>

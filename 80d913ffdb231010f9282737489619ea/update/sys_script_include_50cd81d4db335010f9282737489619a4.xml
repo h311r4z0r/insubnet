@@ -462,7 +462,7 @@ var endingInt = this._octetToDecimal(parseRange[1]);
 var res = 'error'; 
 
 if((supernet == 'true' && parseName[1].trim().toString() == address.trim().toString())||(supernet == 'false' && parseName[1].trim().toString() != address.trim().toString())){
-	for(i=startingInt; i<=endingInt; i++){
+	for(var i=startingInt; i<=endingInt; i++){
 	var ipAddress = this._decimalToOctet(i);
 	var state = 'Available';
 	var resource = '';
@@ -474,13 +474,13 @@ if((supernet == 'true' && parseName[1].trim().toString() == address.trim().toStr
 		resource = lookUpResource.getValue('sys_id');
 		state = 'In Use';
 	}
-
+	gs.info("Decimal: "+i);
 
 	var createIPAssignmentRec = new GlideRecord('x_8302_insubnet_ip_assignment');
 	createIPAssignmentRec.initialize();
 	createIPAssignmentRec.ip_address = ipAddress;
 	createIPAssignmentRec.network = id;
-	createIPAssignmentRec.decimal_conversion = i;
+	createIPAssignmentRec.decimal_conversion = parseInt(i);
 	createIPAssignmentRec.resource = resource;
 	createIPAssignmentRec.state = state;
 	createIPAssignmentRec.insert();
@@ -838,13 +838,13 @@ type: 'inSubnetFunctions'
         <sys_created_by>admin</sys_created_by>
         <sys_created_on>2020-10-07 17:28:05</sys_created_on>
         <sys_id>50cd81d4db335010f9282737489619a4</sys_id>
-        <sys_mod_count>247</sys_mod_count>
+        <sys_mod_count>252</sys_mod_count>
         <sys_name>inSubnetFunctions</sys_name>
         <sys_package display_value="inSubnet" source="x_8302_insubnet">80d913ffdb231010f9282737489619ea</sys_package>
         <sys_policy>read</sys_policy>
         <sys_scope display_value="inSubnet">80d913ffdb231010f9282737489619ea</sys_scope>
         <sys_update_name>sys_script_include_50cd81d4db335010f9282737489619a4</sys_update_name>
         <sys_updated_by>chris.layman@infocenter.io</sys_updated_by>
-        <sys_updated_on>2024-01-22 17:15:59</sys_updated_on>
+        <sys_updated_on>2024-01-24 20:13:29</sys_updated_on>
     </sys_script_include>
 </record_update>
