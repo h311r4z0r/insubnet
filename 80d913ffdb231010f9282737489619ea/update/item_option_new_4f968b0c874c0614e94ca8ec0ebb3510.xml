@@ -37,17 +37,17 @@
         <lookup_value/>
         <macro/>
         <macroponent/>
-        <mandatory>true</mandatory>
+        <mandatory>false</mandatory>
         <map_to_field>false</map_to_field>
         <mask_use_confirmation>false</mask_use_confirmation>
         <mask_use_encryption>false</mask_use_encryption>
-        <name>u_ref_environment</name>
-        <order>10</order>
+        <name>u_slt_resource</name>
+        <order>50</order>
         <post_insert_script/>
         <price_if_checked>0</price_if_checked>
         <pricing_implications>false</pricing_implications>
         <published_ref/>
-        <question_text>Environment</question_text>
+        <question_text>Resource</question_text>
         <read_only>false</read_only>
         <read_roles/>
         <read_script/>
@@ -55,7 +55,7 @@
         <rec_price_if_checked>0</rec_price_if_checked>
         <record/>
         <record_producer_table/>
-        <reference>cmdb_ci_environment</reference>
+        <reference/>
         <reference_qual/>
         <reference_qual_condition/>
         <rich_text/>
@@ -75,19 +75,19 @@
         <summary_macro/>
         <sys_class_name>item_option_new</sys_class_name>
         <sys_created_by>chris.layman@infocenter.io</sys_created_by>
-        <sys_created_on>2024-01-23 20:22:43</sys_created_on>
-        <sys_id>ba5645a3877b3dd0e94ca8ec0ebb35da</sys_id>
-        <sys_mod_count>1</sys_mod_count>
-        <sys_name>Environment</sys_name>
+        <sys_created_on>2024-01-25 18:56:09</sys_created_on>
+        <sys_id>4f968b0c874c0614e94ca8ec0ebb3510</sys_id>
+        <sys_mod_count>0</sys_mod_count>
+        <sys_name>Resource</sys_name>
         <sys_package display_value="inSubnet" source="x_8302_insubnet">80d913ffdb231010f9282737489619ea</sys_package>
         <sys_policy/>
         <sys_scope display_value="inSubnet">80d913ffdb231010f9282737489619ea</sys_scope>
-        <sys_update_name>item_option_new_ba5645a3877b3dd0e94ca8ec0ebb35da</sys_update_name>
+        <sys_update_name>item_option_new_4f968b0c874c0614e94ca8ec0ebb3510</sys_update_name>
         <sys_updated_by>chris.layman@infocenter.io</sys_updated_by>
-        <sys_updated_on>2024-01-25 17:01:35</sys_updated_on>
+        <sys_updated_on>2024-01-25 18:56:09</sys_updated_on>
         <table/>
         <tooltip/>
-        <type>8</type>
+        <type>6</type>
         <ui_page/>
         <unique>false</unique>
         <use_dynamic_default>false</use_dynamic_default>
@@ -103,22 +103,22 @@
         <visible_summary>true</visible_summary>
         <write_roles/>
     </item_option_new>
-    <sys_translated_text action="delete_multiple" query="documentkey=ba5645a3877b3dd0e94ca8ec0ebb35da"/>
-    <fx_price action="delete_multiple" query="id=ba5645a3877b3dd0e94ca8ec0ebb35da"/>
+    <sys_translated_text action="delete_multiple" query="documentkey=4f968b0c874c0614e94ca8ec0ebb3510"/>
+    <fx_price action="delete_multiple" query="id=4f968b0c874c0614e94ca8ec0ebb3510"/>
     <fx_price action="INSERT_OR_UPDATE">
         <amount>0</amount>
         <currency display_value="USD">USD</currency>
         <field>price_if_checked</field>
-        <id>ba5645a3877b3dd0e94ca8ec0ebb35da</id>
+        <id>4f968b0c874c0614e94ca8ec0ebb3510</id>
         <parent/>
         <reference_amount>0</reference_amount>
         <reference_currency display_value="USD">USD</reference_currency>
         <sys_created_by>chris.layman@infocenter.io</sys_created_by>
-        <sys_created_on>2024-01-23 20:22:43</sys_created_on>
-        <sys_id>ee6785a7877b3dd0e94ca8ec0ebb35b3</sys_id>
+        <sys_created_on>2024-01-25 18:56:09</sys_created_on>
+        <sys_id>3dc6034c874c0614e94ca8ec0ebb3529</sys_id>
         <sys_mod_count>0</sys_mod_count>
         <sys_updated_by>chris.layman@infocenter.io</sys_updated_by>
-        <sys_updated_on>2024-01-23 20:22:43</sys_updated_on>
+        <sys_updated_on>2024-01-25 18:56:09</sys_updated_on>
         <table>item_option_new</table>
         <type>calculated</type>
     </fx_price>
@@ -126,16 +126,16 @@
         <amount>0</amount>
         <currency display_value="USD">USD</currency>
         <field>rec_price_if_checked</field>
-        <id>ba5645a3877b3dd0e94ca8ec0ebb35da</id>
+        <id>4f968b0c874c0614e94ca8ec0ebb3510</id>
         <parent/>
         <reference_amount>0</reference_amount>
         <reference_currency display_value="USD">USD</reference_currency>
         <sys_created_by>chris.layman@infocenter.io</sys_created_by>
-        <sys_created_on>2024-01-23 20:22:43</sys_created_on>
-        <sys_id>6e6705a7877b3dd0e94ca8ec0ebb3576</sys_id>
+        <sys_created_on>2024-01-25 18:56:09</sys_created_on>
+        <sys_id>3dc6034c874c0614e94ca8ec0ebb3528</sys_id>
         <sys_mod_count>0</sys_mod_count>
         <sys_updated_by>chris.layman@infocenter.io</sys_updated_by>
-        <sys_updated_on>2024-01-23 20:22:43</sys_updated_on>
+        <sys_updated_on>2024-01-25 18:56:09</sys_updated_on>
         <table>item_option_new</table>
         <type>calculated</type>
     </fx_price>
