@@ -8,33 +8,33 @@
         <hint/>
         <homepage/>
         <image/>
-        <link_type>DIRECT</link_type>
+        <link_type>LIST</link_type>
         <map_page/>
-        <mobile_title>Network Discovery</mobile_title>
+        <mobile_title>Define Environments</mobile_title>
         <mobile_view_name>Mobile</mobile_view_name>
-        <name/>
-        <order>510</order>
+        <name>cmdb_ci_environment</name>
+        <order>3029</order>
         <override_menu_roles>false</override_menu_roles>
-        <query>/com.glideapp.servicecatalog_cat_item_view.do?v=1&amp;sysparm_id=d7295b838777f5d0e94ca8ec0ebb351d</query>
+        <query/>
         <report/>
         <roles/>
         <sys_class_name>sys_app_module</sys_class_name>
         <sys_created_by>chris.layman@infocenter.io</sys_created_by>
-        <sys_created_on>2024-01-22 17:36:57</sys_created_on>
+        <sys_created_on>2024-01-25 20:00:08</sys_created_on>
         <sys_domain>global</sys_domain>
         <sys_domain_path>/</sys_domain_path>
-        <sys_id>d0e793cb8737f5d0e94ca8ec0ebb3518</sys_id>
-        <sys_mod_count>4</sys_mod_count>
-        <sys_name>Update Metadata</sys_name>
+        <sys_id>d6255b8887cc0614e94ca8ec0ebb3563</sys_id>
+        <sys_mod_count>0</sys_mod_count>
+        <sys_name>Define Environments</sys_name>
         <sys_overrides/>
         <sys_package display_value="inSubnet" source="x_8302_insubnet">80d913ffdb231010f9282737489619ea</sys_package>
         <sys_policy/>
         <sys_scope display_value="inSubnet">80d913ffdb231010f9282737489619ea</sys_scope>
-        <sys_update_name>sys_app_module_d0e793cb8737f5d0e94ca8ec0ebb3518</sys_update_name>
+        <sys_update_name>sys_app_module_d6255b8887cc0614e94ca8ec0ebb3563</sys_update_name>
         <sys_updated_by>chris.layman@infocenter.io</sys_updated_by>
-        <sys_updated_on>2024-01-25 19:05:58</sys_updated_on>
+        <sys_updated_on>2024-01-25 20:00:08</sys_updated_on>
         <timeline_page/>
-        <title>Update Metadata</title>
+        <title>Define Environments</title>
         <uncancelable>false</uncancelable>
         <view_name/>
         <window_name/>

@@ -1,8 +1,12 @@
 <?xml version="1.0" encoding="UTF-8"?><database>
     <element db_object_id="bc23d52e87b731d0e94ca8ec0ebb3549" label="IP Assignment" max_length="40" name="x_8302_insubnet_ip_assignment" type="collection">
-        <element label="Classification" max_length="32" name="classification" reference="sys_db_object" reference_qual="nameSTARTSWITHcmdb_ci^sys_update_nameISNOTEMPTY^EQ" reference_qual_condition="nameSTARTSWITHcmdb_ci^sys_update_nameISNOTEMPTY^EQ" type="reference"/>
+        <element attributes="base_table=cmdb_ci_hardware,skip_root=true" choice="1" label="Classification" max_length="32" name="classification" type="table_name">
+            <choice/>
+        </element>
         <element label="Decimal Conversion" max_length="19" name="decimal_conversion" read_only="true" type="longint"/>
-        <element label="Environment" max_length="32" name="environment" reference="cmdb_ci_environment" type="reference"/>
+        <element choice="1" label="Environment" max_length="32" name="environment" reference="cmdb_ci_environment" type="reference">
+            <choice/>
+        </element>
         <element display="true" label="IP Address" max_length="40" name="ip_address" read_only="true" type="string"/>
         <element choice="1" label="IP Type" max_length="40" name="ip_type" type="choice">
             <choice>

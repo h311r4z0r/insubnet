@@ -474,7 +474,6 @@ if((supernet == 'true' && parseName[1].trim().toString() == address.trim().toStr
 		resource = lookUpResource.getValue('sys_id');
 		state = 'In Use';
 	}
-	gs.info("Decimal: "+i);
 
 	var createIPAssignmentRec = new GlideRecord('x_8302_insubnet_ip_assignment');
 	createIPAssignmentRec.initialize();
@@ -490,6 +489,25 @@ if((supernet == 'true' && parseName[1].trim().toString() == address.trim().toStr
 return res;
 },
 
+updateIPAssignmentUsage: function(){
+var lookupIP = new GlideRecord('x_8302_insubnet_ip_assignment');
+lookupIP.query();
+while(lookupIP.next()){
+	var ip_address = lookupIP.getValue('ip_address');
+
+	var lookUpResource = new GlideRecord('cmdb_ci_hardware');
+	lookUpResource.addEncodedQuery("ip_address="+ip_address+"^install_status=1");
+	lookUpResource.query();
+		
+		if(lookUpResource.next()){
+			resource = lookUpResource.getValue('sys_id');
+			lookupIP.state = 'In Use';
+			lookupIP.resource = resource;
+			lookupIP.update();
+		}
+	}
+},
+
 insertIPaddressUIAction: function(id){
 var res = 'false';
 var lookupIPAssignmentRec = new GlideRecord('x_8302_insubnet_ip_assignment');
@@ -500,6 +518,26 @@ var lookupIPAssignmentRec = new GlideRecord('x_8302_insubnet_ip_assignment');
 	}
 	return res;
 },
+
+getExTables: function() {
+	var a=[];
+
+	var table = new GlideTableHierarchy("cmdb_ci_hardware");
+	var listTables = table.getAllExtensions();
+
+	for(i = 0; i < listTables.length; i++){
+		if(listTables[i] != 'cmdb_ci_hardware'){
+			var gExT = new GlideRecord("sys_db_object");
+			gExT.addEncodedQuery('name='+listTables[i]);
+			gExT.query();
+					while(gExT.next()){
+					a.push(gExT.sys_id.toString());
+				}
+		}
+	}
+	gs.info("Length: "+listTables.length+"\nArray: "+a);
+	return "sys_idIN"+a;
+    },
 
 _getArrayDifference: function(arr1,arr2){
 var c = [], diff = [];
@@ -838,13 +876,13 @@ type: 'inSubnetFunctions'
         <sys_created_by>admin</sys_created_by>
         <sys_created_on>2020-10-07 17:28:05</sys_created_on>
         <sys_id>50cd81d4db335010f9282737489619a4</sys_id>
-        <sys_mod_count>252</sys_mod_count>
+        <sys_mod_count>261</sys_mod_count>
         <sys_name>inSubnetFunctions</sys_name>
         <sys_package display_value="inSubnet" source="x_8302_insubnet">80d913ffdb231010f9282737489619ea</sys_package>
         <sys_policy>read</sys_policy>
         <sys_scope display_value="inSubnet">80d913ffdb231010f9282737489619ea</sys_scope>
         <sys_update_name>sys_script_include_50cd81d4db335010f9282737489619a4</sys_update_name>
         <sys_updated_by>chris.layman@infocenter.io</sys_updated_by>
-        <sys_updated_on>2024-01-24 20:13:29</sys_updated_on>
+        <sys_updated_on>2024-01-26 14:16:23</sys_updated_on>
     </sys_script_include>
 </record_update>
