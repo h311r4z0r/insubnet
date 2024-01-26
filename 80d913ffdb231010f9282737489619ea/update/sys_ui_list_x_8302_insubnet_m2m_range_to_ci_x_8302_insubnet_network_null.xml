@@ -3,47 +3,77 @@
         <sys_ui_list_element action="INSERT_OR_UPDATE">
             <average_value>false</average_value>
             <element>hardware</element>
-            <list_id display_value="x_8302_insubnet_m2m_range_to_ci" element="NULL" name="x_8302_insubnet_m2m_range_to_ci" parent="x_8302_insubnet_network" relationship="NULL" sys_domain="global" view="Default view">4c0f75f1dbfb9010f92827374896194c</list_id>
+            <list_id display_value="x_8302_insubnet_m2m_range_to_ci" element="NULL" name="x_8302_insubnet_m2m_range_to_ci" parent="x_8302_insubnet_network" relationship="NULL" sys_domain="global" view="Default view">944c10ec87400a14e94ca8ec0ebb35a1</list_id>
             <max_value>false</max_value>
             <min_value>false</min_value>
             <position>0</position>
             <sum>false</sum>
-            <sys_created_by>admin</sys_created_by>
-            <sys_created_on>2020-10-12 12:49:18</sys_created_on>
-            <sys_id>480f75f1dbfb9010f92827374896194d</sys_id>
+            <sys_created_by>chris.layman@infocenter.io</sys_created_by>
+            <sys_created_on>2024-01-26 19:48:05</sys_created_on>
+            <sys_id>9c4c10ec87400a14e94ca8ec0ebb35a3</sys_id>
             <sys_mod_count>0</sys_mod_count>
-            <sys_updated_by>admin</sys_updated_by>
-            <sys_updated_on>2020-10-12 12:49:18</sys_updated_on>
+            <sys_updated_by>chris.layman@infocenter.io</sys_updated_by>
+            <sys_updated_on>2024-01-26 19:48:05</sys_updated_on>
         </sys_ui_list_element>
         <sys_ui_list_element action="INSERT_OR_UPDATE">
             <average_value>false</average_value>
             <element>hardware.ip_address</element>
-            <list_id display_value="x_8302_insubnet_m2m_range_to_ci" element="NULL" name="x_8302_insubnet_m2m_range_to_ci" parent="x_8302_insubnet_network" relationship="NULL" sys_domain="global" view="Default view">4c0f75f1dbfb9010f92827374896194c</list_id>
+            <list_id display_value="x_8302_insubnet_m2m_range_to_ci" element="NULL" name="x_8302_insubnet_m2m_range_to_ci" parent="x_8302_insubnet_network" relationship="NULL" sys_domain="global" view="Default view">944c10ec87400a14e94ca8ec0ebb35a1</list_id>
             <max_value>false</max_value>
             <min_value>false</min_value>
             <position>1</position>
             <sum>false</sum>
-            <sys_created_by>admin</sys_created_by>
-            <sys_created_on>2020-10-12 12:49:18</sys_created_on>
-            <sys_id>c80f75f1dbfb9010f92827374896194d</sys_id>
+            <sys_created_by>chris.layman@infocenter.io</sys_created_by>
+            <sys_created_on>2024-01-26 19:48:05</sys_created_on>
+            <sys_id>d44c10ec87400a14e94ca8ec0ebb35a4</sys_id>
             <sys_mod_count>0</sys_mod_count>
-            <sys_updated_by>admin</sys_updated_by>
-            <sys_updated_on>2020-10-12 12:49:18</sys_updated_on>
+            <sys_updated_by>chris.layman@infocenter.io</sys_updated_by>
+            <sys_updated_on>2024-01-26 19:48:05</sys_updated_on>
         </sys_ui_list_element>
         <sys_ui_list_element action="INSERT_OR_UPDATE">
             <average_value>false</average_value>
-            <element>range</element>
-            <list_id display_value="x_8302_insubnet_m2m_range_to_ci" element="NULL" name="x_8302_insubnet_m2m_range_to_ci" parent="x_8302_insubnet_network" relationship="NULL" sys_domain="global" view="Default view">4c0f75f1dbfb9010f92827374896194c</list_id>
+            <element>hardware.last_discovered</element>
+            <list_id display_value="x_8302_insubnet_m2m_range_to_ci" element="NULL" name="x_8302_insubnet_m2m_range_to_ci" parent="x_8302_insubnet_network" relationship="NULL" sys_domain="global" view="Default view">944c10ec87400a14e94ca8ec0ebb35a1</list_id>
             <max_value>false</max_value>
             <min_value>false</min_value>
             <position>2</position>
             <sum>false</sum>
-            <sys_created_by>admin</sys_created_by>
-            <sys_created_on>2020-10-12 12:49:18</sys_created_on>
-            <sys_id>4c0f75f1dbfb9010f92827374896194d</sys_id>
+            <sys_created_by>chris.layman@infocenter.io</sys_created_by>
+            <sys_created_on>2024-01-26 19:48:05</sys_created_on>
+            <sys_id>d84c10ec87400a14e94ca8ec0ebb35a4</sys_id>
             <sys_mod_count>0</sys_mod_count>
-            <sys_updated_by>admin</sys_updated_by>
-            <sys_updated_on>2020-10-12 12:49:18</sys_updated_on>
+            <sys_updated_by>chris.layman@infocenter.io</sys_updated_by>
+            <sys_updated_on>2024-01-26 19:48:05</sys_updated_on>
+        </sys_ui_list_element>
+        <sys_ui_list_element action="INSERT_OR_UPDATE">
+            <average_value>false</average_value>
+            <element>hardware.discovery_source</element>
+            <list_id display_value="x_8302_insubnet_m2m_range_to_ci" element="NULL" name="x_8302_insubnet_m2m_range_to_ci" parent="x_8302_insubnet_network" relationship="NULL" sys_domain="global" view="Default view">944c10ec87400a14e94ca8ec0ebb35a1</list_id>
+            <max_value>false</max_value>
+            <min_value>false</min_value>
+            <position>3</position>
+            <sum>false</sum>
+            <sys_created_by>chris.layman@infocenter.io</sys_created_by>
+            <sys_created_on>2024-01-26 19:48:05</sys_created_on>
+            <sys_id>dc4c10ec87400a14e94ca8ec0ebb35a4</sys_id>
+            <sys_mod_count>0</sys_mod_count>
+            <sys_updated_by>chris.layman@infocenter.io</sys_updated_by>
+            <sys_updated_on>2024-01-26 19:48:05</sys_updated_on>
+        </sys_ui_list_element>
+        <sys_ui_list_element action="INSERT_OR_UPDATE">
+            <average_value>false</average_value>
+            <element>range</element>
+            <list_id display_value="x_8302_insubnet_m2m_range_to_ci" element="NULL" name="x_8302_insubnet_m2m_range_to_ci" parent="x_8302_insubnet_network" relationship="NULL" sys_domain="global" view="Default view">944c10ec87400a14e94ca8ec0ebb35a1</list_id>
+            <max_value>false</max_value>
+            <min_value>false</min_value>
+            <position>4</position>
+            <sum>false</sum>
+            <sys_created_by>chris.layman@infocenter.io</sys_created_by>
+            <sys_created_on>2024-01-26 19:48:05</sys_created_on>
+            <sys_id>d04c10ec87400a14e94ca8ec0ebb35a5</sys_id>
+            <sys_mod_count>0</sys_mod_count>
+            <sys_updated_by>chris.layman@infocenter.io</sys_updated_by>
+            <sys_updated_on>2024-01-26 19:48:05</sys_updated_on>
         </sys_ui_list_element>
         <sys_ui_list action="INSERT_OR_UPDATE">
             <average_value>false</average_value>
@@ -56,19 +86,19 @@
             <relationship/>
             <sum>false</sum>
             <sys_class_name>sys_ui_list</sys_class_name>
-            <sys_created_by>admin</sys_created_by>
-            <sys_created_on>2020-10-12 12:49:18</sys_created_on>
+            <sys_created_by>chris.layman@infocenter.io</sys_created_by>
+            <sys_created_on>2024-01-26 19:48:05</sys_created_on>
             <sys_domain>global</sys_domain>
             <sys_domain_path>/</sys_domain_path>
-            <sys_id>4c0f75f1dbfb9010f92827374896194c</sys_id>
+            <sys_id>944c10ec87400a14e94ca8ec0ebb35a1</sys_id>
             <sys_mod_count>0</sys_mod_count>
             <sys_name>x_8302_insubnet_m2m_range_to_ci</sys_name>
             <sys_package display_value="inSubnet" source="x_8302_insubnet">80d913ffdb231010f9282737489619ea</sys_package>
             <sys_policy/>
             <sys_scope display_value="inSubnet">80d913ffdb231010f9282737489619ea</sys_scope>
             <sys_update_name>sys_ui_list_x_8302_insubnet_m2m_range_to_ci_x_8302_insubnet_network_null</sys_update_name>
-            <sys_updated_by>admin</sys_updated_by>
-            <sys_updated_on>2020-10-12 12:49:18</sys_updated_on>
+            <sys_updated_by>chris.layman@infocenter.io</sys_updated_by>
+            <sys_updated_on>2024-01-26 19:48:05</sys_updated_on>
             <sys_user/>
             <view display_value="Default view" name="NULL">Default view</view>
             <view_name/>

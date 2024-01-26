@@ -469,6 +469,8 @@ if((supernet == 'true' && parseName[1].trim().toString() == address.trim().toStr
 
 	var lookUpResource = new GlideRecord('cmdb_ci_hardware');
 	lookUpResource.addEncodedQuery("ip_address="+ipAddress+"^install_status=1");
+	lookUpResource.orderBy('last_discovered');
+	lookUpResource.setLimit(1);
 	lookUpResource.query();
 	if(lookUpResource.next()){
 		resource = lookUpResource.getValue('sys_id');
@@ -498,6 +500,8 @@ while(lookupIP.next()){
 
 	var lookUpResource = new GlideRecord('cmdb_ci_hardware');
 	lookUpResource.addEncodedQuery("ip_address="+ip_address+"^install_status=1");
+	lookUpResource.orderBy('last_discovered');
+	lookUpResource.setLimit(1);
 	lookUpResource.query();
 		
 		if(lookUpResource.next()){
@@ -899,13 +903,13 @@ type: 'inSubnetFunctions'
         <sys_created_by>admin</sys_created_by>
         <sys_created_on>2020-10-07 17:28:05</sys_created_on>
         <sys_id>50cd81d4db335010f9282737489619a4</sys_id>
-        <sys_mod_count>264</sys_mod_count>
+        <sys_mod_count>265</sys_mod_count>
         <sys_name>inSubnetFunctions</sys_name>
         <sys_package display_value="inSubnet" source="x_8302_insubnet">80d913ffdb231010f9282737489619ea</sys_package>
         <sys_policy>read</sys_policy>
         <sys_scope display_value="inSubnet">80d913ffdb231010f9282737489619ea</sys_scope>
         <sys_update_name>sys_script_include_50cd81d4db335010f9282737489619a4</sys_update_name>
         <sys_updated_by>chris.layman@infocenter.io</sys_updated_by>
-        <sys_updated_on>2024-01-26 15:28:12</sys_updated_on>
+        <sys_updated_on>2024-01-26 19:52:37</sys_updated_on>
     </sys_script_include>
 </record_update>
