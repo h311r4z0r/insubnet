@@ -1,0 +1,18 @@
+<?xml version="1.0" encoding="UTF-8"?><record_update table="sc_cat_item_category">
+    <sc_cat_item_category action="INSERT_OR_UPDATE">
+        <sc_cat_item display_value="IP Address Request">d942ac5e87f37d90e94ca8ec0ebb352e</sc_cat_item>
+        <sc_category display_value="IPAM Services">7cf2efd48748c614e94ca8ec0ebb35e2</sc_category>
+        <sys_class_name>sc_cat_item_category</sys_class_name>
+        <sys_created_by>chris.layman@infocenter.io</sys_created_by>
+        <sys_created_on>2024-01-26 16:12:23</sys_created_on>
+        <sys_id>eceaaf1c8788c614e94ca8ec0ebb3577</sys_id>
+        <sys_mod_count>0</sys_mod_count>
+        <sys_name>IPAM Services.IP Address Request</sys_name>
+        <sys_package display_value="inSubnet" source="x_8302_insubnet">80d913ffdb231010f9282737489619ea</sys_package>
+        <sys_policy/>
+        <sys_scope display_value="inSubnet">80d913ffdb231010f9282737489619ea</sys_scope>
+        <sys_update_name>sc_cat_item_category_eceaaf1c8788c614e94ca8ec0ebb3577</sys_update_name>
+        <sys_updated_by>chris.layman@infocenter.io</sys_updated_by>
+        <sys_updated_on>2024-01-26 16:12:23</sys_updated_on>
+    </sc_cat_item_category>
+</record_update>

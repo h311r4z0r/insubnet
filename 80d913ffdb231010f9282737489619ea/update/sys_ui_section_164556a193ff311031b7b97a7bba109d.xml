@@ -3,56 +3,70 @@
         <sys_ui_element action="INSERT_OR_UPDATE">
             <element>location</element>
             <position>0</position>
-            <sys_created_by>admin</sys_created_by>
-            <sys_created_on>2024-01-17 20:55:08</sys_created_on>
-            <sys_id>264596a193ff311031b7b97a7bba1024</sys_id>
+            <sys_created_by>chris.layman@infocenter.io</sys_created_by>
+            <sys_created_on>2024-01-26 15:12:23</sys_created_on>
+            <sys_id>f92dd79887c4c614e94ca8ec0ebb35b5</sys_id>
             <sys_mod_count>0</sys_mod_count>
             <sys_ui_formatter/>
             <sys_ui_section caption="Geolocation" display_value="Geolocation" name="x_8302_insubnet_network" sys_domain="global" view="Default view">164556a193ff311031b7b97a7bba109d</sys_ui_section>
-            <sys_updated_by>admin</sys_updated_by>
-            <sys_updated_on>2024-01-17 20:55:08</sys_updated_on>
+            <sys_updated_by>chris.layman@infocenter.io</sys_updated_by>
+            <sys_updated_on>2024-01-26 15:12:23</sys_updated_on>
+            <sys_user/>
+            <type/>
+        </sys_ui_element>
+        <sys_ui_element action="INSERT_OR_UPDATE">
+            <element>environment</element>
+            <position>1</position>
+            <sys_created_by>chris.layman@infocenter.io</sys_created_by>
+            <sys_created_on>2024-01-26 15:12:23</sys_created_on>
+            <sys_id>fd2dd79887c4c614e94ca8ec0ebb35b5</sys_id>
+            <sys_mod_count>0</sys_mod_count>
+            <sys_ui_formatter/>
+            <sys_ui_section caption="Geolocation" display_value="Geolocation" name="x_8302_insubnet_network" sys_domain="global" view="Default view">164556a193ff311031b7b97a7bba109d</sys_ui_section>
+            <sys_updated_by>chris.layman@infocenter.io</sys_updated_by>
+            <sys_updated_on>2024-01-26 15:12:23</sys_updated_on>
             <sys_user/>
             <type/>
         </sys_ui_element>
         <sys_ui_element action="INSERT_OR_UPDATE">
             <element>.split</element>
-            <position>1</position>
-            <sys_created_by>admin</sys_created_by>
-            <sys_created_on>2024-01-17 20:55:08</sys_created_on>
-            <sys_id>a64596a193ff311031b7b97a7bba1024</sys_id>
+            <position>2</position>
+            <sys_created_by>chris.layman@infocenter.io</sys_created_by>
+            <sys_created_on>2024-01-26 15:12:23</sys_created_on>
+            <sys_id>f12dd79887c4c614e94ca8ec0ebb35b6</sys_id>
             <sys_mod_count>0</sys_mod_count>
             <sys_ui_formatter/>
             <sys_ui_section caption="Geolocation" display_value="Geolocation" name="x_8302_insubnet_network" sys_domain="global" view="Default view">164556a193ff311031b7b97a7bba109d</sys_ui_section>
-            <sys_updated_by>admin</sys_updated_by>
-            <sys_updated_on>2024-01-17 20:55:08</sys_updated_on>
+            <sys_updated_by>chris.layman@infocenter.io</sys_updated_by>
+            <sys_updated_on>2024-01-26 15:12:23</sys_updated_on>
             <sys_user/>
             <type>.split</type>
         </sys_ui_element>
         <sys_ui_element action="INSERT_OR_UPDATE">
             <element>business_unit</element>
-            <position>2</position>
-            <sys_created_by>admin</sys_created_by>
-            <sys_created_on>2024-01-17 20:55:08</sys_created_on>
-            <sys_id>2a4596a193ff311031b7b97a7bba1024</sys_id>
+            <position>3</position>
+            <sys_created_by>chris.layman@infocenter.io</sys_created_by>
+            <sys_created_on>2024-01-26 15:12:23</sys_created_on>
+            <sys_id>f52dd79887c4c614e94ca8ec0ebb35b6</sys_id>
             <sys_mod_count>0</sys_mod_count>
             <sys_ui_formatter/>
             <sys_ui_section caption="Geolocation" display_value="Geolocation" name="x_8302_insubnet_network" sys_domain="global" view="Default view">164556a193ff311031b7b97a7bba109d</sys_ui_section>
-            <sys_updated_by>admin</sys_updated_by>
-            <sys_updated_on>2024-01-17 20:55:08</sys_updated_on>
+            <sys_updated_by>chris.layman@infocenter.io</sys_updated_by>
+            <sys_updated_on>2024-01-26 15:12:23</sys_updated_on>
             <sys_user/>
             <type/>
         </sys_ui_element>
         <sys_ui_element action="INSERT_OR_UPDATE">
             <element>department</element>
-            <position>3</position>
-            <sys_created_by>admin</sys_created_by>
-            <sys_created_on>2024-01-17 20:55:08</sys_created_on>
-            <sys_id>aa4596a193ff311031b7b97a7bba1024</sys_id>
+            <position>4</position>
+            <sys_created_by>chris.layman@infocenter.io</sys_created_by>
+            <sys_created_on>2024-01-26 15:12:23</sys_created_on>
+            <sys_id>f92dd79887c4c614e94ca8ec0ebb35b6</sys_id>
             <sys_mod_count>0</sys_mod_count>
             <sys_ui_formatter/>
             <sys_ui_section caption="Geolocation" display_value="Geolocation" name="x_8302_insubnet_network" sys_domain="global" view="Default view">164556a193ff311031b7b97a7bba109d</sys_ui_section>
-            <sys_updated_by>admin</sys_updated_by>
-            <sys_updated_on>2024-01-17 20:55:08</sys_updated_on>
+            <sys_updated_by>chris.layman@infocenter.io</sys_updated_by>
+            <sys_updated_on>2024-01-26 15:12:23</sys_updated_on>
             <sys_user/>
             <type/>
         </sys_ui_element>

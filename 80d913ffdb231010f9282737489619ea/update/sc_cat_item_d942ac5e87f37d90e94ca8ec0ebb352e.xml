@@ -4,7 +4,7 @@
         <active>true</active>
         <availability>on_desktop</availability>
         <billable>false</billable>
-        <category/>
+        <category display_value="IPAM Services">7cf2efd48748c614e94ca8ec0ebb35e2</category>
         <checked_out/>
         <cost>0</cost>
         <custom_cart/>
@@ -29,9 +29,9 @@
         <mobile_picture_type>use_desktop_picture</mobile_picture_type>
         <model/>
         <name>IP Address Request</name>
-        <no_attachment_v2>false</no_attachment_v2>
+        <no_attachment_v2>true</no_attachment_v2>
         <no_cart>false</no_cart>
-        <no_cart_v2>false</no_cart_v2>
+        <no_cart_v2>true</no_cart_v2>
         <no_delivery_time_v2>true</no_delivery_time_v2>
         <no_order>false</no_order>
         <no_order_now>false</no_order_now>
@@ -41,7 +41,7 @@
         <no_search>false</no_search>
         <no_wishlist_v2>true</no_wishlist_v2>
         <omit_price>false</omit_price>
-        <order>0</order>
+        <order>10</order>
         <ordered_item_link/>
         <owner display_value="System Administrator">6816f79cc0a8016401c5a33be04be441</owner>
         <picture/>
@@ -64,14 +64,14 @@
         <sys_created_by>chris.layman@infocenter.io</sys_created_by>
         <sys_created_on>2024-01-19 20:33:18</sys_created_on>
         <sys_id>d942ac5e87f37d90e94ca8ec0ebb352e</sys_id>
-        <sys_mod_count>21</sys_mod_count>
+        <sys_mod_count>24</sys_mod_count>
         <sys_name>IP Address Request</sys_name>
         <sys_package display_value="inSubnet" source="x_8302_insubnet">80d913ffdb231010f9282737489619ea</sys_package>
         <sys_policy/>
         <sys_scope display_value="inSubnet">80d913ffdb231010f9282737489619ea</sys_scope>
         <sys_update_name>sc_cat_item_d942ac5e87f37d90e94ca8ec0ebb352e</sys_update_name>
-        <sys_updated_by>system</sys_updated_by>
-        <sys_updated_on>2024-01-25 16:48:03</sys_updated_on>
+        <sys_updated_by>chris.layman@infocenter.io</sys_updated_by>
+        <sys_updated_on>2024-01-26 17:55:49</sys_updated_on>
         <taxonomy_topic/>
         <template/>
         <template_manager_roles/>
@@ -79,7 +79,7 @@
         <u_featured_item>false</u_featured_item>
         <use_sc_layout>true</use_sc_layout>
         <vendor/>
-        <version>21</version>
+        <version>24</version>
         <visible_bundle>true</visible_bundle>
         <visible_guide>true</visible_guide>
         <visible_standalone>true</visible_standalone>

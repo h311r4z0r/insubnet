@@ -6,7 +6,7 @@
         <availability>on_desktop</availability>
         <billable>false</billable>
         <can_cancel>false</can_cancel>
-        <category/>
+        <category display_value="IPAM Services">7cf2efd48748c614e94ca8ec0ebb35e2</category>
         <checked_out/>
         <cost>0</cost>
         <custom_cart/>
@@ -31,7 +31,7 @@
         <mobile_picture_type>use_desktop_picture</mobile_picture_type>
         <model/>
         <name>Exclude IP Address</name>
-        <no_attachment_v2>false</no_attachment_v2>
+        <no_attachment_v2>true</no_attachment_v2>
         <no_cart>false</no_cart>
         <no_cart_v2>false</no_cart_v2>
         <no_delivery_time_v2>false</no_delivery_time_v2>
@@ -41,9 +41,9 @@
         <no_quantity>false</no_quantity>
         <no_quantity_v2>false</no_quantity_v2>
         <no_search>false</no_search>
-        <no_wishlist_v2>false</no_wishlist_v2>
+        <no_wishlist_v2>true</no_wishlist_v2>
         <omit_price>false</omit_price>
-        <order>0</order>
+        <order>300</order>
         <ordered_item_link/>
         <owner display_value="System Administrator">6816f79cc0a8016401c5a33be04be441</owner>
         <picture/>
@@ -68,7 +68,7 @@
 * To access the variables, use `producer.var1` where var1 is the name of the variable
 * To access the Record Producer use `cat_item`
 */]]></save_script>
-        <sc_catalogs/>
+        <sc_catalogs>e0d08b13c3330100c8b837659bba8fb4</sc_catalogs>
         <sc_ic_item_staging/>
         <sc_ic_version/>
         <sc_template/>
@@ -88,6 +88,7 @@ for(i =0; i< listColArray.length; i++){
 }
 
 //redirect
+producer.portal_redirect = "sp?id=sc_category&sys_id=7cf2efd48748c614e94ca8ec0ebb35e2&catalog_id=e0d08b13c3330100c8b837659bba8fb4";
 producer.redirect="/x_8302_insubnet_network.do?sys_id="+network.toString();]]></script>
         <short_description>Exclude IP Address</short_description>
         <show_variable_help_on_load>false</show_variable_help_on_load>
@@ -97,14 +98,14 @@ producer.redirect="/x_8302_insubnet_network.do?sys_id="+network.toString();]]></
         <sys_created_by>chris.layman@infocenter.io</sys_created_by>
         <sys_created_on>2024-01-22 20:37:50</sys_created_on>
         <sys_id>4a41c05787fff5d0e94ca8ec0ebb352d</sys_id>
-        <sys_mod_count>9</sys_mod_count>
+        <sys_mod_count>12</sys_mod_count>
         <sys_name>Exclude IP Address</sys_name>
         <sys_package display_value="inSubnet" source="x_8302_insubnet">80d913ffdb231010f9282737489619ea</sys_package>
         <sys_policy/>
         <sys_scope display_value="inSubnet">80d913ffdb231010f9282737489619ea</sys_scope>
         <sys_update_name>sc_cat_item_producer_4a41c05787fff5d0e94ca8ec0ebb352d</sys_update_name>
-        <sys_updated_by>system</sys_updated_by>
-        <sys_updated_on>2024-01-26 14:57:10</sys_updated_on>
+        <sys_updated_by>chris.layman@infocenter.io</sys_updated_by>
+        <sys_updated_on>2024-01-26 16:25:11</sys_updated_on>
         <table_name>x_8302_insubnet_ip_assignment</table_name>
         <taxonomy_topic/>
         <template/>
@@ -113,7 +114,7 @@ producer.redirect="/x_8302_insubnet_network.do?sys_id="+network.toString();]]></
         <u_featured_item>false</u_featured_item>
         <use_sc_layout>true</use_sc_layout>
         <vendor/>
-        <version>12</version>
+        <version>15</version>
         <view/>
         <visible_bundle>true</visible_bundle>
         <visible_guide>true</visible_guide>
