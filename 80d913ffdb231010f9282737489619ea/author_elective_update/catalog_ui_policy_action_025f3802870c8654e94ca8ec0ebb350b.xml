@@ -1,0 +1,73 @@
+<?xml version="1.0" encoding="UTF-8"?><record_update table="catalog_ui_policy_action">
+    <catalog_ui_policy_action action="DELETE">
+        <catalog_item/>
+        <catalog_variable>IO:b00a30c287c88654e94ca8ec0ebb357a</catalog_variable>
+        <cleared>false</cleared>
+        <disabled>ignore</disabled>
+        <field/>
+        <mandatory>true</mandatory>
+        <order>100</order>
+        <sys_class_name>catalog_ui_policy_action</sys_class_name>
+        <sys_created_by>chris.layman@infocenter.io</sys_created_by>
+        <sys_created_on>2024-01-31 14:12:40</sys_created_on>
+        <sys_id>025f3802870c8654e94ca8ec0ebb350b</sys_id>
+        <sys_mod_count>0</sys_mod_count>
+        <sys_name>u_ref_assignedip</sys_name>
+        <sys_package display_value="inSubnet" source="x_8302_insubnet">80d913ffdb231010f9282737489619ea</sys_package>
+        <sys_policy/>
+        <sys_scope display_value="inSubnet">80d913ffdb231010f9282737489619ea</sys_scope>
+        <sys_update_name>catalog_ui_policy_action_025f3802870c8654e94ca8ec0ebb350b</sys_update_name>
+        <sys_updated_by>chris.layman@infocenter.io</sys_updated_by>
+        <sys_updated_on>2024-01-31 14:12:40</sys_updated_on>
+        <table/>
+        <ui_policy display_value="Show on catalog task">d7feb8ce87c88654e94ca8ec0ebb3579</ui_policy>
+        <variable>u_ref_assignedip</variable>
+        <variable_set display_value="IP Requirement">92c4856f873b3dd0e94ca8ec0ebb351d</variable_set>
+        <visible>true</visible>
+    </catalog_ui_policy_action>
+    <sys_update_version action="INSERT_OR_UPDATE">
+        <action>DELETE</action>
+        <application display_value="inSubnet">80d913ffdb231010f9282737489619ea</application>
+        <file_path/>
+        <instance_id>4ea6d630dbbc0910f37acac505961995</instance_id>
+        <instance_name>forwardairdev</instance_name>
+        <name>catalog_ui_policy_action_025f3802870c8654e94ca8ec0ebb350b</name>
+        <payload><![CDATA[<?xml version="1.0" encoding="UTF-8"?><record_update table="catalog_ui_policy_action"><catalog_ui_policy_action action="INSERT_OR_UPDATE"><catalog_item/><catalog_variable>IO:b00a30c287c88654e94ca8ec0ebb357a</catalog_variable><cleared>false</cleared><disabled>ignore</disabled><field/><mandatory>true</mandatory><order>100</order><sys_class_name>catalog_ui_policy_action</sys_class_name><sys_created_by>chris.layman@infocenter.io</sys_created_by><sys_created_on>2024-01-31 14:12:40</sys_created_on><sys_id>025f3802870c8654e94ca8ec0ebb350b</sys_id><sys_mod_count>0</sys_mod_count><sys_name>u_ref_assignedip</sys_name><sys_package display_value="inSubnet" source="x_8302_insubnet">80d913ffdb231010f9282737489619ea</sys_package><sys_policy/><sys_scope display_value="inSubnet">80d913ffdb231010f9282737489619ea</sys_scope><sys_update_name>catalog_ui_policy_action_025f3802870c8654e94ca8ec0ebb350b</sys_update_name><sys_updated_by>chris.layman@infocenter.io</sys_updated_by><sys_updated_on>2024-01-31 14:12:40</sys_updated_on><table/><ui_policy display_value="Show on catalog task">d7feb8ce87c88654e94ca8ec0ebb3579</ui_policy><variable>u_ref_assignedip</variable><variable_set display_value="IP Requirement">92c4856f873b3dd0e94ca8ec0ebb351d</variable_set><visible>true</visible></catalog_ui_policy_action></record_update>]]></payload>
+        <payload_hash>1795784320</payload_hash>
+        <record_name>u_ref_assignedip</record_name>
+        <reverted_from/>
+        <source>72cd6319878c0254e94ca8ec0ebb359b</source>
+        <source_table>sys_update_set</source_table>
+        <state>previous</state>
+        <sys_created_by>chris.layman@infocenter.io</sys_created_by>
+        <sys_created_on>2024-01-31 14:12:40</sys_created_on>
+        <sys_id>3b6ff802870c8654e94ca8ec0ebb35bd</sys_id>
+        <sys_mod_count>0</sys_mod_count>
+        <sys_recorded_at>18d5fdd60f40000001</sys_recorded_at>
+        <sys_updated_by>chris.layman@infocenter.io</sys_updated_by>
+        <sys_updated_on>2024-01-31 14:12:40</sys_updated_on>
+        <type>Catalog UI Policy Action</type>
+        <update_guid>3f6ff8025d0c8654fe2c0cc4131f1cbc</update_guid>
+        <update_guid_history>3f6ff8025d0c8654fe2c0cc4131f1cbc:1795784320</update_guid_history>
+    </sys_update_version>
+    <sys_metadata_delete action="INSERT_OR_UPDATE">
+        <sys_audit_delete display_value="u_ref_assignedip">32d1010a870c8654e94ca8ec0ebb3596</sys_audit_delete>
+        <sys_class_name>sys_metadata_delete</sys_class_name>
+        <sys_created_by>chris.layman@infocenter.io</sys_created_by>
+        <sys_created_on>2024-01-31 14:23:16</sys_created_on>
+        <sys_db_object display_value="" name="catalog_ui_policy_action">catalog_ui_policy_action</sys_db_object>
+        <sys_id>2ff095119fec4bb0bc7343891f82d390</sys_id>
+        <sys_metadata>025f3802870c8654e94ca8ec0ebb350b</sys_metadata>
+        <sys_mod_count>0</sys_mod_count>
+        <sys_name>u_ref_assignedip</sys_name>
+        <sys_package display_value="inSubnet" source="x_8302_insubnet">80d913ffdb231010f9282737489619ea</sys_package>
+        <sys_parent/>
+        <sys_policy/>
+        <sys_scope display_value="inSubnet">80d913ffdb231010f9282737489619ea</sys_scope>
+        <sys_scope_delete display_value="">02cdb062db124b0f8471b9b5066e6be1</sys_scope_delete>
+        <sys_update_name>catalog_ui_policy_action_025f3802870c8654e94ca8ec0ebb350b</sys_update_name>
+        <sys_update_version display_value="catalog_ui_policy_action_025f3802870c8654e94ca8ec0ebb350b">3b6ff802870c8654e94ca8ec0ebb35bd</sys_update_version>
+        <sys_updated_by>chris.layman@infocenter.io</sys_updated_by>
+        <sys_updated_on>2024-01-31 14:23:16</sys_updated_on>
+    </sys_metadata_delete>
+</record_update>

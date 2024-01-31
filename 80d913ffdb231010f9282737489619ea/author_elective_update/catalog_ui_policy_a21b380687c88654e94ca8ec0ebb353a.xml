@@ -1,0 +1,100 @@
+<?xml version="1.0" encoding="UTF-8"?><record_update sys_domain="global" table="catalog_ui_policy">
+    <catalog_ui_policy action="DELETE">
+        <active>true</active>
+        <applies_catalog>true</applies_catalog>
+        <applies_req_item>false</applies_req_item>
+        <applies_sc_task>false</applies_sc_task>
+        <applies_target_record>false</applies_target_record>
+        <applies_to>set</applies_to>
+        <catalog_conditions/>
+        <catalog_item/>
+        <conditions/>
+        <description/>
+        <global>true</global>
+        <inherit>false</inherit>
+        <isolate_script>true</isolate_script>
+        <model_id/>
+        <model_table/>
+        <on_load>true</on_load>
+        <order>100</order>
+        <published_ref/>
+        <reverse_if_false>false</reverse_if_false>
+        <run_scripts>false</run_scripts>
+        <script_false><![CDATA[function onCondition() {
+
+}]]></script_false>
+        <script_true><![CDATA[function onCondition() {
+
+}]]></script_true>
+        <set_values/>
+        <short_description>Hide IP assignment</short_description>
+        <sys_class_name>catalog_ui_policy</sys_class_name>
+        <sys_created_by>chris.layman@infocenter.io</sys_created_by>
+        <sys_created_on>2024-01-31 13:53:59</sys_created_on>
+        <sys_domain>global</sys_domain>
+        <sys_domain_path>/</sys_domain_path>
+        <sys_id>a21b380687c88654e94ca8ec0ebb353a</sys_id>
+        <sys_mod_count>0</sys_mod_count>
+        <sys_name>Hide IP assignment</sys_name>
+        <sys_overrides/>
+        <sys_package display_value="inSubnet" source="x_8302_insubnet">80d913ffdb231010f9282737489619ea</sys_package>
+        <sys_policy/>
+        <sys_scope display_value="inSubnet">80d913ffdb231010f9282737489619ea</sys_scope>
+        <sys_update_name>catalog_ui_policy_a21b380687c88654e94ca8ec0ebb353a</sys_update_name>
+        <sys_updated_by>chris.layman@infocenter.io</sys_updated_by>
+        <sys_updated_on>2024-01-31 13:53:59</sys_updated_on>
+        <table/>
+        <ui_type>0</ui_type>
+        <variable_set display_value="IP Requirement">92c4856f873b3dd0e94ca8ec0ebb351d</variable_set>
+        <view/>
+    </catalog_ui_policy>
+    <sys_update_version action="INSERT_OR_UPDATE">
+        <action>DELETE</action>
+        <application display_value="inSubnet">80d913ffdb231010f9282737489619ea</application>
+        <file_path/>
+        <instance_id>4ea6d630dbbc0910f37acac505961995</instance_id>
+        <instance_name>forwardairdev</instance_name>
+        <name>catalog_ui_policy_a21b380687c88654e94ca8ec0ebb353a</name>
+        <payload>&lt;?xml version="1.0" encoding="UTF-8"?&gt;&lt;record_update sys_domain="global" table="catalog_ui_policy"&gt;&lt;catalog_ui_policy action="INSERT_OR_UPDATE"&gt;&lt;active&gt;true&lt;/active&gt;&lt;applies_catalog&gt;true&lt;/applies_catalog&gt;&lt;applies_req_item&gt;false&lt;/applies_req_item&gt;&lt;applies_sc_task&gt;false&lt;/applies_sc_task&gt;&lt;applies_target_record&gt;false&lt;/applies_target_record&gt;&lt;applies_to&gt;set&lt;/applies_to&gt;&lt;catalog_conditions/&gt;&lt;catalog_item/&gt;&lt;conditions/&gt;&lt;description/&gt;&lt;global&gt;true&lt;/global&gt;&lt;inherit&gt;false&lt;/inherit&gt;&lt;isolate_script&gt;true&lt;/isolate_script&gt;&lt;model_id/&gt;&lt;model_table/&gt;&lt;on_load&gt;true&lt;/on_load&gt;&lt;order&gt;100&lt;/order&gt;&lt;published_ref/&gt;&lt;reverse_if_false&gt;false&lt;/reverse_if_false&gt;&lt;run_scripts&gt;false&lt;/run_scripts&gt;&lt;script_false&gt;&lt;![CDATA[function onCondition() {
+
+}]]&gt;&lt;/script_false&gt;&lt;script_true&gt;&lt;![CDATA[function onCondition() {
+
+}]]&gt;&lt;/script_true&gt;&lt;set_values/&gt;&lt;short_description&gt;Hide IP assignment&lt;/short_description&gt;&lt;sys_class_name&gt;catalog_ui_policy&lt;/sys_class_name&gt;&lt;sys_created_by&gt;chris.layman@infocenter.io&lt;/sys_created_by&gt;&lt;sys_created_on&gt;2024-01-31 13:53:59&lt;/sys_created_on&gt;&lt;sys_domain&gt;global&lt;/sys_domain&gt;&lt;sys_domain_path&gt;/&lt;/sys_domain_path&gt;&lt;sys_id&gt;a21b380687c88654e94ca8ec0ebb353a&lt;/sys_id&gt;&lt;sys_mod_count&gt;0&lt;/sys_mod_count&gt;&lt;sys_name&gt;Hide IP assignment&lt;/sys_name&gt;&lt;sys_overrides/&gt;&lt;sys_package display_value="inSubnet" source="x_8302_insubnet"&gt;80d913ffdb231010f9282737489619ea&lt;/sys_package&gt;&lt;sys_policy/&gt;&lt;sys_scope display_value="inSubnet"&gt;80d913ffdb231010f9282737489619ea&lt;/sys_scope&gt;&lt;sys_update_name&gt;catalog_ui_policy_a21b380687c88654e94ca8ec0ebb353a&lt;/sys_update_name&gt;&lt;sys_updated_by&gt;chris.layman@infocenter.io&lt;/sys_updated_by&gt;&lt;sys_updated_on&gt;2024-01-31 13:53:59&lt;/sys_updated_on&gt;&lt;table/&gt;&lt;ui_type&gt;0&lt;/ui_type&gt;&lt;variable_set display_value="IP Requirement"&gt;92c4856f873b3dd0e94ca8ec0ebb351d&lt;/variable_set&gt;&lt;view/&gt;&lt;/catalog_ui_policy&gt;&lt;/record_update&gt;</payload>
+        <payload_hash>-1092202050</payload_hash>
+        <record_name>Hide IP assignment</record_name>
+        <reverted_from/>
+        <source>72cd6319878c0254e94ca8ec0ebb359b</source>
+        <source_table>sys_update_set</source_table>
+        <state>previous</state>
+        <sys_created_by>chris.layman@infocenter.io</sys_created_by>
+        <sys_created_on>2024-01-31 13:53:59</sys_created_on>
+        <sys_id>8e2b3c0687c88654e94ca8ec0ebb35ba</sys_id>
+        <sys_mod_count>0</sys_mod_count>
+        <sys_recorded_at>18d5fcc47ec0000001</sys_recorded_at>
+        <sys_updated_by>chris.layman@infocenter.io</sys_updated_by>
+        <sys_updated_on>2024-01-31 13:53:59</sys_updated_on>
+        <type>Catalog UI Policy</type>
+        <update_guid>822b3c0630c8865408b2644d2633aeba</update_guid>
+        <update_guid_history>822b3c0630c8865408b2644d2633aeba:-1092202050</update_guid_history>
+    </sys_update_version>
+    <sys_metadata_delete action="INSERT_OR_UPDATE">
+        <sys_audit_delete display_value="Hide IP assignment">418db8ca87c88654e94ca8ec0ebb3520</sys_audit_delete>
+        <sys_class_name>sys_metadata_delete</sys_class_name>
+        <sys_created_by>chris.layman@infocenter.io</sys_created_by>
+        <sys_created_on>2024-01-31 14:04:18</sys_created_on>
+        <sys_db_object display_value="" name="catalog_ui_policy">catalog_ui_policy</sys_db_object>
+        <sys_id>6ebf1de999554034b30048c93e019004</sys_id>
+        <sys_metadata>a21b380687c88654e94ca8ec0ebb353a</sys_metadata>
+        <sys_mod_count>0</sys_mod_count>
+        <sys_name>Hide IP assignment</sys_name>
+        <sys_package display_value="inSubnet" source="x_8302_insubnet">80d913ffdb231010f9282737489619ea</sys_package>
+        <sys_parent/>
+        <sys_policy/>
+        <sys_scope display_value="inSubnet">80d913ffdb231010f9282737489619ea</sys_scope>
+        <sys_scope_delete display_value="">02cdb062db124b0f8471b9b5066e6be1</sys_scope_delete>
+        <sys_update_name>catalog_ui_policy_a21b380687c88654e94ca8ec0ebb353a</sys_update_name>
+        <sys_update_version display_value="catalog_ui_policy_a21b380687c88654e94ca8ec0ebb353a">8e2b3c0687c88654e94ca8ec0ebb35ba</sys_update_version>
+        <sys_updated_by>chris.layman@infocenter.io</sys_updated_by>
+        <sys_updated_on>2024-01-31 14:04:18</sys_updated_on>
+    </sys_metadata_delete>
+</record_update>
