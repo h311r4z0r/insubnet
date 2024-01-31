@@ -11,10 +11,11 @@
         <delivery_plan/>
         <delivery_plan_script/>
         <delivery_time>1970-01-03 00:00:00</delivery_time>
-        <description><![CDATA[<p>Request an IP for specific resources in the infrastructure.</p>]]></description>
+        <description><![CDATA[<p>Request an IP for specific resources in the infrastructure.</p>
+<p><span style="color: #ba372a;"><strong>***Note: Provide any process diagrams, security architecture, and/or other documentation to support IP assignments.</strong></span></p>]]></description>
         <display_price_property>non_zero</display_price_property>
         <entitlement_script/>
-        <flow_designer_flow/>
+        <flow_designer_flow display_value="IP Address Request">0e2ea3d9878c0254e94ca8ec0ebb35b7</flow_designer_flow>
         <fulfillment_automation_level>unspecified</fulfillment_automation_level>
         <group/>
         <hide_sp>false</hide_sp>
@@ -22,14 +23,14 @@
         <ignore_price>true</ignore_price>
         <image/>
         <location/>
-        <mandatory_attachment>false</mandatory_attachment>
+        <mandatory_attachment>true</mandatory_attachment>
         <meta/>
         <mobile_hide_price>false</mobile_hide_price>
         <mobile_picture/>
         <mobile_picture_type>use_desktop_picture</mobile_picture_type>
         <model/>
         <name>IP Address Request</name>
-        <no_attachment_v2>true</no_attachment_v2>
+        <no_attachment_v2>false</no_attachment_v2>
         <no_cart>false</no_cart>
         <no_cart_v2>true</no_cart_v2>
         <no_delivery_time_v2>true</no_delivery_time_v2>
@@ -64,14 +65,14 @@
         <sys_created_by>chris.layman@infocenter.io</sys_created_by>
         <sys_created_on>2024-01-19 20:33:18</sys_created_on>
         <sys_id>d942ac5e87f37d90e94ca8ec0ebb352e</sys_id>
-        <sys_mod_count>24</sys_mod_count>
+        <sys_mod_count>37</sys_mod_count>
         <sys_name>IP Address Request</sys_name>
         <sys_package display_value="inSubnet" source="x_8302_insubnet">80d913ffdb231010f9282737489619ea</sys_package>
         <sys_policy/>
         <sys_scope display_value="inSubnet">80d913ffdb231010f9282737489619ea</sys_scope>
         <sys_update_name>sc_cat_item_d942ac5e87f37d90e94ca8ec0ebb352e</sys_update_name>
-        <sys_updated_by>chris.layman@infocenter.io</sys_updated_by>
-        <sys_updated_on>2024-01-26 17:55:49</sys_updated_on>
+        <sys_updated_by>system</sys_updated_by>
+        <sys_updated_on>2024-01-30 20:29:34</sys_updated_on>
         <taxonomy_topic/>
         <template/>
         <template_manager_roles/>
@@ -79,7 +80,7 @@
         <u_featured_item>false</u_featured_item>
         <use_sc_layout>true</use_sc_layout>
         <vendor/>
-        <version>24</version>
+        <version>37</version>
         <visible_bundle>true</visible_bundle>
         <visible_guide>true</visible_guide>
         <visible_standalone>true</visible_standalone>
