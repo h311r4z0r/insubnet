@@ -2,19 +2,22 @@
     <sc_cat_item_producer action="INSERT_OR_UPDATE">
         <access_type>restricted</access_type>
         <active>true</active>
+        <allow_edit>false</allow_edit>
         <availability>on_desktop</availability>
         <billable>false</billable>
         <can_cancel>false</can_cancel>
         <category/>
+        <checked_out/>
         <cost>0</cost>
         <custom_cart/>
-        <delivery_plan display_value="DEFAULT">523da512c611228900811a37c97c2014</delivery_plan>
+        <delivery_plan display_value="">523da512c611228900811a37c97c2014</delivery_plan>
         <delivery_plan_script/>
         <delivery_time>1970-01-03 00:00:00</delivery_time>
         <description/>
         <display_price_property>non_zero</display_price_property>
         <entitlement_script/>
         <flow_designer_flow/>
+        <fulfillment_automation_level/>
         <group/>
         <hide_sp>false</hide_sp>
         <icon/>
@@ -39,22 +42,27 @@
         <no_quantity>false</no_quantity>
         <no_quantity_v2>false</no_quantity_v2>
         <no_search>false</no_search>
-        <no_wishlist_v2>false</no_wishlist_v2>
+        <no_wishlist_v2>true</no_wishlist_v2>
         <omit_price>false</omit_price>
         <order>0</order>
         <ordered_item_link/>
+        <owner/>
         <picture/>
         <post_insert_script/>
         <preview>JavaScript: popupOpenStandard("com.glideapp.servicecatalog_cat_item_view.do?v=1&amp;sysparm_id=ee71f1bc2f442010ff58c886f699b6dd&amp;sysparm_preview=true", "summary");</preview>
         <price>0</price>
+        <published_ref/>
         <recurring_frequency/>
         <recurring_price>0</recurring_price>
         <redirect_url>generated_record</redirect_url>
         <request_method/>
         <roles/>
+        <save_options/>
+        <save_script/>
         <sc_catalogs>e0d08b13c3330100c8b837659bba8fb4</sc_catalogs>
         <sc_ic_item_staging/>
         <sc_ic_version/>
+        <sc_template/>
         <script><![CDATA[var record = producer.name;
 var checkCMDBRec = new GlideRecord('x_8302_insubnet_discovery_schedule');
 checkCMDBRec.get(record);
@@ -71,23 +79,28 @@ producer.redirect="/discovery_schedule.do?sys_id="+oobSchedule.toString();]]></s
         <short_description>Remove network(s) from discovery schedule.</short_description>
         <show_variable_help_on_load>false</show_variable_help_on_load>
         <start_closed>false</start_closed>
+        <state/>
         <sys_class_name>sc_cat_item_producer</sys_class_name>
         <sys_created_by>admin</sys_created_by>
         <sys_created_on>2020-10-21 19:33:21</sys_created_on>
         <sys_id>ee71f1bc2f442010ff58c886f699b6dd</sys_id>
-        <sys_mod_count>4</sys_mod_count>
+        <sys_mod_count>5</sys_mod_count>
         <sys_name>Remove from Schedule</sys_name>
         <sys_package display_value="inSubnet" source="x_8302_insubnet">80d913ffdb231010f9282737489619ea</sys_package>
         <sys_policy/>
         <sys_scope display_value="inSubnet">80d913ffdb231010f9282737489619ea</sys_scope>
         <sys_update_name>sc_cat_item_producer_ee71f1bc2f442010ff58c886f699b6dd</sys_update_name>
-        <sys_updated_by>admin</sys_updated_by>
-        <sys_updated_on>2021-01-07 17:31:33</sys_updated_on>
+        <sys_updated_by>shruti.jibhekar@infocenter.io</sys_updated_by>
+        <sys_updated_on>2024-01-30 07:09:56</sys_updated_on>
         <table_name>discovery_schedule</table_name>
+        <taxonomy_topic/>
         <template/>
+        <template_manager_roles/>
         <type>item</type>
+        <u_featured_item>false</u_featured_item>
         <use_sc_layout>true</use_sc_layout>
         <vendor/>
+        <version>1</version>
         <view/>
         <visible_bundle>true</visible_bundle>
         <visible_guide>true</visible_guide>
